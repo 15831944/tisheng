@@ -1,0 +1,10 @@
+C:\Users\lenovo\source\repos\WcfAppliacation\WcfAppliacation\bin\Debug\WcfAppliacation.pdb
+C:\Users\lenovo\source\repos\WcfAppliacation\WcfAppliacation\obj\Debug\WcfAppliacation.csprojAssemblyReference.cache
+C:\Users\lenovo\source\repos\WcfAppliacation\WcfAppliacation\obj\Debug\WcfAppliacation.Properties.Resources.resources
+C:\Users\lenovo\source\repos\WcfAppliacation\WcfAppliacation\obj\Debug\WcfAppliacation.csproj.GenerateResource.cache
+C:\Users\lenovo\source\repos\WcfAppliacation\WcfAppliacation\obj\Debug\WcfAppliacation.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\source\repos\WcfAppliacation\WcfAppliacation\obj\Debug\WcfAppliacation.pdb
+C:\Users\lenovo\source\repos\WcfAppliacation\WcfAppliacation\bin\Debug\WcfAppliacation.exe.config
+C:\Users\lenovo\source\repos\WcfAppliacation\WcfAppliacation\bin\Debug\WcfAppliacation.exe
+C:\Users\lenovo\source\repos\WcfAppliacation\WcfAppliacation\obj\Debug\WcfAppliacation.exe
+C:\Users\lenovo\source\repos\WcfAppliacation\WcfAppliacation\obj\Debug\WcfAppliacation.Form1.resources
