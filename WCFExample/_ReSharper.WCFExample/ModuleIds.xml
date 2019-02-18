@@ -1,0 +1,7 @@
+<Modules>
+  <Module PersistentId="DE722FD7-6B9C-4547-A1D5-BC67C13FBC5B" ModuleId="WCFExamle.ServiceInterface" />
+  <Module PersistentId="6876E2EF-06FC-48D2-989B-A87BFDCF7E6C" ModuleId="WCFExample.ServiceImplement" />
+  <Module PersistentId="B84E958E-6676-4FDA-8427-0FA2D30C1C7B" ModuleId="WCFExample.Host" />
+  <Module PersistentId="CD2B6B42-2AC9-4AF0-9D0E-3150C77141BC" ModuleId="WCFExample.ServiceClient" />
+  <Module PersistentId="D7EAD8B6-5FDD-49F3-8B73-E99A8482103B" ModuleId="WebApplication1" />
+</Modules>

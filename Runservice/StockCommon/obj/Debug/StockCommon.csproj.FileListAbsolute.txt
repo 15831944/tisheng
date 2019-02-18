@@ -1,0 +1,8 @@
+D:\提升项目\Runservice\StockCommon\bin\Debug\StockCommon.dll
+D:\提升项目\Runservice\StockCommon\bin\Debug\StockCommon.pdb
+D:\提升项目\Runservice\StockCommon\bin\Debug\Newtonsoft.Json.dll
+D:\提升项目\Runservice\StockCommon\obj\Debug\StockCommon.csprojAssemblyReference.cache
+D:\提升项目\Runservice\StockCommon\obj\Debug\StockCommon.csproj.CoreCompileInputs.cache
+D:\提升项目\Runservice\StockCommon\obj\Debug\StockCommon.csproj.CopyComplete
+D:\提升项目\Runservice\StockCommon\obj\Debug\StockCommon.dll
+D:\提升项目\Runservice\StockCommon\obj\Debug\StockCommon.pdb

@@ -1,0 +1,10 @@
+D:\提升项目\Runservice\StockInterface\bin\Debug\StockInterface.dll
+D:\提升项目\Runservice\StockInterface\bin\Debug\StockInterface.pdb
+D:\提升项目\Runservice\StockInterface\bin\Debug\StockTest.dll
+D:\提升项目\Runservice\StockInterface\bin\Debug\Newtonsoft.Json.dll
+D:\提升项目\Runservice\StockInterface\bin\Debug\StockTest.pdb
+D:\提升项目\Runservice\StockInterface\obj\Debug\StockInterface.csprojAssemblyReference.cache
+D:\提升项目\Runservice\StockInterface\obj\Debug\StockInterface.csproj.CoreCompileInputs.cache
+D:\提升项目\Runservice\StockInterface\obj\Debug\StockInterface.csproj.CopyComplete
+D:\提升项目\Runservice\StockInterface\obj\Debug\StockInterface.dll
+D:\提升项目\Runservice\StockInterface\obj\Debug\StockInterface.pdb

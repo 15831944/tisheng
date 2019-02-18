@@ -1,0 +1,9 @@
+D:\艺龙工作\DataTestProject\WCFExample\WCFExample.Host\bin\WCFExample.Host.dll
+D:\艺龙工作\DataTestProject\WCFExample\WCFExample.Host\bin\WCFExample.Host.pdb
+D:\艺龙工作\DataTestProject\WCFExample\WCFExample.Host\obj\Debug\ResolveAssemblyReference.cache
+D:\艺龙工作\DataTestProject\WCFExample\WCFExample.Host\obj\Debug\WCFExample.Host.dll
+D:\艺龙工作\DataTestProject\WCFExample\WCFExample.Host\obj\Debug\WCFExample.Host.pdb
+D:\艺龙工作\DataTestProject\WCFExample\WCFExample.Host\bin\WCFExample.ServiceImplement.dll
+D:\艺龙工作\DataTestProject\WCFExample\WCFExample.Host\bin\WCFExamle.ServiceInterface.dll
+D:\艺龙工作\DataTestProject\WCFExample\WCFExample.Host\bin\WCFExample.ServiceImplement.pdb
+D:\艺龙工作\DataTestProject\WCFExample\WCFExample.Host\bin\WCFExamle.ServiceInterface.pdb

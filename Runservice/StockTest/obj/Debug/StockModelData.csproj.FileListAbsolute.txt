@@ -1,0 +1,7 @@
+D:\提升项目\Runservice\StockTest\bin\Debug\StockTest.dll
+D:\提升项目\Runservice\StockTest\bin\Debug\StockTest.pdb
+D:\提升项目\Runservice\StockTest\obj\Debug\StockModelData.csprojAssemblyReference.cache
+D:\提升项目\Runservice\StockTest\obj\Debug\StockModelData.csproj.CoreCompileInputs.cache
+D:\提升项目\Runservice\StockTest\obj\Debug\StockModelData.csproj.CopyComplete
+D:\提升项目\Runservice\StockTest\obj\Debug\StockTest.dll
+D:\提升项目\Runservice\StockTest\obj\Debug\StockTest.pdb

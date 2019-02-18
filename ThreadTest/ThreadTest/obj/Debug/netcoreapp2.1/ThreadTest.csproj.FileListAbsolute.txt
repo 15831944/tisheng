@@ -1,0 +1,11 @@
+D:\提升项目\ThreadTest\ThreadTest\bin\Debug\netcoreapp2.1\ThreadTest.deps.json
+D:\提升项目\ThreadTest\ThreadTest\bin\Debug\netcoreapp2.1\ThreadTest.runtimeconfig.json
+D:\提升项目\ThreadTest\ThreadTest\bin\Debug\netcoreapp2.1\ThreadTest.runtimeconfig.dev.json
+D:\提升项目\ThreadTest\ThreadTest\bin\Debug\netcoreapp2.1\ThreadTest.dll
+D:\提升项目\ThreadTest\ThreadTest\bin\Debug\netcoreapp2.1\ThreadTest.pdb
+D:\提升项目\ThreadTest\ThreadTest\obj\Debug\netcoreapp2.1\ThreadTest.csprojAssemblyReference.cache
+D:\提升项目\ThreadTest\ThreadTest\obj\Debug\netcoreapp2.1\ThreadTest.csproj.CoreCompileInputs.cache
+D:\提升项目\ThreadTest\ThreadTest\obj\Debug\netcoreapp2.1\ThreadTest.AssemblyInfoInputs.cache
+D:\提升项目\ThreadTest\ThreadTest\obj\Debug\netcoreapp2.1\ThreadTest.AssemblyInfo.cs
+D:\提升项目\ThreadTest\ThreadTest\obj\Debug\netcoreapp2.1\ThreadTest.dll
+D:\提升项目\ThreadTest\ThreadTest\obj\Debug\netcoreapp2.1\ThreadTest.pdb

@@ -1,0 +1,7 @@
+D:\艺龙工作\DataTestProject\WCFExample\WCFExample.ServiceClient\bin\Debug\WCFExample.ServiceClient.dll
+D:\艺龙工作\DataTestProject\WCFExample\WCFExample.ServiceClient\bin\Debug\WCFExample.ServiceClient.pdb
+D:\艺龙工作\DataTestProject\WCFExample\WCFExample.ServiceClient\obj\Debug\ResolveAssemblyReference.cache
+D:\艺龙工作\DataTestProject\WCFExample\WCFExample.ServiceClient\obj\Debug\WCFExample.ServiceClient.dll
+D:\艺龙工作\DataTestProject\WCFExample\WCFExample.ServiceClient\obj\Debug\WCFExample.ServiceClient.pdb
+D:\艺龙工作\DataTestProject\WCFExample\WCFExample.ServiceClient\bin\Debug\WCFExamle.ServiceInterface.dll
+D:\艺龙工作\DataTestProject\WCFExample\WCFExample.ServiceClient\bin\Debug\WCFExamle.ServiceInterface.pdb

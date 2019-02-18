@@ -1,0 +1,10 @@
+D:\提升项目\ThreadTest\ThreadTestForm\bin\Debug\ThreadTestForm.exe.config
+D:\提升项目\ThreadTest\ThreadTestForm\bin\Debug\ThreadTestForm.exe
+D:\提升项目\ThreadTest\ThreadTestForm\bin\Debug\ThreadTestForm.pdb
+D:\提升项目\ThreadTest\ThreadTestForm\obj\Debug\ThreadTestForm.csprojAssemblyReference.cache
+D:\提升项目\ThreadTest\ThreadTestForm\obj\Debug\ThreadTestForm.Form1.resources
+D:\提升项目\ThreadTest\ThreadTestForm\obj\Debug\ThreadTestForm.Properties.Resources.resources
+D:\提升项目\ThreadTest\ThreadTestForm\obj\Debug\ThreadTestForm.csproj.GenerateResource.cache
+D:\提升项目\ThreadTest\ThreadTestForm\obj\Debug\ThreadTestForm.csproj.CoreCompileInputs.cache
+D:\提升项目\ThreadTest\ThreadTestForm\obj\Debug\ThreadTestForm.exe
+D:\提升项目\ThreadTest\ThreadTestForm\obj\Debug\ThreadTestForm.pdb

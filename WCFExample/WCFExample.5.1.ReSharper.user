@@ -1,0 +1,137 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="DE722FD7-6B9C-4547-A1D5-BC67C13FBC5B/f:ICalculator.cs" caret="204" fromTop="7" />
+      <File id="B84E958E-6676-4FDA-8427-0FA2D30C1C7B/f:Calculator.svc" caret="78" fromTop="0" />
+      <File id="6876E2EF-06FC-48D2-989B-A87BFDCF7E6C/f:Calculator.cs" caret="196" fromTop="8" />
+      <File id="D7EAD8B6-5FDD-49F3-8B73-E99A8482103B/f:Global.asax.cs" caret="0" fromTop="0" />
+      <File id="D7EAD8B6-5FDD-49F3-8B73-E99A8482103B/f:Default.aspx" caret="452" fromTop="12" />
+      <File id="D7EAD8B6-5FDD-49F3-8B73-E99A8482103B/f:Web.config" caret="1913" fromTop="9" />
+      <File id="B84E958E-6676-4FDA-8427-0FA2D30C1C7B/f:Web.config" caret="658" fromTop="13" />
+      <File id="D7EAD8B6-5FDD-49F3-8B73-E99A8482103B/f:Default.aspx.cs" caret="633" fromTop="21" />
+      <File id="CD2B6B42-2AC9-4AF0-9D0E-3150C77141BC/f:CalculatorClient.cs" caret="351" fromTop="9" />
+      <File id="CD2B6B42-2AC9-4AF0-9D0E-3150C77141BC/f:ServiceFactory.cs" caret="338" fromTop="0" />
+      <File id="CD2B6B42-2AC9-4AF0-9D0E-3150C77141BC/f:ServiceProxy.cs" caret="548" fromTop="16" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="DE722FD7-6B9C-4547-A1D5-BC67C13FBC5B/f:ICalculator.cs" caret="26" fromTop="0" />
+      <File id="DE722FD7-6B9C-4547-A1D5-BC67C13FBC5B/f:ICalculator.cs" caret="124" fromTop="4" />
+      <File id="6876E2EF-06FC-48D2-989B-A87BFDCF7E6C/f:Calculator.cs" caret="305" fromTop="12" />
+      <File id="B84E958E-6676-4FDA-8427-0FA2D30C1C7B/f:Calculator.svc" caret="78" fromTop="0" />
+      <File id="6876E2EF-06FC-48D2-989B-A87BFDCF7E6C/f:Calculator.cs" caret="206" fromTop="8" />
+      <File id="CD2B6B42-2AC9-4AF0-9D0E-3150C77141BC/f:CalculatorClient.cs" caret="152" fromTop="9" />
+      <File id="CD2B6B42-2AC9-4AF0-9D0E-3150C77141BC/f:CalculatorClient.cs" caret="360" fromTop="13" />
+      <File id="CD2B6B42-2AC9-4AF0-9D0E-3150C77141BC/f:ServiceProxy.cs" caret="151" fromTop="15" />
+      <File id="CD2B6B42-2AC9-4AF0-9D0E-3150C77141BC/f:ServiceFactory.cs" caret="1602" fromTop="23" />
+      <File id="CD2B6B42-2AC9-4AF0-9D0E-3150C77141BC/f:ServiceFactory.cs" caret="412" fromTop="13" />
+      <File id="CD2B6B42-2AC9-4AF0-9D0E-3150C77141BC/f:ServiceFactory.cs" caret="537" fromTop="9" />
+      <File id="CD2B6B42-2AC9-4AF0-9D0E-3150C77141BC/f:ServiceFactory.cs" caret="300" fromTop="3" />
+      <File id="CD2B6B42-2AC9-4AF0-9D0E-3150C77141BC/f:ServiceProxy.cs" caret="358" fromTop="4" />
+      <File id="CD2B6B42-2AC9-4AF0-9D0E-3150C77141BC/f:ServiceFactory.cs" caret="1090" fromTop="26" />
+      <File id="CD2B6B42-2AC9-4AF0-9D0E-3150C77141BC/f:ServiceFactory.cs" caret="945" fromTop="20" />
+      <File id="CD2B6B42-2AC9-4AF0-9D0E-3150C77141BC/f:ServiceFactory.cs" caret="717" fromTop="6" />
+      <File id="CD2B6B42-2AC9-4AF0-9D0E-3150C77141BC/f:ServiceProxy.cs" caret="0" fromTop="0" />
+      <File id="CD2B6B42-2AC9-4AF0-9D0E-3150C77141BC/f:ServiceFactory.cs" caret="63" fromTop="1" />
+      <File id="CD2B6B42-2AC9-4AF0-9D0E-3150C77141BC/f:CalculatorClient.cs" caret="63" fromTop="1" />
+      <File id="CD2B6B42-2AC9-4AF0-9D0E-3150C77141BC/f:ServiceProxy.cs" caret="655" fromTop="20" />
+      <File id="CD2B6B42-2AC9-4AF0-9D0E-3150C77141BC/f:ServiceFactory.cs" caret="173" fromTop="7" />
+      <File id="D7EAD8B6-5FDD-49F3-8B73-E99A8482103B/f:Global.asax.cs" caret="0" fromTop="0" />
+      <File id="D7EAD8B6-5FDD-49F3-8B73-E99A8482103B/f:Web.config" caret="1956" fromTop="15" />
+      <File id="D7EAD8B6-5FDD-49F3-8B73-E99A8482103B/f:Default.aspx" caret="1126" fromTop="10" />
+      <File id="D7EAD8B6-5FDD-49F3-8B73-E99A8482103B/f:Default.aspx" caret="433" fromTop="10" />
+      <File id="D7EAD8B6-5FDD-49F3-8B73-E99A8482103B/f:Default.aspx.cs" caret="176" fromTop="6" />
+      <File id="D7EAD8B6-5FDD-49F3-8B73-E99A8482103B/f:Default.aspx.cs" caret="697" fromTop="22" />
+      <File id="D7EAD8B6-5FDD-49F3-8B73-E99A8482103B/f:Default.aspx.cs" caret="376" fromTop="13" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="interface" priority="1" />
+      <Item value="decimal" priority="10" />
+      <Item value="OperationContract" priority="0" />
+      <Item value="return" priority="5" />
+      <Item value="a" priority="4" />
+      <Item value="b" priority="0" />
+      <Item value="using" priority="2" />
+      <Item value="WCFExamle" priority="0" />
+      <Item value="ServiceInterface" priority="0" />
+      <Item value="ICalculator`0" priority="2" />
+      <Item value="public" priority="6" />
+      <Item value="string" priority="5" />
+      <Item value="base" priority="1" />
+      <Item value="binding" priority="1" />
+      <Item value="remoteAddress" priority="0" />
+      <Item value="internal" priority="1" />
+      <Item value="System" priority="1" />
+      <Item value="Xml" priority="0" />
+      <Item value="XmlDictionaryReaderQuotas`0" priority="0" />
+      <Item value="CalculatorClient`0" priority="2" />
+      <Item value="calculatorClient" priority="0" />
+      <Item value="new" priority="4" />
+      <Item value="CalculatorClient" priority="0" />
+      <Item value="GetInitBinding`0" priority="0" />
+      <Item value="EndpointAddress`0" priority="0" />
+      <Item value="this" priority="0" />
+      <Item value="EndpointAddress" priority="0" />
+      <Item value="remotingAddress" priority="2" />
+      <Item value="if" priority="0" />
+      <Item value="null" priority="1" />
+      <Item value="try" priority="0" />
+      <Item value="private" priority="1" />
+      <Item value="m_ICalculator" priority="1" />
+      <Item value="ServiceFactory`0" priority="0" />
+      <Item value="BasicHttpBinding`0" priority="0" />
+      <Item value="void" priority="1" />
+      <Item value="protected" priority="0" />
+      <Item value="Configuration" priority="0" />
+      <Item value="ConfigurationManager`0" priority="0" />
+      <Item value="WCFExample" priority="0" />
+      <Item value="ServiceClient" priority="1" />
+      <Item value="ServiceProxy`0" priority="0" />
+      <Item value="serviceProxy" priority="2" />
+      <Item value="ServiceProxy" priority="0" />
+      <Item value="Response" priority="0" />
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.ServiceModel.ClientBase`1">
+      <Item value="Channel" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WCFExamle.ServiceInterface.ICalculator">
+      <Item value="Add`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WCFExample.ServiceClient.ServiceFactory">
+      <Item value="GetInitBinding`0" priority="0" />
+      <Item value="GetCalculatorClient`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="IsNullOrEmpty`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Configuration.ConfigurationManager">
+      <Item value="AppSettings" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WCFExample.ServiceClient.ServiceProxy">
+      <Item value="Add`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpResponse">
+      <Item value="Write`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
