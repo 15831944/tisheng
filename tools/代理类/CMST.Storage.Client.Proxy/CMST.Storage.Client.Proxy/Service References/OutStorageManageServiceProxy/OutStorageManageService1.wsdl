@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="OutStorageManageService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IOutStorageManageProxy_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <msf:Streamed xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IOutStorageManageProxy_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.4.80:8082/OutStorageManageService?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/OutStorageManageService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/OutStorageManageService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/OutStorageManageService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.SpecialBusiness" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOutStorageManageProxy_TempSaveOutBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:TempSaveOutBill" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_TempSaveOutBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TempSaveOutBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_CheckOutPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckOutPlan" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_CheckOutPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckOutPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_CheckNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckNew" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_CheckNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_SaveOutBillFact_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOutBillFact" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_SaveOutBillFact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOutBillFactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_InvalidPreGoods_InputMessage">
+    <wsdl:part name="parameters" element="tns:InvalidPreGoods" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_InvalidPreGoods_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InvalidPreGoodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_InvalidPreGoodsFacted_InputMessage">
+    <wsdl:part name="parameters" element="tns:InvalidPreGoodsFacted" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_InvalidPreGoodsFacted_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InvalidPreGoodsFactedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_DirectOutBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:DirectOutBill" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_DirectOutBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DirectOutBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_SaveAndCheckPreGoods_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAndCheckPreGoods" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_SaveAndCheckPreGoods_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAndCheckPreGoodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_ChangePreGoods_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePreGoods" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_ChangePreGoods_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePreGoodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_SwapOutPreGoods_InputMessage">
+    <wsdl:part name="parameters" element="tns:SwapOutPreGoods" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_SwapOutPreGoods_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SwapOutPreGoodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_Reassortment_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reassortment" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_Reassortment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReassortmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_ReviewOutCheck_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReviewOutCheck" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_ReviewOutCheck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReviewOutCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_InvalidOutPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:InvalidOutPlan" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_InvalidOutPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InvalidOutPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_PrintOutPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrintOutPlan" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_PrintOutPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrintOutPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_SubmitOutPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitOutPlan" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_SubmitOutPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitOutPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_SaveAndReViewOutPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAndReViewOutPlan" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_SaveAndReViewOutPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAndReViewOutPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_ReverseOutPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReverseOutPlan" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_ReverseOutPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReverseOutPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_QueryOutPlanByConditionsPageInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryOutPlanByConditionsPageInfo" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_QueryOutPlanByConditionsPageInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryOutPlanByConditionsPageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_QueryOutPlanByConditions_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryOutPlanByConditions" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_QueryOutPlanByConditions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryOutPlanByConditionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_QueryOutPlanByComIDAndBillOfLadingNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryOutPlanByComIDAndBillOfLadingNo" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_QueryOutPlanByComIDAndBillOfLadingNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryOutPlanByComIDAndBillOfLadingNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_CreatePreGoodsById_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePreGoodsById" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_CreatePreGoodsById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePreGoodsByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_SplitInvoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:SplitInvoice" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_SplitInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SplitInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_SplitInvoiceForPDA_InputMessage">
+    <wsdl:part name="parameters" element="tns:SplitInvoiceForPDA" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_SplitInvoiceForPDA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SplitInvoiceForPDAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_QueryOutStoreOnLineByConditions_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryOutStoreOnLineByConditions" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_QueryOutStoreOnLineByConditions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryOutStoreOnLineByConditionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_GenerateOutOnLine_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateOutOnLine" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_GenerateOutOnLine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateOutOnLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_GetOutStoreOnLineByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutStoreOnLineByID" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_GetOutStoreOnLineByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutStoreOnLineByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_UpdateOutOnLineStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOutOnLineStatus" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_UpdateOutOnLineStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOutOnLineStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_CheckOutOnLine_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckOutOnLine" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_CheckOutOnLine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckOutOnLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_QueryOplByTrackingNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryOplByTrackingNum" />
+  </wsdl:message>
+  <wsdl:message name="IOutStorageManageProxy_QueryOplByTrackingNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryOplByTrackingNumResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOutStorageManageProxy">
+    <wsdl:operation name="TempSaveOutBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/TempSaveOutBill" message="tns:IOutStorageManageProxy_TempSaveOutBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/TempSaveOutBillResponse" message="tns:IOutStorageManageProxy_TempSaveOutBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckOutPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/CheckOutPlan" message="tns:IOutStorageManageProxy_CheckOutPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/CheckOutPlanResponse" message="tns:IOutStorageManageProxy_CheckOutPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/CheckNew" message="tns:IOutStorageManageProxy_CheckNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/CheckNewResponse" message="tns:IOutStorageManageProxy_CheckNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveOutBillFact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/SaveOutBillFact" message="tns:IOutStorageManageProxy_SaveOutBillFact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/SaveOutBillFactResponse" message="tns:IOutStorageManageProxy_SaveOutBillFact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InvalidPreGoods">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/InvalidPreGoods" message="tns:IOutStorageManageProxy_InvalidPreGoods_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/InvalidPreGoodsResponse" message="tns:IOutStorageManageProxy_InvalidPreGoods_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InvalidPreGoodsFacted">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/InvalidPreGoodsFacted" message="tns:IOutStorageManageProxy_InvalidPreGoodsFacted_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/InvalidPreGoodsFactedResponse" message="tns:IOutStorageManageProxy_InvalidPreGoodsFacted_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DirectOutBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/DirectOutBill" message="tns:IOutStorageManageProxy_DirectOutBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/DirectOutBillResponse" message="tns:IOutStorageManageProxy_DirectOutBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAndCheckPreGoods">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/SaveAndCheckPreGoods" message="tns:IOutStorageManageProxy_SaveAndCheckPreGoods_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/SaveAndCheckPreGoodsResponse" message="tns:IOutStorageManageProxy_SaveAndCheckPreGoods_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePreGoods">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/ChangePreGoods" message="tns:IOutStorageManageProxy_ChangePreGoods_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/ChangePreGoodsResponse" message="tns:IOutStorageManageProxy_ChangePreGoods_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SwapOutPreGoods">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/SwapOutPreGoods" message="tns:IOutStorageManageProxy_SwapOutPreGoods_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/SwapOutPreGoodsResponse" message="tns:IOutStorageManageProxy_SwapOutPreGoods_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reassortment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/Reassortment" message="tns:IOutStorageManageProxy_Reassortment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/ReassortmentResponse" message="tns:IOutStorageManageProxy_Reassortment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReviewOutCheck">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/ReviewOutCheck" message="tns:IOutStorageManageProxy_ReviewOutCheck_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/ReviewOutCheckResponse" message="tns:IOutStorageManageProxy_ReviewOutCheck_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InvalidOutPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/InvalidOutPlan" message="tns:IOutStorageManageProxy_InvalidOutPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/InvalidOutPlanResponse" message="tns:IOutStorageManageProxy_InvalidOutPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrintOutPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/PrintOutPlan" message="tns:IOutStorageManageProxy_PrintOutPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/PrintOutPlanResponse" message="tns:IOutStorageManageProxy_PrintOutPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitOutPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/SubmitOutPlan" message="tns:IOutStorageManageProxy_SubmitOutPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/SubmitOutPlanResponse" message="tns:IOutStorageManageProxy_SubmitOutPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAndReViewOutPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/SaveAndReViewOutPlan" message="tns:IOutStorageManageProxy_SaveAndReViewOutPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/SaveAndReViewOutPlanResponse" message="tns:IOutStorageManageProxy_SaveAndReViewOutPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReverseOutPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/ReverseOutPlan" message="tns:IOutStorageManageProxy_ReverseOutPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/ReverseOutPlanResponse" message="tns:IOutStorageManageProxy_ReverseOutPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOutPlanByConditionsPageInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/QueryOutPlanByConditionsPageInfo" message="tns:IOutStorageManageProxy_QueryOutPlanByConditionsPageInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/QueryOutPlanByConditionsPageInfoResponse" message="tns:IOutStorageManageProxy_QueryOutPlanByConditionsPageInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOutPlanByConditions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/QueryOutPlanByConditions" message="tns:IOutStorageManageProxy_QueryOutPlanByConditions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/QueryOutPlanByConditionsResponse" message="tns:IOutStorageManageProxy_QueryOutPlanByConditions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOutPlanByComIDAndBillOfLadingNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/QueryOutPlanByComIDAndBillOfLadingNo" message="tns:IOutStorageManageProxy_QueryOutPlanByComIDAndBillOfLadingNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/QueryOutPlanByComIDAndBillOfLadingNoResponse" message="tns:IOutStorageManageProxy_QueryOutPlanByComIDAndBillOfLadingNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePreGoodsById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/CreatePreGoodsById" message="tns:IOutStorageManageProxy_CreatePreGoodsById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/CreatePreGoodsByIdResponse" message="tns:IOutStorageManageProxy_CreatePreGoodsById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SplitInvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/SplitInvoice" message="tns:IOutStorageManageProxy_SplitInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/SplitInvoiceResponse" message="tns:IOutStorageManageProxy_SplitInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SplitInvoiceForPDA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/SplitInvoiceForPDA" message="tns:IOutStorageManageProxy_SplitInvoiceForPDA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/SplitInvoiceForPDAResponse" message="tns:IOutStorageManageProxy_SplitInvoiceForPDA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOutStoreOnLineByConditions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/QueryOutStoreOnLineByConditions" message="tns:IOutStorageManageProxy_QueryOutStoreOnLineByConditions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/QueryOutStoreOnLineByConditionsResponse" message="tns:IOutStorageManageProxy_QueryOutStoreOnLineByConditions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateOutOnLine">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/GenerateOutOnLine" message="tns:IOutStorageManageProxy_GenerateOutOnLine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/GenerateOutOnLineResponse" message="tns:IOutStorageManageProxy_GenerateOutOnLine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutStoreOnLineByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/GetOutStoreOnLineByID" message="tns:IOutStorageManageProxy_GetOutStoreOnLineByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/GetOutStoreOnLineByIDResponse" message="tns:IOutStorageManageProxy_GetOutStoreOnLineByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOutOnLineStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/UpdateOutOnLineStatus" message="tns:IOutStorageManageProxy_UpdateOutOnLineStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/UpdateOutOnLineStatusResponse" message="tns:IOutStorageManageProxy_UpdateOutOnLineStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckOutOnLine">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/CheckOutOnLine" message="tns:IOutStorageManageProxy_CheckOutOnLine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/CheckOutOnLineResponse" message="tns:IOutStorageManageProxy_CheckOutOnLine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOplByTrackingNum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutStorageManage/QueryOplByTrackingNum" message="tns:IOutStorageManageProxy_QueryOplByTrackingNum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutStorageManage/QueryOplByTrackingNumResponse" message="tns:IOutStorageManageProxy_QueryOplByTrackingNum_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IOutStorageManageProxy" type="tns:IOutStorageManageProxy">
+    <wsp:PolicyReference URI="#NetTcpBinding_IOutStorageManageProxy_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="TempSaveOutBill">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/TempSaveOutBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOutPlan">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/CheckOutPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckNew">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/CheckNew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveOutBillFact">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/SaveOutBillFact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvalidPreGoods">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/InvalidPreGoods" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvalidPreGoodsFacted">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/InvalidPreGoodsFacted" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DirectOutBill">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/DirectOutBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAndCheckPreGoods">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/SaveAndCheckPreGoods" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePreGoods">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/ChangePreGoods" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SwapOutPreGoods">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/SwapOutPreGoods" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reassortment">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/Reassortment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReviewOutCheck">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/ReviewOutCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvalidOutPlan">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/InvalidOutPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintOutPlan">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/PrintOutPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitOutPlan">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/SubmitOutPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAndReViewOutPlan">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/SaveAndReViewOutPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReverseOutPlan">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/ReverseOutPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOutPlanByConditionsPageInfo">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/QueryOutPlanByConditionsPageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOutPlanByConditions">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/QueryOutPlanByConditions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOutPlanByComIDAndBillOfLadingNo">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/QueryOutPlanByComIDAndBillOfLadingNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePreGoodsById">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/CreatePreGoodsById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SplitInvoice">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/SplitInvoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SplitInvoiceForPDA">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/SplitInvoiceForPDA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOutStoreOnLineByConditions">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/QueryOutStoreOnLineByConditions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateOutOnLine">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/GenerateOutOnLine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutStoreOnLineByID">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/GetOutStoreOnLineByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOutOnLineStatus">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/UpdateOutOnLineStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOutOnLine">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/CheckOutOnLine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOplByTrackingNum">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/QueryOplByTrackingNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSHttpBinding_IOutStorageManageProxy" type="tns:IOutStorageManageProxy">
+    <wsp:PolicyReference URI="#WSHttpBinding_IOutStorageManageProxy_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TempSaveOutBill">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/TempSaveOutBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOutPlan">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/CheckOutPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckNew">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/CheckNew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveOutBillFact">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/SaveOutBillFact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvalidPreGoods">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/InvalidPreGoods" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvalidPreGoodsFacted">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/InvalidPreGoodsFacted" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DirectOutBill">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/DirectOutBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAndCheckPreGoods">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/SaveAndCheckPreGoods" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePreGoods">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/ChangePreGoods" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SwapOutPreGoods">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/SwapOutPreGoods" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reassortment">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/Reassortment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReviewOutCheck">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/ReviewOutCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvalidOutPlan">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/InvalidOutPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintOutPlan">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/PrintOutPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitOutPlan">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/SubmitOutPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAndReViewOutPlan">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/SaveAndReViewOutPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReverseOutPlan">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/ReverseOutPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOutPlanByConditionsPageInfo">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/QueryOutPlanByConditionsPageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOutPlanByConditions">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/QueryOutPlanByConditions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOutPlanByComIDAndBillOfLadingNo">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/QueryOutPlanByComIDAndBillOfLadingNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePreGoodsById">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/CreatePreGoodsById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SplitInvoice">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/SplitInvoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SplitInvoiceForPDA">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/SplitInvoiceForPDA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOutStoreOnLineByConditions">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/QueryOutStoreOnLineByConditions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateOutOnLine">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/GenerateOutOnLine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutStoreOnLineByID">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/GetOutStoreOnLineByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOutOnLineStatus">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/UpdateOutOnLineStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOutOnLine">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/CheckOutOnLine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOplByTrackingNum">
+      <soap12:operation soapAction="http://tempuri.org/IOutStorageManage/QueryOplByTrackingNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OutStorageManageService">
+    <wsdl:port name="NetTcpBinding_IOutStorageManageProxy" binding="tns:NetTcpBinding_IOutStorageManageProxy">
+      <soap12:address location="net.tcp://192.168.4.80:8081/OutStorageManageService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://192.168.4.80:8081/OutStorageManageService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="WSHttpBinding_IOutStorageManageProxy" binding="tns:WSHttpBinding_IOutStorageManageProxy">
+      <soap12:address location="http://192.168.4.80:8082/OutStorageManageService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://192.168.4.80:8082/OutStorageManageService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

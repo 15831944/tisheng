@@ -1,0 +1,2126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BaseManage" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IBaseManageProxy_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <msf:Streamed xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IBaseManageProxy_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.4.80:8082/BaseManage?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/BaseManage?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/BaseManage?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.BaseManage" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/BaseManage?xsd=xsd3" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/BaseManage?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.InStore" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/BaseManage?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/BaseManage?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBaseManageProxy_GetDepositAndroid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepositAndroid" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetDepositAndroid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepositAndroidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetALLBillType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetALLBillType" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetALLBillType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetALLBillTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetDepartmentListByCmstName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepartmentListByCmstName" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetDepartmentListByCmstName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepartmentListByCmstNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetDepListByCmstIfUse_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepListByCmstIfUse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetDepListByCmstIfUse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepListByCmstIfUseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_SaveDepartment_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDepartment" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_SaveDepartment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetThreeLevelLinkedGoodsAllocationCache_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetThreeLevelLinkedGoodsAllocationCache" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetThreeLevelLinkedGoodsAllocationCache_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetThreeLevelLinkedGoodsAllocationCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_JudgeDepost_InputMessage">
+    <wsdl:part name="parameters" element="tns:JudgeDepost" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_JudgeDepost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JudgeDepostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_JudgeReservoirArea_InputMessage">
+    <wsdl:part name="parameters" element="tns:JudgeReservoirArea" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_JudgeReservoirArea_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JudgeReservoirAreaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_JudgeGoodsAllocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:JudgeGoodsAllocation" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_JudgeGoodsAllocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JudgeGoodsAllocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetRepAdress_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRepAdress" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetRepAdress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRepAdressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllOrganization_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrganization" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllOrganization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrganizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllOperatorList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOperatorList" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllOperatorList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOperatorListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_SaveOperator_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOperator" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_SaveOperator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOperatorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetOperatorListByCmstOrg_Role_Name_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperatorListByCmstOrg_Role_Name" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetOperatorListByCmstOrg_Role_Name_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperatorListByCmstOrg_Role_NameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetOperatorByOperatorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperatorByOperatorID" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetOperatorByOperatorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperatorByOperatorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetCompanyOperatorByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyOperatorByID" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetCompanyOperatorByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyOperatorByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetCompanyOperatorListByRoleAndOperater_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyOperatorListByRoleAndOperater" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetCompanyOperatorListByRoleAndOperater_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyOperatorListByRoleAndOperaterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_SaveCompanyOperator_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCompanyOperator" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_SaveCompanyOperator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCompanyOperatorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_SaveBindOrUnBindCA_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBindOrUnBindCA" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_SaveBindOrUnBindCA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBindOrUnBindCAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetOperatorByAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperatorByAccount" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetOperatorByAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperatorByAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetOperatorNameByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperatorNameByID" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetOperatorNameByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperatorNameByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_ValidatePrintPwd_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidatePrintPwd" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_ValidatePrintPwd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidatePrintPwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllReservoirArea_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllReservoirArea" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllReservoirArea_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllReservoirAreaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllRoleList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRoleList" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllRoleList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRoleListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllRoleListByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRoleListByName" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllRoleListByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRoleListByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetUseRoleList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUseRoleList" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetUseRoleList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUseRoleListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllRoleOperations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRoleOperations" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllRoleOperations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRoleOperationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_SaveRoleOperate_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRoleOperate" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_SaveRoleOperate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRoleOperateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_SaveRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRole" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_SaveRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetMenuUI_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuUI" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetMenuUI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuUIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_OrganizationEntityClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:OrganizationEntityClass" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_OrganizationEntityClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OrganizationEntityClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_StorageEntityClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:StorageEntityClass" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_StorageEntityClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StorageEntityClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetOperatorAuthorities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperatorAuthorities" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetOperatorAuthorities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperatorAuthoritiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetOperatorMenuAuthorities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperatorMenuAuthorities" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetOperatorMenuAuthorities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperatorMenuAuthoritiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllStorage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStorage" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllStorage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStorageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllStorageList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStorageList" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllStorageList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStorageListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_SaveStorage_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveStorage" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_SaveStorage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveStorageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllReservoirList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllReservoirList" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllReservoirList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllReservoirListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetPropertyList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPropertyList" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetPropertyList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPropertyListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllReservoirListByNamee_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllReservoirListByNamee" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllReservoirListByNamee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllReservoirListByNameeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_SaveReservoirStorage_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveReservoirStorage" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_SaveReservoirStorage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveReservoirStorageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetCBStorageData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCBStorageData" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetCBStorageData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCBStorageDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetCBReservoirData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCBReservoirData" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetCBReservoirData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCBReservoirDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetStorageData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStorageData" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetStorageData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStorageDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetReservoirData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReservoirData" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetReservoirData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReservoirDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetDepositPlaceData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepositPlaceData" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetDepositPlaceData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepositPlaceDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_InsertDepositPlace1_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDepositPlace1" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_InsertDepositPlace1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDepositPlace1Response" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_UpdateDepositPlace1_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDepositPlace1" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_UpdateDepositPlace1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDepositPlace1Response" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetStorageWayList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStorageWayList" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetStorageWayList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStorageWayListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetOutboundWayList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundWayList" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetOutboundWayList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutboundWayListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_SaveArrivalMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveArrivalMode" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_SaveArrivalMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveArrivalModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_SaveDeliveryMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDeliveryMode" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_SaveDeliveryMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDeliveryModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_QueryAllArrivalMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllArrivalMode" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_QueryAllArrivalMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllArrivalModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_QueryArrivalModeIfUse_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryArrivalModeIfUse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_QueryArrivalModeIfUse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryArrivalModeIfUseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_QueryAllDeliveryMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllDeliveryMode" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_QueryAllDeliveryMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllDeliveryModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_QueryDeliveryModeIfUse_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryDeliveryModeIfUse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_QueryDeliveryModeIfUse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryDeliveryModeIfUseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_QueryAllArrivalModeEntity_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllArrivalModeEntity" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_QueryAllArrivalModeEntity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllArrivalModeEntityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_QueryAllDeliveryModeEntity_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllDeliveryModeEntity" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_QueryAllDeliveryModeEntity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllDeliveryModeEntityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GenerateStorageWayClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateStorageWayClass" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GenerateStorageWayClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateStorageWayClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GenerateOutboundWayClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateOutboundWayClass" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GenerateOutboundWayClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateOutboundWayClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GenerateArrivalModeClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateArrivalModeClass" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GenerateArrivalModeClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateArrivalModeClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GenerateDeliveryModeClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateDeliveryModeClass" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GenerateDeliveryModeClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateDeliveryModeClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllStorageListByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStorageListByName" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetAllStorageListByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStorageListByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetStorageCache_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStorageCache" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetStorageCache_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStorageCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetDepPowerForAndoird_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepPowerForAndoird" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetDepPowerForAndoird_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepPowerForAndoirdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetPersonCache_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonCache" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetPersonCache_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetArrivalModeCache_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArrivalModeCache" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetArrivalModeCache_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArrivalModeCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetDeliveryModeCache_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeliveryModeCache" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetDeliveryModeCache_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeliveryModeCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetDepotsCache_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepotsCache" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetDepotsCache_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepotsCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetReservoirCacheAndroid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReservoirCacheAndroid" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetReservoirCacheAndroid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReservoirCacheAndroidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetDepositCacheAndroid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepositCacheAndroid" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetDepositCacheAndroid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepositCacheAndroidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetPersonCacheAndroid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonCacheAndroid" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetPersonCacheAndroid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonCacheAndroidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetArrivalDeliveryModeCacheAndroid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArrivalDeliveryModeCacheAndroid" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetArrivalDeliveryModeCacheAndroid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArrivalDeliveryModeCacheAndroidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetReservoirAreaEntityByOpeID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReservoirAreaEntityByOpeID" />
+  </wsdl:message>
+  <wsdl:message name="IBaseManageProxy_GetReservoirAreaEntityByOpeID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReservoirAreaEntityByOpeIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBaseManageProxy">
+    <wsdl:operation name="GetDepositAndroid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetDepositAndroid" message="tns:IBaseManageProxy_GetDepositAndroid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetDepositAndroidResponse" message="tns:IBaseManageProxy_GetDepositAndroid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetALLBillType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetALLBillType" message="tns:IBaseManageProxy_GetALLBillType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetALLBillTypeResponse" message="tns:IBaseManageProxy_GetALLBillType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentListByCmstName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetDepartmentListByCmstName" message="tns:IBaseManageProxy_GetDepartmentListByCmstName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetDepartmentListByCmstNameResponse" message="tns:IBaseManageProxy_GetDepartmentListByCmstName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepListByCmstIfUse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetDepListByCmstIfUse" message="tns:IBaseManageProxy_GetDepListByCmstIfUse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetDepListByCmstIfUseResponse" message="tns:IBaseManageProxy_GetDepListByCmstIfUse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDepartment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/SaveDepartment" message="tns:IBaseManageProxy_SaveDepartment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/SaveDepartmentResponse" message="tns:IBaseManageProxy_SaveDepartment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetThreeLevelLinkedGoodsAllocationCache">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetThreeLevelLinkedGoodsAllocationCache" message="tns:IBaseManageProxy_GetThreeLevelLinkedGoodsAllocationCache_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetThreeLevelLinkedGoodsAllocationCacheResponse" message="tns:IBaseManageProxy_GetThreeLevelLinkedGoodsAllocationCache_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JudgeDepost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/JudgeDepost" message="tns:IBaseManageProxy_JudgeDepost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/JudgeDepostResponse" message="tns:IBaseManageProxy_JudgeDepost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JudgeReservoirArea">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/JudgeReservoirArea" message="tns:IBaseManageProxy_JudgeReservoirArea_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/JudgeReservoirAreaResponse" message="tns:IBaseManageProxy_JudgeReservoirArea_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JudgeGoodsAllocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/JudgeGoodsAllocation" message="tns:IBaseManageProxy_JudgeGoodsAllocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/JudgeGoodsAllocationResponse" message="tns:IBaseManageProxy_JudgeGoodsAllocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRepAdress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetRepAdress" message="tns:IBaseManageProxy_GetRepAdress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetRepAdressResponse" message="tns:IBaseManageProxy_GetRepAdress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrganization">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetAllOrganization" message="tns:IBaseManageProxy_GetAllOrganization_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetAllOrganizationResponse" message="tns:IBaseManageProxy_GetAllOrganization_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOperatorList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetAllOperatorList" message="tns:IBaseManageProxy_GetAllOperatorList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetAllOperatorListResponse" message="tns:IBaseManageProxy_GetAllOperatorList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveOperator">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/SaveOperator" message="tns:IBaseManageProxy_SaveOperator_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/SaveOperatorResponse" message="tns:IBaseManageProxy_SaveOperator_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatorListByCmstOrg_Role_Name">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetOperatorListByCmstOrg_Role_Name" message="tns:IBaseManageProxy_GetOperatorListByCmstOrg_Role_Name_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetOperatorListByCmstOrg_Role_NameResponse" message="tns:IBaseManageProxy_GetOperatorListByCmstOrg_Role_Name_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatorByOperatorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetOperatorByOperatorID" message="tns:IBaseManageProxy_GetOperatorByOperatorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetOperatorByOperatorIDResponse" message="tns:IBaseManageProxy_GetOperatorByOperatorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyOperatorByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetCompanyOperatorByID" message="tns:IBaseManageProxy_GetCompanyOperatorByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetCompanyOperatorByIDResponse" message="tns:IBaseManageProxy_GetCompanyOperatorByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyOperatorListByRoleAndOperater">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetCompanyOperatorListByRoleAndOperater" message="tns:IBaseManageProxy_GetCompanyOperatorListByRoleAndOperater_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetCompanyOperatorListByRoleAndOperaterResponse" message="tns:IBaseManageProxy_GetCompanyOperatorListByRoleAndOperater_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCompanyOperator">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/SaveCompanyOperator" message="tns:IBaseManageProxy_SaveCompanyOperator_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/SaveCompanyOperatorResponse" message="tns:IBaseManageProxy_SaveCompanyOperator_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveBindOrUnBindCA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/SaveBindOrUnBindCA" message="tns:IBaseManageProxy_SaveBindOrUnBindCA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/SaveBindOrUnBindCAResponse" message="tns:IBaseManageProxy_SaveBindOrUnBindCA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatorByAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetOperatorByAccount" message="tns:IBaseManageProxy_GetOperatorByAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetOperatorByAccountResponse" message="tns:IBaseManageProxy_GetOperatorByAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatorNameByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetOperatorNameByID" message="tns:IBaseManageProxy_GetOperatorNameByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetOperatorNameByIDResponse" message="tns:IBaseManageProxy_GetOperatorNameByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePrintPwd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/ValidatePrintPwd" message="tns:IBaseManageProxy_ValidatePrintPwd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/ValidatePrintPwdResponse" message="tns:IBaseManageProxy_ValidatePrintPwd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllReservoirArea">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetAllReservoirArea" message="tns:IBaseManageProxy_GetAllReservoirArea_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetAllReservoirAreaResponse" message="tns:IBaseManageProxy_GetAllReservoirArea_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRoleList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetAllRoleList" message="tns:IBaseManageProxy_GetAllRoleList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetAllRoleListResponse" message="tns:IBaseManageProxy_GetAllRoleList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRoleListByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetAllRoleListByName" message="tns:IBaseManageProxy_GetAllRoleListByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetAllRoleListByNameResponse" message="tns:IBaseManageProxy_GetAllRoleListByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUseRoleList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetUseRoleList" message="tns:IBaseManageProxy_GetUseRoleList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetUseRoleListResponse" message="tns:IBaseManageProxy_GetUseRoleList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRoleOperations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetAllRoleOperations" message="tns:IBaseManageProxy_GetAllRoleOperations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetAllRoleOperationsResponse" message="tns:IBaseManageProxy_GetAllRoleOperations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRoleOperate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/SaveRoleOperate" message="tns:IBaseManageProxy_SaveRoleOperate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/SaveRoleOperateResponse" message="tns:IBaseManageProxy_SaveRoleOperate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/SaveRole" message="tns:IBaseManageProxy_SaveRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/SaveRoleResponse" message="tns:IBaseManageProxy_SaveRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuUI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetMenuUI" message="tns:IBaseManageProxy_GetMenuUI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetMenuUIResponse" message="tns:IBaseManageProxy_GetMenuUI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OrganizationEntityClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/OrganizationEntityClass" message="tns:IBaseManageProxy_OrganizationEntityClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/OrganizationEntityClassResponse" message="tns:IBaseManageProxy_OrganizationEntityClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StorageEntityClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/StorageEntityClass" message="tns:IBaseManageProxy_StorageEntityClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/StorageEntityClassResponse" message="tns:IBaseManageProxy_StorageEntityClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatorAuthorities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetOperatorAuthorities" message="tns:IBaseManageProxy_GetOperatorAuthorities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetOperatorAuthoritiesResponse" message="tns:IBaseManageProxy_GetOperatorAuthorities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatorMenuAuthorities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetOperatorMenuAuthorities" message="tns:IBaseManageProxy_GetOperatorMenuAuthorities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetOperatorMenuAuthoritiesResponse" message="tns:IBaseManageProxy_GetOperatorMenuAuthorities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStorage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetAllStorage" message="tns:IBaseManageProxy_GetAllStorage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetAllStorageResponse" message="tns:IBaseManageProxy_GetAllStorage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStorageList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetAllStorageList" message="tns:IBaseManageProxy_GetAllStorageList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetAllStorageListResponse" message="tns:IBaseManageProxy_GetAllStorageList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveStorage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/SaveStorage" message="tns:IBaseManageProxy_SaveStorage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/SaveStorageResponse" message="tns:IBaseManageProxy_SaveStorage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllReservoirList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetAllReservoirList" message="tns:IBaseManageProxy_GetAllReservoirList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetAllReservoirListResponse" message="tns:IBaseManageProxy_GetAllReservoirList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetPropertyList" message="tns:IBaseManageProxy_GetPropertyList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetPropertyListResponse" message="tns:IBaseManageProxy_GetPropertyList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllReservoirListByNamee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetAllReservoirListByNamee" message="tns:IBaseManageProxy_GetAllReservoirListByNamee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetAllReservoirListByNameeResponse" message="tns:IBaseManageProxy_GetAllReservoirListByNamee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveReservoirStorage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/SaveReservoirStorage" message="tns:IBaseManageProxy_SaveReservoirStorage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/SaveReservoirStorageResponse" message="tns:IBaseManageProxy_SaveReservoirStorage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCBStorageData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetCBStorageData" message="tns:IBaseManageProxy_GetCBStorageData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetCBStorageDataResponse" message="tns:IBaseManageProxy_GetCBStorageData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCBReservoirData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetCBReservoirData" message="tns:IBaseManageProxy_GetCBReservoirData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetCBReservoirDataResponse" message="tns:IBaseManageProxy_GetCBReservoirData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetStorageData" message="tns:IBaseManageProxy_GetStorageData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetStorageDataResponse" message="tns:IBaseManageProxy_GetStorageData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReservoirData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetReservoirData" message="tns:IBaseManageProxy_GetReservoirData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetReservoirDataResponse" message="tns:IBaseManageProxy_GetReservoirData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepositPlaceData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetDepositPlaceData" message="tns:IBaseManageProxy_GetDepositPlaceData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetDepositPlaceDataResponse" message="tns:IBaseManageProxy_GetDepositPlaceData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDepositPlace1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/InsertDepositPlace1" message="tns:IBaseManageProxy_InsertDepositPlace1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/InsertDepositPlace1Response" message="tns:IBaseManageProxy_InsertDepositPlace1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDepositPlace1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/UpdateDepositPlace1" message="tns:IBaseManageProxy_UpdateDepositPlace1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/UpdateDepositPlace1Response" message="tns:IBaseManageProxy_UpdateDepositPlace1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageWayList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetStorageWayList" message="tns:IBaseManageProxy_GetStorageWayList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetStorageWayListResponse" message="tns:IBaseManageProxy_GetStorageWayList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundWayList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetOutboundWayList" message="tns:IBaseManageProxy_GetOutboundWayList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetOutboundWayListResponse" message="tns:IBaseManageProxy_GetOutboundWayList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveArrivalMode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/SaveArrivalMode" message="tns:IBaseManageProxy_SaveArrivalMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/SaveArrivalModeResponse" message="tns:IBaseManageProxy_SaveArrivalMode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDeliveryMode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/SaveDeliveryMode" message="tns:IBaseManageProxy_SaveDeliveryMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/SaveDeliveryModeResponse" message="tns:IBaseManageProxy_SaveDeliveryMode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllArrivalMode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/QueryAllArrivalMode" message="tns:IBaseManageProxy_QueryAllArrivalMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/QueryAllArrivalModeResponse" message="tns:IBaseManageProxy_QueryAllArrivalMode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryArrivalModeIfUse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/QueryArrivalModeIfUse" message="tns:IBaseManageProxy_QueryArrivalModeIfUse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/QueryArrivalModeIfUseResponse" message="tns:IBaseManageProxy_QueryArrivalModeIfUse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllDeliveryMode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/QueryAllDeliveryMode" message="tns:IBaseManageProxy_QueryAllDeliveryMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/QueryAllDeliveryModeResponse" message="tns:IBaseManageProxy_QueryAllDeliveryMode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryDeliveryModeIfUse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/QueryDeliveryModeIfUse" message="tns:IBaseManageProxy_QueryDeliveryModeIfUse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/QueryDeliveryModeIfUseResponse" message="tns:IBaseManageProxy_QueryDeliveryModeIfUse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllArrivalModeEntity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/QueryAllArrivalModeEntity" message="tns:IBaseManageProxy_QueryAllArrivalModeEntity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/QueryAllArrivalModeEntityResponse" message="tns:IBaseManageProxy_QueryAllArrivalModeEntity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllDeliveryModeEntity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/QueryAllDeliveryModeEntity" message="tns:IBaseManageProxy_QueryAllDeliveryModeEntity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/QueryAllDeliveryModeEntityResponse" message="tns:IBaseManageProxy_QueryAllDeliveryModeEntity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateStorageWayClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GenerateStorageWayClass" message="tns:IBaseManageProxy_GenerateStorageWayClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GenerateStorageWayClassResponse" message="tns:IBaseManageProxy_GenerateStorageWayClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateOutboundWayClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GenerateOutboundWayClass" message="tns:IBaseManageProxy_GenerateOutboundWayClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GenerateOutboundWayClassResponse" message="tns:IBaseManageProxy_GenerateOutboundWayClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateArrivalModeClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GenerateArrivalModeClass" message="tns:IBaseManageProxy_GenerateArrivalModeClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GenerateArrivalModeClassResponse" message="tns:IBaseManageProxy_GenerateArrivalModeClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDeliveryModeClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GenerateDeliveryModeClass" message="tns:IBaseManageProxy_GenerateDeliveryModeClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GenerateDeliveryModeClassResponse" message="tns:IBaseManageProxy_GenerateDeliveryModeClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStorageListByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetAllStorageListByName" message="tns:IBaseManageProxy_GetAllStorageListByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetAllStorageListByNameResponse" message="tns:IBaseManageProxy_GetAllStorageListByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageCache">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetStorageCache" message="tns:IBaseManageProxy_GetStorageCache_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetStorageCacheResponse" message="tns:IBaseManageProxy_GetStorageCache_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepPowerForAndoird">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetDepPowerForAndoird" message="tns:IBaseManageProxy_GetDepPowerForAndoird_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetDepPowerForAndoirdResponse" message="tns:IBaseManageProxy_GetDepPowerForAndoird_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonCache">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetPersonCache" message="tns:IBaseManageProxy_GetPersonCache_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetPersonCacheResponse" message="tns:IBaseManageProxy_GetPersonCache_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArrivalModeCache">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetArrivalModeCache" message="tns:IBaseManageProxy_GetArrivalModeCache_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetArrivalModeCacheResponse" message="tns:IBaseManageProxy_GetArrivalModeCache_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveryModeCache">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetDeliveryModeCache" message="tns:IBaseManageProxy_GetDeliveryModeCache_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetDeliveryModeCacheResponse" message="tns:IBaseManageProxy_GetDeliveryModeCache_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepotsCache">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetDepotsCache" message="tns:IBaseManageProxy_GetDepotsCache_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetDepotsCacheResponse" message="tns:IBaseManageProxy_GetDepotsCache_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReservoirCacheAndroid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetReservoirCacheAndroid" message="tns:IBaseManageProxy_GetReservoirCacheAndroid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetReservoirCacheAndroidResponse" message="tns:IBaseManageProxy_GetReservoirCacheAndroid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepositCacheAndroid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetDepositCacheAndroid" message="tns:IBaseManageProxy_GetDepositCacheAndroid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetDepositCacheAndroidResponse" message="tns:IBaseManageProxy_GetDepositCacheAndroid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonCacheAndroid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetPersonCacheAndroid" message="tns:IBaseManageProxy_GetPersonCacheAndroid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetPersonCacheAndroidResponse" message="tns:IBaseManageProxy_GetPersonCacheAndroid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArrivalDeliveryModeCacheAndroid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetArrivalDeliveryModeCacheAndroid" message="tns:IBaseManageProxy_GetArrivalDeliveryModeCacheAndroid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetArrivalDeliveryModeCacheAndroidResponse" message="tns:IBaseManageProxy_GetArrivalDeliveryModeCacheAndroid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReservoirAreaEntityByOpeID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseManage/GetReservoirAreaEntityByOpeID" message="tns:IBaseManageProxy_GetReservoirAreaEntityByOpeID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseManage/GetReservoirAreaEntityByOpeIDResponse" message="tns:IBaseManageProxy_GetReservoirAreaEntityByOpeID_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IBaseManageProxy" type="tns:IBaseManageProxy">
+    <wsp:PolicyReference URI="#NetTcpBinding_IBaseManageProxy_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetDepositAndroid">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetDepositAndroid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetALLBillType">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetALLBillType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentListByCmstName">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetDepartmentListByCmstName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepListByCmstIfUse">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetDepListByCmstIfUse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDepartment">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/SaveDepartment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThreeLevelLinkedGoodsAllocationCache">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetThreeLevelLinkedGoodsAllocationCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JudgeDepost">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/JudgeDepost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JudgeReservoirArea">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/JudgeReservoirArea" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JudgeGoodsAllocation">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/JudgeGoodsAllocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRepAdress">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetRepAdress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrganization">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllOrganization" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOperatorList">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllOperatorList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveOperator">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/SaveOperator" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatorListByCmstOrg_Role_Name">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetOperatorListByCmstOrg_Role_Name" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatorByOperatorID">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetOperatorByOperatorID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyOperatorByID">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetCompanyOperatorByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyOperatorListByRoleAndOperater">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetCompanyOperatorListByRoleAndOperater" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCompanyOperator">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/SaveCompanyOperator" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveBindOrUnBindCA">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/SaveBindOrUnBindCA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatorByAccount">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetOperatorByAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatorNameByID">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetOperatorNameByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePrintPwd">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/ValidatePrintPwd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllReservoirArea">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllReservoirArea" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRoleList">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllRoleList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRoleListByName">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllRoleListByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUseRoleList">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetUseRoleList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRoleOperations">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllRoleOperations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRoleOperate">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/SaveRoleOperate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRole">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/SaveRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuUI">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetMenuUI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrganizationEntityClass">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/OrganizationEntityClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StorageEntityClass">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/StorageEntityClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatorAuthorities">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetOperatorAuthorities" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatorMenuAuthorities">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetOperatorMenuAuthorities" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStorage">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllStorage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStorageList">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllStorageList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveStorage">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/SaveStorage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllReservoirList">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllReservoirList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyList">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetPropertyList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllReservoirListByNamee">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllReservoirListByNamee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveReservoirStorage">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/SaveReservoirStorage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCBStorageData">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetCBStorageData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCBReservoirData">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetCBReservoirData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageData">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetStorageData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReservoirData">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetReservoirData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepositPlaceData">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetDepositPlaceData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDepositPlace1">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/InsertDepositPlace1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDepositPlace1">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/UpdateDepositPlace1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageWayList">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetStorageWayList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundWayList">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetOutboundWayList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveArrivalMode">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/SaveArrivalMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDeliveryMode">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/SaveDeliveryMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllArrivalMode">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/QueryAllArrivalMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryArrivalModeIfUse">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/QueryArrivalModeIfUse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllDeliveryMode">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/QueryAllDeliveryMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryDeliveryModeIfUse">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/QueryDeliveryModeIfUse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllArrivalModeEntity">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/QueryAllArrivalModeEntity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllDeliveryModeEntity">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/QueryAllDeliveryModeEntity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateStorageWayClass">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GenerateStorageWayClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateOutboundWayClass">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GenerateOutboundWayClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateArrivalModeClass">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GenerateArrivalModeClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDeliveryModeClass">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GenerateDeliveryModeClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStorageListByName">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllStorageListByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageCache">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetStorageCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepPowerForAndoird">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetDepPowerForAndoird" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonCache">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetPersonCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArrivalModeCache">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetArrivalModeCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveryModeCache">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetDeliveryModeCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepotsCache">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetDepotsCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReservoirCacheAndroid">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetReservoirCacheAndroid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepositCacheAndroid">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetDepositCacheAndroid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonCacheAndroid">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetPersonCacheAndroid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArrivalDeliveryModeCacheAndroid">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetArrivalDeliveryModeCacheAndroid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReservoirAreaEntityByOpeID">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetReservoirAreaEntityByOpeID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSHttpBinding_IBaseManageProxy" type="tns:IBaseManageProxy">
+    <wsp:PolicyReference URI="#WSHttpBinding_IBaseManageProxy_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDepositAndroid">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetDepositAndroid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetALLBillType">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetALLBillType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentListByCmstName">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetDepartmentListByCmstName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepListByCmstIfUse">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetDepListByCmstIfUse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDepartment">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/SaveDepartment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThreeLevelLinkedGoodsAllocationCache">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetThreeLevelLinkedGoodsAllocationCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JudgeDepost">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/JudgeDepost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JudgeReservoirArea">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/JudgeReservoirArea" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JudgeGoodsAllocation">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/JudgeGoodsAllocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRepAdress">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetRepAdress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrganization">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllOrganization" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOperatorList">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllOperatorList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveOperator">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/SaveOperator" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatorListByCmstOrg_Role_Name">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetOperatorListByCmstOrg_Role_Name" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatorByOperatorID">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetOperatorByOperatorID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyOperatorByID">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetCompanyOperatorByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyOperatorListByRoleAndOperater">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetCompanyOperatorListByRoleAndOperater" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCompanyOperator">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/SaveCompanyOperator" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveBindOrUnBindCA">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/SaveBindOrUnBindCA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatorByAccount">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetOperatorByAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatorNameByID">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetOperatorNameByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePrintPwd">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/ValidatePrintPwd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllReservoirArea">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllReservoirArea" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRoleList">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllRoleList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRoleListByName">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllRoleListByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUseRoleList">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetUseRoleList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRoleOperations">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllRoleOperations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRoleOperate">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/SaveRoleOperate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRole">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/SaveRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuUI">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetMenuUI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrganizationEntityClass">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/OrganizationEntityClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StorageEntityClass">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/StorageEntityClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatorAuthorities">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetOperatorAuthorities" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatorMenuAuthorities">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetOperatorMenuAuthorities" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStorage">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllStorage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStorageList">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllStorageList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveStorage">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/SaveStorage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllReservoirList">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllReservoirList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyList">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetPropertyList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllReservoirListByNamee">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllReservoirListByNamee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveReservoirStorage">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/SaveReservoirStorage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCBStorageData">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetCBStorageData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCBReservoirData">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetCBReservoirData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageData">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetStorageData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReservoirData">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetReservoirData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepositPlaceData">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetDepositPlaceData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDepositPlace1">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/InsertDepositPlace1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDepositPlace1">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/UpdateDepositPlace1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageWayList">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetStorageWayList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutboundWayList">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetOutboundWayList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveArrivalMode">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/SaveArrivalMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDeliveryMode">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/SaveDeliveryMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllArrivalMode">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/QueryAllArrivalMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryArrivalModeIfUse">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/QueryArrivalModeIfUse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllDeliveryMode">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/QueryAllDeliveryMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryDeliveryModeIfUse">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/QueryDeliveryModeIfUse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllArrivalModeEntity">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/QueryAllArrivalModeEntity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllDeliveryModeEntity">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/QueryAllDeliveryModeEntity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateStorageWayClass">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GenerateStorageWayClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateOutboundWayClass">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GenerateOutboundWayClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateArrivalModeClass">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GenerateArrivalModeClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDeliveryModeClass">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GenerateDeliveryModeClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStorageListByName">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetAllStorageListByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageCache">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetStorageCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepPowerForAndoird">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetDepPowerForAndoird" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonCache">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetPersonCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArrivalModeCache">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetArrivalModeCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveryModeCache">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetDeliveryModeCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepotsCache">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetDepotsCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReservoirCacheAndroid">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetReservoirCacheAndroid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepositCacheAndroid">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetDepositCacheAndroid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonCacheAndroid">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetPersonCacheAndroid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArrivalDeliveryModeCacheAndroid">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetArrivalDeliveryModeCacheAndroid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReservoirAreaEntityByOpeID">
+      <soap12:operation soapAction="http://tempuri.org/IBaseManage/GetReservoirAreaEntityByOpeID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BaseManage">
+    <wsdl:port name="NetTcpBinding_IBaseManageProxy" binding="tns:NetTcpBinding_IBaseManageProxy">
+      <soap12:address location="net.tcp://192.168.4.80:8081/BaseManage" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://192.168.4.80:8081/BaseManage</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="WSHttpBinding_IBaseManageProxy" binding="tns:WSHttpBinding_IBaseManageProxy">
+      <soap12:address location="http://192.168.4.80:8082/BaseManage" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://192.168.4.80:8082/BaseManage</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

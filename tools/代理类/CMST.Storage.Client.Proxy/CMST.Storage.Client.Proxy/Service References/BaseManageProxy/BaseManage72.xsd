@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="DeliveryMode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DmoCmstId" type="xs:int" />
+      <xs:element minOccurs="0" name="DmoId" type="xs:int" />
+      <xs:element minOccurs="0" name="DmoIfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DmoName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DmoOwaId" type="xs:int" />
+      <xs:element minOccurs="0" name="DmoOwaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DmoRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DmoUseStatus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeliveryMode" nillable="true" type="tns:DeliveryMode" />
+  <xs:complexType name="OutboundWay">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OwaId" type="xs:int" />
+      <xs:element minOccurs="0" name="OwaIfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OwaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwaRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwaUseStatus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OutboundWay" nillable="true" type="tns:OutboundWay" />
+</xs:schema>

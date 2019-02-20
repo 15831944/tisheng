@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ReportManage" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IReportManageProxy_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <msf:Streamed xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IReportManageProxy_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://127.0.0.1:8902/ReportManage?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://127.0.0.1:8902/ReportManage?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://127.0.0.1:8902/ReportManage?xsd=xsd2" />
+      <xsd:import schemaLocation="http://127.0.0.1:8902/ReportManage?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.ReportServer.Data.ReportManage" />
+      <xsd:import schemaLocation="http://127.0.0.1:8902/ReportManage?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.ReportServer.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IReportManageProxy_GetReportTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportTest" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_GetReportTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_GetReportCountTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportCountTest" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_GetReportCountTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportCountTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_TestReportStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestReportStatus" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_TestReportStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestReportStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_GetThroughputRowCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetThroughputRowCount" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_GetThroughputRowCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetThroughputRowCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_GetThroughputReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetThroughputReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_GetThroughputReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetThroughputReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_GetStorageDetailRowCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStorageDetailRowCount" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_GetStorageDetailRowCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStorageDetailRowCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_GetStorageDetailReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStorageDetailReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_GetStorageDetailReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStorageDetailReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_GetDeliveryDetailRowCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeliveryDetailRowCount" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_GetDeliveryDetailRowCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeliveryDetailRowCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_GetDeliveryDetailReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeliveryDetailReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_GetDeliveryDetailReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeliveryDetailReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_GetInOutDetailRowCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInOutDetailRowCount" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_GetInOutDetailRowCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInOutDetailRowCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_GetInOutDetailReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInOutDetailReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_GetInOutDetailReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInOutDetailReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_QueryStockHistoryRowCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStockHistoryRowCount" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_QueryStockHistoryRowCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStockHistoryRowCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_QueryStockHistoryDetailReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStockHistoryDetailReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_QueryStockHistoryDetailReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStockHistoryDetailReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_StockHistoryClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:StockHistoryClass" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_StockHistoryClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StockHistoryClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_QueryStockBalanceRowCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStockBalanceRowCount" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_QueryStockBalanceRowCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStockBalanceRowCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_QueryStockBalanceDetailReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStockBalanceDetailReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_QueryStockBalanceDetailReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStockBalanceDetailReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_StockBalanceClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:StockBalanceClass" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_StockBalanceClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StockBalanceClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_QueryGoodsFlowRankRowCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryGoodsFlowRankRowCount" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_QueryGoodsFlowRankRowCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryGoodsFlowRankRowCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_QueryGoodsFlowRankReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryGoodsFlowRankReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_QueryGoodsFlowRankReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryGoodsFlowRankReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_GoodsFlowRankClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GoodsFlowRankClass" />
+  </wsdl:message>
+  <wsdl:message name="IReportManageProxy_GoodsFlowRankClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GoodsFlowRankClassResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IReportManageProxy">
+    <wsdl:operation name="GetReportTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportManage/GetReportTest" message="tns:IReportManageProxy_GetReportTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportManage/GetReportTestResponse" message="tns:IReportManageProxy_GetReportTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportCountTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportManage/GetReportCountTest" message="tns:IReportManageProxy_GetReportCountTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportManage/GetReportCountTestResponse" message="tns:IReportManageProxy_GetReportCountTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestReportStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportManage/TestReportStatus" message="tns:IReportManageProxy_TestReportStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportManage/TestReportStatusResponse" message="tns:IReportManageProxy_TestReportStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetThroughputRowCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportManage/GetThroughputRowCount" message="tns:IReportManageProxy_GetThroughputRowCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportManage/GetThroughputRowCountResponse" message="tns:IReportManageProxy_GetThroughputRowCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetThroughputReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportManage/GetThroughputReport" message="tns:IReportManageProxy_GetThroughputReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportManage/GetThroughputReportResponse" message="tns:IReportManageProxy_GetThroughputReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageDetailRowCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportManage/GetStorageDetailRowCount" message="tns:IReportManageProxy_GetStorageDetailRowCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportManage/GetStorageDetailRowCountResponse" message="tns:IReportManageProxy_GetStorageDetailRowCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageDetailReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportManage/GetStorageDetailReport" message="tns:IReportManageProxy_GetStorageDetailReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportManage/GetStorageDetailReportResponse" message="tns:IReportManageProxy_GetStorageDetailReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveryDetailRowCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportManage/GetDeliveryDetailRowCount" message="tns:IReportManageProxy_GetDeliveryDetailRowCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportManage/GetDeliveryDetailRowCountResponse" message="tns:IReportManageProxy_GetDeliveryDetailRowCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveryDetailReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportManage/GetDeliveryDetailReport" message="tns:IReportManageProxy_GetDeliveryDetailReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportManage/GetDeliveryDetailReportResponse" message="tns:IReportManageProxy_GetDeliveryDetailReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInOutDetailRowCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportManage/GetInOutDetailRowCount" message="tns:IReportManageProxy_GetInOutDetailRowCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportManage/GetInOutDetailRowCountResponse" message="tns:IReportManageProxy_GetInOutDetailRowCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInOutDetailReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportManage/GetInOutDetailReport" message="tns:IReportManageProxy_GetInOutDetailReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportManage/GetInOutDetailReportResponse" message="tns:IReportManageProxy_GetInOutDetailReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockHistoryRowCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportManage/QueryStockHistoryRowCount" message="tns:IReportManageProxy_QueryStockHistoryRowCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportManage/QueryStockHistoryRowCountResponse" message="tns:IReportManageProxy_QueryStockHistoryRowCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockHistoryDetailReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportManage/QueryStockHistoryDetailReport" message="tns:IReportManageProxy_QueryStockHistoryDetailReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportManage/QueryStockHistoryDetailReportResponse" message="tns:IReportManageProxy_QueryStockHistoryDetailReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StockHistoryClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportManage/StockHistoryClass" message="tns:IReportManageProxy_StockHistoryClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportManage/StockHistoryClassResponse" message="tns:IReportManageProxy_StockHistoryClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockBalanceRowCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportManage/QueryStockBalanceRowCount" message="tns:IReportManageProxy_QueryStockBalanceRowCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportManage/QueryStockBalanceRowCountResponse" message="tns:IReportManageProxy_QueryStockBalanceRowCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockBalanceDetailReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportManage/QueryStockBalanceDetailReport" message="tns:IReportManageProxy_QueryStockBalanceDetailReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportManage/QueryStockBalanceDetailReportResponse" message="tns:IReportManageProxy_QueryStockBalanceDetailReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StockBalanceClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportManage/StockBalanceClass" message="tns:IReportManageProxy_StockBalanceClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportManage/StockBalanceClassResponse" message="tns:IReportManageProxy_StockBalanceClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryGoodsFlowRankRowCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportManage/QueryGoodsFlowRankRowCount" message="tns:IReportManageProxy_QueryGoodsFlowRankRowCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportManage/QueryGoodsFlowRankRowCountResponse" message="tns:IReportManageProxy_QueryGoodsFlowRankRowCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryGoodsFlowRankReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportManage/QueryGoodsFlowRankReport" message="tns:IReportManageProxy_QueryGoodsFlowRankReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportManage/QueryGoodsFlowRankReportResponse" message="tns:IReportManageProxy_QueryGoodsFlowRankReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GoodsFlowRankClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportManage/GoodsFlowRankClass" message="tns:IReportManageProxy_GoodsFlowRankClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportManage/GoodsFlowRankClassResponse" message="tns:IReportManageProxy_GoodsFlowRankClass_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IReportManageProxy" type="tns:IReportManageProxy">
+    <wsp:PolicyReference URI="#NetTcpBinding_IReportManageProxy_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetReportTest">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GetReportTest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportCountTest">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GetReportCountTest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestReportStatus">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/TestReportStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThroughputRowCount">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GetThroughputRowCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThroughputReport">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GetThroughputReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageDetailRowCount">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GetStorageDetailRowCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageDetailReport">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GetStorageDetailReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveryDetailRowCount">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GetDeliveryDetailRowCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveryDetailReport">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GetDeliveryDetailReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInOutDetailRowCount">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GetInOutDetailRowCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInOutDetailReport">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GetInOutDetailReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockHistoryRowCount">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/QueryStockHistoryRowCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockHistoryDetailReport">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/QueryStockHistoryDetailReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StockHistoryClass">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/StockHistoryClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockBalanceRowCount">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/QueryStockBalanceRowCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockBalanceDetailReport">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/QueryStockBalanceDetailReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StockBalanceClass">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/StockBalanceClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryGoodsFlowRankRowCount">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/QueryGoodsFlowRankRowCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryGoodsFlowRankReport">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/QueryGoodsFlowRankReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GoodsFlowRankClass">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GoodsFlowRankClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSHttpBinding_IReportManageProxy" type="tns:IReportManageProxy">
+    <wsp:PolicyReference URI="#WSHttpBinding_IReportManageProxy_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetReportTest">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GetReportTest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportCountTest">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GetReportCountTest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestReportStatus">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/TestReportStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThroughputRowCount">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GetThroughputRowCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThroughputReport">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GetThroughputReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageDetailRowCount">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GetStorageDetailRowCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageDetailReport">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GetStorageDetailReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveryDetailRowCount">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GetDeliveryDetailRowCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveryDetailReport">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GetDeliveryDetailReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInOutDetailRowCount">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GetInOutDetailRowCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInOutDetailReport">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GetInOutDetailReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockHistoryRowCount">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/QueryStockHistoryRowCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockHistoryDetailReport">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/QueryStockHistoryDetailReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StockHistoryClass">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/StockHistoryClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockBalanceRowCount">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/QueryStockBalanceRowCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockBalanceDetailReport">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/QueryStockBalanceDetailReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StockBalanceClass">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/StockBalanceClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryGoodsFlowRankRowCount">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/QueryGoodsFlowRankRowCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryGoodsFlowRankReport">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/QueryGoodsFlowRankReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GoodsFlowRankClass">
+      <soap12:operation soapAction="http://tempuri.org/IReportManage/GoodsFlowRankClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReportManage">
+    <wsdl:port name="NetTcpBinding_IReportManageProxy" binding="tns:NetTcpBinding_IReportManageProxy">
+      <soap12:address location="net.tcp://127.0.0.1:8901/ReportManage" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://127.0.0.1:8901/ReportManage</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="WSHttpBinding_IReportManageProxy" binding="tns:WSHttpBinding_IReportManageProxy">
+      <soap12:address location="http://127.0.0.1:8902/ReportManage" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://127.0.0.1:8902/ReportManage</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

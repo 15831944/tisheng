@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.ProductManage" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.ProductManage" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ProductInfoEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProCmstId" type="xs:int" />
+      <xs:element minOccurs="0" name="ProCmstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProGraId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProGraName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProHelpCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProId" type="xs:int" />
+      <xs:element minOccurs="0" name="ProIfDel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ProIfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ProIndId" type="xs:int" />
+      <xs:element minOccurs="0" name="ProIndName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProManId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProManName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProPacId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProPacName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProPnaId" type="xs:int" />
+      <xs:element minOccurs="0" name="ProPnaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProPprName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProProductId" type="xs:int" />
+      <xs:element minOccurs="0" name="ProSequence" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProSpeId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProSpeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProUseStstus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductInfoEntity" nillable="true" type="tns:ProductInfoEntity" />
+  <xs:complexType name="ProductNameEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CmstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IndName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PnaCmstId" type="xs:int" />
+      <xs:element minOccurs="0" name="PnaGbrId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PnaGbrName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PnaHelpCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PnaId" type="xs:int" />
+      <xs:element minOccurs="0" name="PnaIfDel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PnaIfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PnaIfUse2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PnaIndId" type="xs:int" />
+      <xs:element minOccurs="0" name="PnaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PnaRemark" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductNameEntity" nillable="true" type="tns:ProductNameEntity" />
+  <xs:complexType name="GoodsBreedEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GbrGclId" type="xs:int" />
+      <xs:element minOccurs="0" name="GbrGclName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GbrId" type="xs:int" />
+      <xs:element minOccurs="0" name="GbrIfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="GbrName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GbrRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GbrUseStatus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GoodsBreedEntity" nillable="true" type="tns:GoodsBreedEntity" />
+  <xs:complexType name="GoodsClassEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GclId" type="xs:int" />
+      <xs:element minOccurs="0" name="GclIfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="GclName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GclRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GclUseStatus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GoodsClassEntity" nillable="true" type="tns:GoodsClassEntity" />
+  <xs:complexType name="ManufacturerEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ManCmstId" type="xs:int" />
+      <xs:element minOccurs="0" name="ManId" type="xs:int" />
+      <xs:element minOccurs="0" name="ManIfDel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ManIfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ManIndId" type="xs:int" />
+      <xs:element minOccurs="0" name="ManName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ManRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ManUseStstus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ManufacturerEntity" nillable="true" type="tns:ManufacturerEntity" />
+  <xs:complexType name="PlasticizingProductsEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PprCmstId" type="xs:int" />
+      <xs:element minOccurs="0" name="PprGraId" type="xs:int" />
+      <xs:element minOccurs="0" name="PprGraName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PprId" type="xs:int" />
+      <xs:element minOccurs="0" name="PprIfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PprManId" type="xs:int" />
+      <xs:element minOccurs="0" name="PprManName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PprName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PprPacId" type="xs:int" />
+      <xs:element minOccurs="0" name="PprPacName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PprPnaId" type="xs:int" />
+      <xs:element minOccurs="0" name="PprPnaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PprSpeId" type="xs:int" />
+      <xs:element minOccurs="0" name="PprSpeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PprUseStstus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlasticizingProductsEntity" nillable="true" type="tns:PlasticizingProductsEntity" />
+  <xs:complexType name="CustomerProductEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CprCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CprComId" type="xs:int" />
+      <xs:element minOccurs="0" name="CprComName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CprId" type="xs:int" />
+      <xs:element minOccurs="0" name="CprIfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CprProId" type="xs:int" />
+      <xs:element minOccurs="0" name="CprProName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CprUseStstus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerProductEntity" nillable="true" type="tns:CustomerProductEntity" />
+  <xs:complexType name="SpecEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CmstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IndName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpeCmstId" type="xs:int" />
+      <xs:element minOccurs="0" name="SpeId" type="xs:int" />
+      <xs:element minOccurs="0" name="SpeIfDel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SpeIfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SpeIfUse2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpeIndId" type="xs:int" />
+      <xs:element minOccurs="0" name="SpeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpeRemark" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SpecEntity" nillable="true" type="tns:SpecEntity" />
+  <xs:complexType name="GradeEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CmstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GraCmstId" type="xs:int" />
+      <xs:element minOccurs="0" name="GraId" type="xs:int" />
+      <xs:element minOccurs="0" name="GraIfDel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="GraIfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="GraIfUse2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GraIndId" type="xs:int" />
+      <xs:element minOccurs="0" name="GraName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GraRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IndName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GradeEntity" nillable="true" type="tns:GradeEntity" />
+  <xs:complexType name="PackagingEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CmstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IndName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PacCmstId" type="xs:int" />
+      <xs:element minOccurs="0" name="PacId" type="xs:int" />
+      <xs:element minOccurs="0" name="PacIfDel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PacIfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PacIfUse2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PacIndId" type="xs:int" />
+      <xs:element minOccurs="0" name="PacName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PacRemark" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PackagingEntity" nillable="true" type="tns:PackagingEntity" />
+</xs:schema>

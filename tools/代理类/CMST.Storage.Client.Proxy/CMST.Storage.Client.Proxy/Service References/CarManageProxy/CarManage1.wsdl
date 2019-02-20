@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CarManage" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_ICarManageProxy_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <msf:Streamed xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICarManageProxy_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.4.80:8082/CarManage?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/CarManage?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/CarManage?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.CarManage" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICarManageProxy_SaveCarRegister_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCarRegister" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_SaveCarRegister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCarRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_BindCarRegisterWithBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:BindCarRegisterWithBill" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_BindCarRegisterWithBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BindCarRegisterWithBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryCarRegisterById_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCarRegisterById" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryCarRegisterById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCarRegisterByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryCarRegisterByBillNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCarRegisterByBillNo" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryCarRegisterByBillNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCarRegisterByBillNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryCarRegisterByCarNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCarRegisterByCarNo" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryCarRegisterByCarNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCarRegisterByCarNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryCarRegisterPageInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCarRegisterPageInfo" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryCarRegisterPageInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCarRegisterPageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryOutPlanByCarRegisterNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryOutPlanByCarRegisterNo" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryOutPlanByCarRegisterNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryOutPlanByCarRegisterNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryInStoreBillByCarRegisterNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryInStoreBillByCarRegisterNo" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryInStoreBillByCarRegisterNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryInStoreBillByCarRegisterNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_CheckCarRegister_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckCarRegister" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_CheckCarRegister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckCarRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryAllCarRegister_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllCarRegister" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryAllCarRegister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllCarRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryAllCarRegisterId_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllCarRegisterId" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryAllCarRegisterId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllCarRegisterIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryCarRegisterByCarNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCarRegisterByCarNum" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryCarRegisterByCarNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCarRegisterByCarNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryCarRegisterDetailCountByBillNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCarRegisterDetailCountByBillNo" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryCarRegisterDetailCountByBillNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCarRegisterDetailCountByBillNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryCarRegistersByBillNoAndBillType_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCarRegistersByBillNoAndBillType" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_QueryCarRegistersByBillNoAndBillType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCarRegistersByBillNoAndBillTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_UnBindCarRegisterWithBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnBindCarRegisterWithBill" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_UnBindCarRegisterWithBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnBindCarRegisterWithBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_GenerateCarRegisterClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateCarRegisterClass" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_GenerateCarRegisterClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateCarRegisterClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_GenerateOutStoreCheckClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateOutStoreCheckClass" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_GenerateOutStoreCheckClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateOutStoreCheckClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_GenerateInStoreCheckClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateInStoreCheckClass" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_GenerateInStoreCheckClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateInStoreCheckClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_UpdateRemakeByCreID_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRemakeByCreID" />
+  </wsdl:message>
+  <wsdl:message name="ICarManageProxy_UpdateRemakeByCreID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRemakeByCreIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICarManageProxy">
+    <wsdl:operation name="SaveCarRegister">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarManage/SaveCarRegister" message="tns:ICarManageProxy_SaveCarRegister_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarManage/SaveCarRegisterResponse" message="tns:ICarManageProxy_SaveCarRegister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BindCarRegisterWithBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarManage/BindCarRegisterWithBill" message="tns:ICarManageProxy_BindCarRegisterWithBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarManage/BindCarRegisterWithBillResponse" message="tns:ICarManageProxy_BindCarRegisterWithBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarRegisterById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarManage/QueryCarRegisterById" message="tns:ICarManageProxy_QueryCarRegisterById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarManage/QueryCarRegisterByIdResponse" message="tns:ICarManageProxy_QueryCarRegisterById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarRegisterByBillNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarManage/QueryCarRegisterByBillNo" message="tns:ICarManageProxy_QueryCarRegisterByBillNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarManage/QueryCarRegisterByBillNoResponse" message="tns:ICarManageProxy_QueryCarRegisterByBillNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarRegisterByCarNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarManage/QueryCarRegisterByCarNo" message="tns:ICarManageProxy_QueryCarRegisterByCarNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarManage/QueryCarRegisterByCarNoResponse" message="tns:ICarManageProxy_QueryCarRegisterByCarNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarRegisterPageInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarManage/QueryCarRegisterPageInfo" message="tns:ICarManageProxy_QueryCarRegisterPageInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarManage/QueryCarRegisterPageInfoResponse" message="tns:ICarManageProxy_QueryCarRegisterPageInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOutPlanByCarRegisterNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarManage/QueryOutPlanByCarRegisterNo" message="tns:ICarManageProxy_QueryOutPlanByCarRegisterNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarManage/QueryOutPlanByCarRegisterNoResponse" message="tns:ICarManageProxy_QueryOutPlanByCarRegisterNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryInStoreBillByCarRegisterNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarManage/QueryInStoreBillByCarRegisterNo" message="tns:ICarManageProxy_QueryInStoreBillByCarRegisterNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarManage/QueryInStoreBillByCarRegisterNoResponse" message="tns:ICarManageProxy_QueryInStoreBillByCarRegisterNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckCarRegister">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarManage/CheckCarRegister" message="tns:ICarManageProxy_CheckCarRegister_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarManage/CheckCarRegisterResponse" message="tns:ICarManageProxy_CheckCarRegister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllCarRegister">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarManage/QueryAllCarRegister" message="tns:ICarManageProxy_QueryAllCarRegister_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarManage/QueryAllCarRegisterResponse" message="tns:ICarManageProxy_QueryAllCarRegister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllCarRegisterId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarManage/QueryAllCarRegisterId" message="tns:ICarManageProxy_QueryAllCarRegisterId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarManage/QueryAllCarRegisterIdResponse" message="tns:ICarManageProxy_QueryAllCarRegisterId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarRegisterByCarNum">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarManage/QueryCarRegisterByCarNum" message="tns:ICarManageProxy_QueryCarRegisterByCarNum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarManage/QueryCarRegisterByCarNumResponse" message="tns:ICarManageProxy_QueryCarRegisterByCarNum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarRegisterDetailCountByBillNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarManage/QueryCarRegisterDetailCountByBillNo" message="tns:ICarManageProxy_QueryCarRegisterDetailCountByBillNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarManage/QueryCarRegisterDetailCountByBillNoResponse" message="tns:ICarManageProxy_QueryCarRegisterDetailCountByBillNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarRegistersByBillNoAndBillType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarManage/QueryCarRegistersByBillNoAndBillType" message="tns:ICarManageProxy_QueryCarRegistersByBillNoAndBillType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarManage/QueryCarRegistersByBillNoAndBillTypeResponse" message="tns:ICarManageProxy_QueryCarRegistersByBillNoAndBillType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnBindCarRegisterWithBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarManage/UnBindCarRegisterWithBill" message="tns:ICarManageProxy_UnBindCarRegisterWithBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarManage/UnBindCarRegisterWithBillResponse" message="tns:ICarManageProxy_UnBindCarRegisterWithBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateCarRegisterClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarManage/GenerateCarRegisterClass" message="tns:ICarManageProxy_GenerateCarRegisterClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarManage/GenerateCarRegisterClassResponse" message="tns:ICarManageProxy_GenerateCarRegisterClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateOutStoreCheckClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarManage/GenerateOutStoreCheckClass" message="tns:ICarManageProxy_GenerateOutStoreCheckClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarManage/GenerateOutStoreCheckClassResponse" message="tns:ICarManageProxy_GenerateOutStoreCheckClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateInStoreCheckClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarManage/GenerateInStoreCheckClass" message="tns:ICarManageProxy_GenerateInStoreCheckClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarManage/GenerateInStoreCheckClassResponse" message="tns:ICarManageProxy_GenerateInStoreCheckClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRemakeByCreID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarManage/UpdateRemakeByCreID" message="tns:ICarManageProxy_UpdateRemakeByCreID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarManage/UpdateRemakeByCreIDResponse" message="tns:ICarManageProxy_UpdateRemakeByCreID_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_ICarManageProxy" type="tns:ICarManageProxy">
+    <wsp:PolicyReference URI="#NetTcpBinding_ICarManageProxy_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="SaveCarRegister">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/SaveCarRegister" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindCarRegisterWithBill">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/BindCarRegisterWithBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarRegisterById">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryCarRegisterById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarRegisterByBillNo">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryCarRegisterByBillNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarRegisterByCarNo">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryCarRegisterByCarNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarRegisterPageInfo">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryCarRegisterPageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOutPlanByCarRegisterNo">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryOutPlanByCarRegisterNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryInStoreBillByCarRegisterNo">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryInStoreBillByCarRegisterNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckCarRegister">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/CheckCarRegister" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllCarRegister">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryAllCarRegister" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllCarRegisterId">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryAllCarRegisterId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarRegisterByCarNum">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryCarRegisterByCarNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarRegisterDetailCountByBillNo">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryCarRegisterDetailCountByBillNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarRegistersByBillNoAndBillType">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryCarRegistersByBillNoAndBillType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnBindCarRegisterWithBill">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/UnBindCarRegisterWithBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateCarRegisterClass">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/GenerateCarRegisterClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateOutStoreCheckClass">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/GenerateOutStoreCheckClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateInStoreCheckClass">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/GenerateInStoreCheckClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRemakeByCreID">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/UpdateRemakeByCreID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSHttpBinding_ICarManageProxy" type="tns:ICarManageProxy">
+    <wsp:PolicyReference URI="#WSHttpBinding_ICarManageProxy_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveCarRegister">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/SaveCarRegister" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindCarRegisterWithBill">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/BindCarRegisterWithBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarRegisterById">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryCarRegisterById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarRegisterByBillNo">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryCarRegisterByBillNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarRegisterByCarNo">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryCarRegisterByCarNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarRegisterPageInfo">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryCarRegisterPageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOutPlanByCarRegisterNo">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryOutPlanByCarRegisterNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryInStoreBillByCarRegisterNo">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryInStoreBillByCarRegisterNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckCarRegister">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/CheckCarRegister" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllCarRegister">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryAllCarRegister" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllCarRegisterId">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryAllCarRegisterId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarRegisterByCarNum">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryCarRegisterByCarNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarRegisterDetailCountByBillNo">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryCarRegisterDetailCountByBillNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarRegistersByBillNoAndBillType">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/QueryCarRegistersByBillNoAndBillType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnBindCarRegisterWithBill">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/UnBindCarRegisterWithBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateCarRegisterClass">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/GenerateCarRegisterClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateOutStoreCheckClass">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/GenerateOutStoreCheckClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateInStoreCheckClass">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/GenerateInStoreCheckClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRemakeByCreID">
+      <soap12:operation soapAction="http://tempuri.org/ICarManage/UpdateRemakeByCreID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CarManage">
+    <wsdl:port name="NetTcpBinding_ICarManageProxy" binding="tns:NetTcpBinding_ICarManageProxy">
+      <soap12:address location="net.tcp://192.168.4.80:8081/CarManage" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://192.168.4.80:8081/CarManage</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="WSHttpBinding_ICarManageProxy" binding="tns:WSHttpBinding_ICarManageProxy">
+      <soap12:address location="http://192.168.4.80:8082/CarManage" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://192.168.4.80:8082/CarManage</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

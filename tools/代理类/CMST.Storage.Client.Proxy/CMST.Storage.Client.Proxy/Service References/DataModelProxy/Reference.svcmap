@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a41d2f1a-ed3f-411f-9cca-5e4ee422cf27" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://127.0.0.1:8082/DataModelService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataModelService6.xsd" MetadataType="Schema" ID="2fcbb7fb-735e-42fc-9657-1784d45895a4" SourceId="1" SourceUrl="http://192.168.4.80:8082/DataModelService?xsd=xsd3" />
+    <MetadataFile FileName="DataModelService61.xsd" MetadataType="Schema" ID="42d4795a-6d4b-4c8d-8deb-c3bf0327c5ba" SourceId="1" SourceUrl="http://192.168.4.80:8082/DataModelService?xsd=xsd2" />
+    <MetadataFile FileName="DataModelService62.xsd" MetadataType="Schema" ID="aebe1568-185f-4b62-90b5-29da2b059158" SourceId="1" SourceUrl="http://192.168.4.80:8082/DataModelService?xsd=xsd1" />
+    <MetadataFile FileName="DataModelService63.xsd" MetadataType="Schema" ID="1f2db6e0-5bb3-4daa-8418-8261f18f010b" SourceId="1" SourceUrl="http://192.168.4.80:8082/DataModelService?xsd=xsd0" />
+    <MetadataFile FileName="DataModelService64.xsd" MetadataType="Schema" ID="4903c87c-092a-47b8-978d-0d297a4093e5" SourceId="1" SourceUrl="http://192.168.4.80:8082/DataModelService?xsd=xsd5" />
+    <MetadataFile FileName="DataModelService1.disco" MetadataType="Disco" ID="05136f05-d196-4ebd-a273-c3317403ee39" SourceId="1" SourceUrl="http://192.168.4.80:8082/DataModelService?disco" />
+    <MetadataFile FileName="DataModelService1.wsdl" MetadataType="Wsdl" ID="24d8f90c-a886-46ac-aa38-c6f2b7345b37" SourceId="1" SourceUrl="http://192.168.4.80:8082/DataModelService?wsdl" />
+    <MetadataFile FileName="DataModelService65.xsd" MetadataType="Schema" ID="3a6b35ed-a1a7-4418-84d9-8a1c1beda4ed" SourceId="1" SourceUrl="http://192.168.4.80:8082/DataModelService?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

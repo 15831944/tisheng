@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.4.80:8082/OutStorageManageService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" />
+  <xs:import schemaLocation="http://192.168.4.80:8082/OutStorageManageService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.SpecialBusiness" />
+  <xs:element name="TempSaveOutBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" minOccurs="0" name="outPlan" nillable="true" type="q1:OutPlan" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TempSaveOutBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TempSaveOutBillResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckOutPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:long" />
+        <xs:element minOccurs="0" name="checker" type="xs:int" />
+        <xs:element minOccurs="0" name="companyId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckOutPlanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckOutPlanResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="totalId" type="xs:long" />
+        <xs:element minOccurs="0" name="checker" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveOutBillFact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="billId" type="xs:long" />
+        <xs:element minOccurs="0" name="operater" type="xs:int" />
+        <xs:element minOccurs="0" name="companyId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveOutBillFactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveOutBillFactResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvalidPreGoods">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pgoId" type="xs:long" />
+        <xs:element minOccurs="0" name="operater" type="xs:int" />
+        <xs:element minOccurs="0" name="companyId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvalidPreGoodsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InvalidPreGoodsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvalidPreGoodsFacted">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pgoId" type="xs:long" />
+        <xs:element minOccurs="0" name="operater" type="xs:int" />
+        <xs:element minOccurs="0" name="companyId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvalidPreGoodsFactedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InvalidPreGoodsFactedResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DirectOutBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" minOccurs="0" name="outPlan" nillable="true" type="q2:OutPlan" />
+        <xs:element minOccurs="0" name="companyId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DirectOutBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DirectOutBillResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAndCheckPreGoods">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" minOccurs="0" name="prepareGoods" nillable="true" type="q3:PrepareGoods" />
+        <xs:element minOccurs="0" name="operater" type="xs:int" />
+        <xs:element minOccurs="0" name="companyId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAndCheckPreGoodsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveAndCheckPreGoodsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePreGoods">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pgoId" type="xs:long" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" minOccurs="0" name="prepareGoodsNew" nillable="true" type="q4:PrepareGoods" />
+        <xs:element minOccurs="0" name="operater" type="xs:int" />
+        <xs:element minOccurs="0" name="companyId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePreGoodsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ChangePreGoodsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SwapOutPreGoods">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pgoId" type="xs:long" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" minOccurs="0" name="prepareGoodsNew" nillable="true" type="q5:PrepareGoods" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.SpecialBusiness" minOccurs="0" name="transposition" nillable="true" type="q6:Transposition" />
+        <xs:element minOccurs="0" name="operater" type="xs:int" />
+        <xs:element minOccurs="0" name="oldCompanyId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SwapOutPreGoodsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SwapOutPreGoodsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Reassortment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" minOccurs="0" name="prepareGoodsNew" nillable="true" type="q7:PrepareGoods" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" minOccurs="0" name="prepareGoodsOld" nillable="true" type="q8:PrepareGoods" />
+        <xs:element minOccurs="0" name="operater" type="xs:int" />
+        <xs:element minOccurs="0" name="cmstId" type="xs:int" />
+        <xs:element minOccurs="0" name="depId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReassortmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReassortmentResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReviewOutCheck">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="outPlanId" type="xs:long" />
+        <xs:element minOccurs="0" name="checker" type="xs:int" />
+        <xs:element minOccurs="0" name="companyId" type="xs:int" />
+        <xs:element minOccurs="0" name="reviewRemark" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReviewOutCheckResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReviewOutCheckResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvalidOutPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="outPlanId" type="xs:long" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvalidOutPlanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InvalidOutPlanResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrintOutPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="outPlanId" type="xs:long" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrintOutPlanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PrintOutPlanResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitOutPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" minOccurs="0" name="op" nillable="true" type="q9:OutPlan" />
+        <xs:element minOccurs="0" name="checker" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitOutPlanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SubmitOutPlanResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAndReViewOutPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" minOccurs="0" name="op" nillable="true" type="q10:OutPlan" />
+        <xs:element minOccurs="0" name="checker" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAndReViewOutPlanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveAndReViewOutPlanResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReverseOutPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="outPlanId" type="xs:long" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReverseOutPlanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReverseOutPlanResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryOutPlanByConditionsPageInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" minOccurs="0" name="opqm" nillable="true" type="q11:OutPlanQueryMOdel" />
+        <xs:element minOccurs="0" name="queryFields" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Page" type="xs:int" />
+        <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryOutPlanByConditionsPageInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryOutPlanByConditionsPageInfoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryOutPlanByConditions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cmstid" type="xs:int" />
+        <xs:element minOccurs="0" name="outPlanid" type="xs:long" />
+        <xs:element minOccurs="0" name="billOfLadingNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="companyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dmoName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="depName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryOutPlanByConditionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryOutPlanByConditionsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryOutPlanByComIDAndBillOfLadingNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cmstID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="billOfLadingNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="outPlanId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryOutPlanByComIDAndBillOfLadingNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryOutPlanByComIDAndBillOfLadingNoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePreGoodsById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="skuId" type="xs:int" />
+        <xs:element minOccurs="0" name="outPlanId" type="xs:long" />
+        <xs:element minOccurs="0" name="outPlanDetailId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePreGoodsByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreatePreGoodsByIdResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SplitInvoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" minOccurs="0" name="prepareGoodsSplits" nillable="true" type="q12:ArrayOfPrepareGoods" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" minOccurs="0" name="prepareGoodsOld" nillable="true" type="q13:PrepareGoods" />
+        <xs:element minOccurs="0" name="operater" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SplitInvoiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SplitInvoiceResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SplitInvoiceForPDA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jsonsplitInvoice" nillable="true" type="xs:string" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" minOccurs="0" name="prepareGoodsOld" nillable="true" type="q14:PrepareGoods" />
+        <xs:element minOccurs="0" name="operater" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SplitInvoiceForPDAResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SplitInvoiceForPDAResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryOutStoreOnLineByConditions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" minOccurs="0" name="olqm" nillable="true" type="q15:OnLineQueryModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryOutStoreOnLineByConditionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryOutStoreOnLineByConditionsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateOutOnLine">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateOutOnLineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" minOccurs="0" name="GenerateOutOnLineResult" nillable="true" type="q16:OutOnLine" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutStoreOnLineByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutStoreOnLineByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOutStoreOnLineByIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOutOnLineStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOutOnLineStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateOutOnLineStatusResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckOutOnLine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:long" />
+        <xs:element minOccurs="0" name="checkerId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckOutOnLineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckOutOnLineResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryOplByTrackingNum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TrackingNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ComId" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="CmstId" type="xs:int" />
+        <xs:element minOccurs="0" name="queryFields" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Page" type="xs:int" />
+        <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryOplByTrackingNumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryOplByTrackingNumResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

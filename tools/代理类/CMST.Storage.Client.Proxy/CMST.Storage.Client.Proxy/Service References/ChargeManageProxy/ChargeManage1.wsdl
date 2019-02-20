@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ChargeManage" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IChargeManageProxy_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <msf:Streamed xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IChargeManageProxy_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.4.80:8082/ChargeManage?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/ChargeManage?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/ChargeManage?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.ChargeManage" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/ChargeManage?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.Charge" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IChargeManageProxy_SaveJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveJob" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_SaveJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_SaveJobForPDA_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveJobForPDA" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_SaveJobForPDA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveJobForPDAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_CheckJobForPDA_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckJobForPDA" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_CheckJobForPDA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckJobForPDAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_GetJobByConditionsForPDA_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobByConditionsForPDA" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_GetJobByConditionsForPDA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobByConditionsForPDAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_CheckJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckJob" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_CheckJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_BatchCheckJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:BatchCheckJob" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_BatchCheckJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BatchCheckJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_UnCheckJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnCheckJob" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_UnCheckJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnCheckJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_BatchUnCheckJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:BatchUnCheckJob" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_BatchUnCheckJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BatchUnCheckJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_ReturnJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnJob" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_ReturnJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_BatchReturnJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:BatchReturnJob" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_BatchReturnJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BatchReturnJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_InvalidJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:InvalidJob" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_InvalidJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InvalidJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_GetJobByConditionsPageInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobByConditionsPageInfo" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_GetJobByConditionsPageInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobByConditionsPageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_GetJobByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobByID" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_GetJobByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_GetJobByBillNOAndType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobByBillNOAndType" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_GetJobByBillNOAndType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobByBillNOAndTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_GetJobsByBillNoAndType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsByBillNoAndType" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_GetJobsByBillNoAndType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsByBillNoAndTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_SaveJobMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveJobMode" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_SaveJobMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveJobModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_SaveJobModeIfUse_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveJobModeIfUse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_SaveJobModeIfUse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveJobModeIfUseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_GetAllJobeMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllJobeMode" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_GetAllJobeMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllJobeModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_GetAllUseJobeMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUseJobeMode" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_GetAllUseJobeMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUseJobeModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_QueryJobModeByCmstAndMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryJobModeByCmstAndMode" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_QueryJobModeByCmstAndMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryJobModeByCmstAndModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_SaveJmo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveJmo" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_SaveJmo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveJmoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_DelJmo_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelJmo" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_DelJmo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelJmoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_ImportJmo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportJmo" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_ImportJmo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportJmoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_QueryJobTypeByCmstAndName_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryJobTypeByCmstAndName" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_QueryJobTypeByCmstAndName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryJobTypeByCmstAndNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_SaveJty_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveJty" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_SaveJty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveJtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_QueryUseJobTypeByCmst_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryUseJobTypeByCmst" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_QueryUseJobTypeByCmst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryUseJobTypeByCmstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_QueryBatchCharge_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryBatchCharge" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_QueryBatchCharge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryBatchChargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_QueryBatchChargeByBillNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryBatchChargeByBillNo" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_QueryBatchChargeByBillNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryBatchChargeByBillNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_SaveBatchChargeTemporary_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBatchChargeTemporary" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_SaveBatchChargeTemporary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBatchChargeTemporaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_CheckBatchCharge_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckBatchCharge" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_CheckBatchCharge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckBatchChargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_QueryBatchChargePageInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryBatchChargePageInfo" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_QueryBatchChargePageInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryBatchChargePageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_UpdateBatchChargeStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBatchChargeStatus" />
+  </wsdl:message>
+  <wsdl:message name="IChargeManageProxy_UpdateBatchChargeStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBatchChargeStatusResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IChargeManageProxy">
+    <wsdl:operation name="SaveJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/SaveJob" message="tns:IChargeManageProxy_SaveJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/SaveJobResponse" message="tns:IChargeManageProxy_SaveJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveJobForPDA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/SaveJobForPDA" message="tns:IChargeManageProxy_SaveJobForPDA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/SaveJobForPDAResponse" message="tns:IChargeManageProxy_SaveJobForPDA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckJobForPDA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/CheckJobForPDA" message="tns:IChargeManageProxy_CheckJobForPDA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/CheckJobForPDAResponse" message="tns:IChargeManageProxy_CheckJobForPDA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobByConditionsForPDA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/GetJobByConditionsForPDA" message="tns:IChargeManageProxy_GetJobByConditionsForPDA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/GetJobByConditionsForPDAResponse" message="tns:IChargeManageProxy_GetJobByConditionsForPDA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/CheckJob" message="tns:IChargeManageProxy_CheckJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/CheckJobResponse" message="tns:IChargeManageProxy_CheckJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BatchCheckJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/BatchCheckJob" message="tns:IChargeManageProxy_BatchCheckJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/BatchCheckJobResponse" message="tns:IChargeManageProxy_BatchCheckJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnCheckJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/UnCheckJob" message="tns:IChargeManageProxy_UnCheckJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/UnCheckJobResponse" message="tns:IChargeManageProxy_UnCheckJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BatchUnCheckJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/BatchUnCheckJob" message="tns:IChargeManageProxy_BatchUnCheckJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/BatchUnCheckJobResponse" message="tns:IChargeManageProxy_BatchUnCheckJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/ReturnJob" message="tns:IChargeManageProxy_ReturnJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/ReturnJobResponse" message="tns:IChargeManageProxy_ReturnJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BatchReturnJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/BatchReturnJob" message="tns:IChargeManageProxy_BatchReturnJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/BatchReturnJobResponse" message="tns:IChargeManageProxy_BatchReturnJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InvalidJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/InvalidJob" message="tns:IChargeManageProxy_InvalidJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/InvalidJobResponse" message="tns:IChargeManageProxy_InvalidJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobByConditionsPageInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/GetJobByConditionsPageInfo" message="tns:IChargeManageProxy_GetJobByConditionsPageInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/GetJobByConditionsPageInfoResponse" message="tns:IChargeManageProxy_GetJobByConditionsPageInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/GetJobByID" message="tns:IChargeManageProxy_GetJobByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/GetJobByIDResponse" message="tns:IChargeManageProxy_GetJobByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobByBillNOAndType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/GetJobByBillNOAndType" message="tns:IChargeManageProxy_GetJobByBillNOAndType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/GetJobByBillNOAndTypeResponse" message="tns:IChargeManageProxy_GetJobByBillNOAndType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsByBillNoAndType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/GetJobsByBillNoAndType" message="tns:IChargeManageProxy_GetJobsByBillNoAndType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/GetJobsByBillNoAndTypeResponse" message="tns:IChargeManageProxy_GetJobsByBillNoAndType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveJobMode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/SaveJobMode" message="tns:IChargeManageProxy_SaveJobMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/SaveJobModeResponse" message="tns:IChargeManageProxy_SaveJobMode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveJobModeIfUse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/SaveJobModeIfUse" message="tns:IChargeManageProxy_SaveJobModeIfUse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/SaveJobModeIfUseResponse" message="tns:IChargeManageProxy_SaveJobModeIfUse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllJobeMode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/GetAllJobeMode" message="tns:IChargeManageProxy_GetAllJobeMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/GetAllJobeModeResponse" message="tns:IChargeManageProxy_GetAllJobeMode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUseJobeMode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/GetAllUseJobeMode" message="tns:IChargeManageProxy_GetAllUseJobeMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/GetAllUseJobeModeResponse" message="tns:IChargeManageProxy_GetAllUseJobeMode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryJobModeByCmstAndMode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/QueryJobModeByCmstAndMode" message="tns:IChargeManageProxy_QueryJobModeByCmstAndMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/QueryJobModeByCmstAndModeResponse" message="tns:IChargeManageProxy_QueryJobModeByCmstAndMode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveJmo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/SaveJmo" message="tns:IChargeManageProxy_SaveJmo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/SaveJmoResponse" message="tns:IChargeManageProxy_SaveJmo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelJmo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/DelJmo" message="tns:IChargeManageProxy_DelJmo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/DelJmoResponse" message="tns:IChargeManageProxy_DelJmo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportJmo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/ImportJmo" message="tns:IChargeManageProxy_ImportJmo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/ImportJmoResponse" message="tns:IChargeManageProxy_ImportJmo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryJobTypeByCmstAndName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/QueryJobTypeByCmstAndName" message="tns:IChargeManageProxy_QueryJobTypeByCmstAndName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/QueryJobTypeByCmstAndNameResponse" message="tns:IChargeManageProxy_QueryJobTypeByCmstAndName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveJty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/SaveJty" message="tns:IChargeManageProxy_SaveJty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/SaveJtyResponse" message="tns:IChargeManageProxy_SaveJty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryUseJobTypeByCmst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/QueryUseJobTypeByCmst" message="tns:IChargeManageProxy_QueryUseJobTypeByCmst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/QueryUseJobTypeByCmstResponse" message="tns:IChargeManageProxy_QueryUseJobTypeByCmst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryBatchCharge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/QueryBatchCharge" message="tns:IChargeManageProxy_QueryBatchCharge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/QueryBatchChargeResponse" message="tns:IChargeManageProxy_QueryBatchCharge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryBatchChargeByBillNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/QueryBatchChargeByBillNo" message="tns:IChargeManageProxy_QueryBatchChargeByBillNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/QueryBatchChargeByBillNoResponse" message="tns:IChargeManageProxy_QueryBatchChargeByBillNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveBatchChargeTemporary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/SaveBatchChargeTemporary" message="tns:IChargeManageProxy_SaveBatchChargeTemporary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/SaveBatchChargeTemporaryResponse" message="tns:IChargeManageProxy_SaveBatchChargeTemporary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckBatchCharge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/CheckBatchCharge" message="tns:IChargeManageProxy_CheckBatchCharge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/CheckBatchChargeResponse" message="tns:IChargeManageProxy_CheckBatchCharge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryBatchChargePageInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/QueryBatchChargePageInfo" message="tns:IChargeManageProxy_QueryBatchChargePageInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/QueryBatchChargePageInfoResponse" message="tns:IChargeManageProxy_QueryBatchChargePageInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBatchChargeStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChargeManage/UpdateBatchChargeStatus" message="tns:IChargeManageProxy_UpdateBatchChargeStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChargeManage/UpdateBatchChargeStatusResponse" message="tns:IChargeManageProxy_UpdateBatchChargeStatus_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IChargeManageProxy" type="tns:IChargeManageProxy">
+    <wsp:PolicyReference URI="#NetTcpBinding_IChargeManageProxy_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="SaveJob">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/SaveJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveJobForPDA">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/SaveJobForPDA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckJobForPDA">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/CheckJobForPDA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobByConditionsForPDA">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/GetJobByConditionsForPDA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckJob">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/CheckJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchCheckJob">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/BatchCheckJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnCheckJob">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/UnCheckJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchUnCheckJob">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/BatchUnCheckJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnJob">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/ReturnJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchReturnJob">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/BatchReturnJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvalidJob">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/InvalidJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobByConditionsPageInfo">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/GetJobByConditionsPageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobByID">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/GetJobByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobByBillNOAndType">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/GetJobByBillNOAndType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsByBillNoAndType">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/GetJobsByBillNoAndType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveJobMode">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/SaveJobMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveJobModeIfUse">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/SaveJobModeIfUse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllJobeMode">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/GetAllJobeMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUseJobeMode">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/GetAllUseJobeMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryJobModeByCmstAndMode">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/QueryJobModeByCmstAndMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveJmo">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/SaveJmo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelJmo">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/DelJmo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportJmo">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/ImportJmo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryJobTypeByCmstAndName">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/QueryJobTypeByCmstAndName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveJty">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/SaveJty" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUseJobTypeByCmst">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/QueryUseJobTypeByCmst" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryBatchCharge">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/QueryBatchCharge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryBatchChargeByBillNo">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/QueryBatchChargeByBillNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveBatchChargeTemporary">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/SaveBatchChargeTemporary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBatchCharge">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/CheckBatchCharge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryBatchChargePageInfo">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/QueryBatchChargePageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBatchChargeStatus">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/UpdateBatchChargeStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSHttpBinding_IChargeManageProxy" type="tns:IChargeManageProxy">
+    <wsp:PolicyReference URI="#WSHttpBinding_IChargeManageProxy_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveJob">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/SaveJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveJobForPDA">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/SaveJobForPDA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckJobForPDA">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/CheckJobForPDA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobByConditionsForPDA">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/GetJobByConditionsForPDA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckJob">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/CheckJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchCheckJob">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/BatchCheckJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnCheckJob">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/UnCheckJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchUnCheckJob">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/BatchUnCheckJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnJob">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/ReturnJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchReturnJob">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/BatchReturnJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvalidJob">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/InvalidJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobByConditionsPageInfo">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/GetJobByConditionsPageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobByID">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/GetJobByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobByBillNOAndType">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/GetJobByBillNOAndType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsByBillNoAndType">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/GetJobsByBillNoAndType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveJobMode">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/SaveJobMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveJobModeIfUse">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/SaveJobModeIfUse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllJobeMode">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/GetAllJobeMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUseJobeMode">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/GetAllUseJobeMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryJobModeByCmstAndMode">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/QueryJobModeByCmstAndMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveJmo">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/SaveJmo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelJmo">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/DelJmo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportJmo">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/ImportJmo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryJobTypeByCmstAndName">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/QueryJobTypeByCmstAndName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveJty">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/SaveJty" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUseJobTypeByCmst">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/QueryUseJobTypeByCmst" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryBatchCharge">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/QueryBatchCharge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryBatchChargeByBillNo">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/QueryBatchChargeByBillNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveBatchChargeTemporary">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/SaveBatchChargeTemporary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBatchCharge">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/CheckBatchCharge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryBatchChargePageInfo">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/QueryBatchChargePageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBatchChargeStatus">
+      <soap12:operation soapAction="http://tempuri.org/IChargeManage/UpdateBatchChargeStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ChargeManage">
+    <wsdl:port name="NetTcpBinding_IChargeManageProxy" binding="tns:NetTcpBinding_IChargeManageProxy">
+      <soap12:address location="net.tcp://192.168.4.80:8081/ChargeManage" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://192.168.4.80:8081/ChargeManage</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="WSHttpBinding_IChargeManageProxy" binding="tns:WSHttpBinding_IChargeManageProxy">
+      <soap12:address location="http://192.168.4.80:8082/ChargeManage" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://192.168.4.80:8082/ChargeManage</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

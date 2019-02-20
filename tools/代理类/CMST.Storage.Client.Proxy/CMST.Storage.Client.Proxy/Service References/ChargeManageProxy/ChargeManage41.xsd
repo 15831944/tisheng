@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.Charge" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.Charge" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="BatchCharge">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BchBillno" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="BchBilltype" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BchChargetype" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BchCheckName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BchChecktime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BchCmstId" type="xs:int" />
+      <xs:element minOccurs="0" name="BchComId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BchId" type="xs:long" />
+      <xs:element minOccurs="0" name="BchMakeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BchMaketime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BchOpeChecker" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BchOpeMaker" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BchRemark1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BchRemark2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BchStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="BchStatusName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cbs" nillable="true" type="tns:ArrayOfChargeBill" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BatchCharge" nillable="true" type="tns:BatchCharge" />
+  <xs:complexType name="ArrayOfChargeBill">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ChargeBill" nillable="true" type="tns:ChargeBill" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChargeBill" nillable="true" type="tns:ArrayOfChargeBill" />
+  <xs:complexType name="ChargeBill">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CbiBchId" type="xs:long" />
+      <xs:element minOccurs="0" name="CbiBillno" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="CbiBilltype" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CbiChargeType" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CbiChecktime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CbiComId" type="xs:int" />
+      <xs:element minOccurs="0" name="CbiCtyId" type="xs:int" />
+      <xs:element minOccurs="0" name="CbiId" type="xs:long" />
+      <xs:element minOccurs="0" name="CbiMaketime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CbiOpeChecker" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CbiOpeMaker" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CbiPaid" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CbiPayable" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CbiRemark1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CbiRemark2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CbiStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="CbiSum" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChargeBill" nillable="true" type="tns:ChargeBill" />
+  <xs:complexType name="BatchChargeQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BchID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="BillNo" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="BillStatus" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BillType" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ChargeType" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CmstID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ComID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DepID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Remark2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TimeType" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BatchChargeQuery" nillable="true" type="tns:BatchChargeQuery" />
+</xs:schema>

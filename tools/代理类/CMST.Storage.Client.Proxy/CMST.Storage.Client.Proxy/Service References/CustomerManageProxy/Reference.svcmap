@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="55d67394-f0d1-4c33-8778-ae0c4d032979" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://127.0.0.1:8082/CustomerManage" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CustomerManage6.xsd" MetadataType="Schema" ID="51c1ab32-8358-4000-bb1f-5327da7a1ef0" SourceId="1" SourceUrl="http://192.168.4.80:8082/CustomerManage?xsd=xsd0" />
+    <MetadataFile FileName="CustomerManage1.disco" MetadataType="Disco" ID="769ab0ec-20e5-4107-9fcc-73fd18d0fd2f" SourceId="1" SourceUrl="http://192.168.4.80:8082/CustomerManage?disco" />
+    <MetadataFile FileName="CustomerManage61.xsd" MetadataType="Schema" ID="541c9904-689d-474b-8008-67206023b52f" SourceId="1" SourceUrl="http://192.168.4.80:8082/CustomerManage?xsd=xsd2" />
+    <MetadataFile FileName="CustomerManage1.wsdl" MetadataType="Wsdl" ID="5e4e13b5-0393-4927-8d0c-54c57b1862f9" SourceId="1" SourceUrl="http://192.168.4.80:8082/CustomerManage?wsdl" />
+    <MetadataFile FileName="CustomerManage62.xsd" MetadataType="Schema" ID="7738ecf1-9d79-43ee-af2f-f93e21639306" SourceId="1" SourceUrl="http://192.168.4.80:8082/CustomerManage?xsd=xsd1" />
+    <MetadataFile FileName="CustomerManage63.xsd" MetadataType="Schema" ID="84c3c463-665d-4108-918b-8173440fb650" SourceId="1" SourceUrl="http://192.168.4.80:8082/CustomerManage?xsd=xsd5" />
+    <MetadataFile FileName="CustomerManage64.xsd" MetadataType="Schema" ID="f07b1747-93ed-4837-9923-1c9c5b14c6e1" SourceId="1" SourceUrl="http://192.168.4.80:8082/CustomerManage?xsd=xsd3" />
+    <MetadataFile FileName="CustomerManage65.xsd" MetadataType="Schema" ID="5f2c7848-6508-4b7b-9498-a9eb89033ea4" SourceId="1" SourceUrl="http://192.168.4.80:8082/CustomerManage?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

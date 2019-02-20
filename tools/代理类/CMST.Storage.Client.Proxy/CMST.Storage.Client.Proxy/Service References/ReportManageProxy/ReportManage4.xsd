@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CMST.Storage.ReportServer.Data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CMST.Storage.ReportServer.Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="QueryStockHistoryModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CmstID" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ConfirmTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DepId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="GraID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Level1" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Level2" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ManID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PacId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PnaId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RarId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SpeID" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryStockHistoryModel" nillable="true" type="tns:QueryStockHistoryModel" />
+</xs:schema>

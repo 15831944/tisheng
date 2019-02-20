@@ -1,0 +1,2011 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProductManage" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IProductManageProxy_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <msf:Streamed xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IProductManageProxy_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.4.80:8082/ProductManage?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/ProductManage?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/ProductManage?xsd=xsd2" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/ProductManage?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.ProductManage" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IProductManageProxy_GetProductInfoCache_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInfoCache" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetProductInfoCache_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInfoCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetProductInfoCacheForPDA_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInfoCacheForPDA" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetProductInfoCacheForPDA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInfoCacheForPDAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetProductInfoCacheAndroid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInfoCacheAndroid" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetProductInfoCacheAndroid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInfoCacheAndroidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetMaterialsCacheAndroid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialsCacheAndroid" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetMaterialsCacheAndroid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialsCacheAndroidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_ImportPro_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportPro" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_ImportPro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportProResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_ImportPna_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportPna" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_ImportPna_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportPnaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetProductName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductName" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetProductName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_AddProductName_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddProductName" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_AddProductName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddProductNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_EditProductName_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditProductName" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_EditProductName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditProductNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetProductNameByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductNameByName" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetProductNameByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductNameByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetProductNameByNameAndId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductNameByNameAndId" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetProductNameByNameAndId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductNameByNameAndIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GenerateProductNameEntity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateProductNameEntity" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GenerateProductNameEntity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateProductNameEntityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_DelProductName_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelProductName" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_DelProductName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelProductNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetProductNameIfUse_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductNameIfUse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetProductNameIfUse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductNameIfUseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetGoodsBreedByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGoodsBreedByName" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetGoodsBreedByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGoodsBreedByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GenerateGoodsBreedEntity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateGoodsBreedEntity" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GenerateGoodsBreedEntity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateGoodsBreedEntityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetGoodsClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGoodsClass" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetGoodsClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGoodsClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GenerateGoodsClassEntity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateGoodsClassEntity" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GenerateGoodsClassEntity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateGoodsClassEntityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GenerateManufacturerEntityClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateManufacturerEntityClass" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GenerateManufacturerEntityClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateManufacturerEntityClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetManufacturerIfUse_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetManufacturerIfUse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetManufacturerIfUse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetManufacturerIfUseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetAllManufacturer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllManufacturer" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetAllManufacturer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllManufacturerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_SaveManufacturer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveManufacturer" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_SaveManufacturer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveManufacturerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_DelManufacturer_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelManufacturer" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_DelManufacturer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelManufacturerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GeneratePlasticizingProductsEntityClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GeneratePlasticizingProductsEntityClass" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GeneratePlasticizingProductsEntityClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GeneratePlasticizingProductsEntityClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetAllPlasticizingProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPlasticizingProducts" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetAllPlasticizingProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPlasticizingProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_SavePlasticizingProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePlasticizingProducts" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_SavePlasticizingProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePlasticizingProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_CheckPprName_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPprName" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_CheckPprName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPprNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetPlasticizingProductsPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlasticizingProductsPage" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetPlasticizingProductsPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlasticizingProductsPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetPlasticizingProductsById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlasticizingProductsById" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetPlasticizingProductsById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlasticizingProductsByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GenerateCustomerProductEntityClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateCustomerProductEntityClass" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GenerateCustomerProductEntityClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateCustomerProductEntityClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetAllCustomerProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCustomerProduct" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetAllCustomerProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCustomerProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_SaveCustomerProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCustomerProduct" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_SaveCustomerProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCustomerProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetCustomerProductPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerProductPage" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetCustomerProductPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerProductPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetCustomerProductById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerProductById" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetCustomerProductById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerProductByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GenerateProductInfoEntityClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateProductInfoEntityClass" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GenerateProductInfoEntityClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateProductInfoEntityClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetProductInfoPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInfoPage" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetProductInfoPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInfoPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetProductInfoById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInfoById" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetProductInfoById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInfoByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetAllProductInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProductInfo" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetAllProductInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProductInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_SelectProductInfoList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectProductInfoList" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_SelectProductInfoList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectProductInfoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_SaveProductInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveProductInfo" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_SaveProductInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveProductInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_DelProductInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelProductInfo" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_DelProductInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelProductInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetSpec_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpec" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetSpec_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetSpecIfUse_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecIfUse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetSpecIfUse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecIfUseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_AddSpec_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSpec" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_AddSpec_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSpecResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_EditSpec_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditSpec" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_EditSpec_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditSpecResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetSpecByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecByName" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetSpecByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetSpecByNameAndId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecByNameAndId" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetSpecByNameAndId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecByNameAndIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GenerateSpecEntity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateSpecEntity" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GenerateSpecEntity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateSpecEntityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_DelSpec_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelSpec" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_DelSpec_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelSpecResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetGrade_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGrade" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetGrade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetGradeIfUse_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGradeIfUse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetGradeIfUse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGradeIfUseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_AddGrade_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddGrade" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_AddGrade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddGradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_EditGrade_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditGrade" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_EditGrade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditGradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetGradeByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGradeByName" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetGradeByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGradeByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetGradeByNameAndId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGradeByNameAndId" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetGradeByNameAndId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGradeByNameAndIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GenerateGradeEntityClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateGradeEntityClass" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GenerateGradeEntityClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateGradeEntityClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_DelGrade_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelGrade" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_DelGrade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelGradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetPackaging_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackaging" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetPackaging_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackagingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetPackagingIfUse_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackagingIfUse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetPackagingIfUse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackagingIfUseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_AddPackaging_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPackaging" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_AddPackaging_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPackagingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_EditPackaging_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditPackaging" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_EditPackaging_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditPackagingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetPackagingByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackagingByName" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetPackagingByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackagingByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetPackagingByNameAndId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackagingByNameAndId" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetPackagingByNameAndId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackagingByNameAndIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GeneratePackagingEntityClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GeneratePackagingEntityClass" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GeneratePackagingEntityClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GeneratePackagingEntityClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_DelPackaging_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelPackaging" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_DelPackaging_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelPackagingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetProductNameCache_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductNameCache" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetProductNameCache_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductNameCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetSpecCache_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecCache" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetSpecCache_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetManufacturerCache_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetManufacturerCache" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetManufacturerCache_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetManufacturerCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetGradeCache_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGradeCache" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetGradeCache_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGradeCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetPackagingCache_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackagingCache" />
+  </wsdl:message>
+  <wsdl:message name="IProductManageProxy_GetPackagingCache_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackagingCacheResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IProductManageProxy">
+    <wsdl:operation name="GetProductInfoCache">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetProductInfoCache" message="tns:IProductManageProxy_GetProductInfoCache_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetProductInfoCacheResponse" message="tns:IProductManageProxy_GetProductInfoCache_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfoCacheForPDA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetProductInfoCacheForPDA" message="tns:IProductManageProxy_GetProductInfoCacheForPDA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetProductInfoCacheForPDAResponse" message="tns:IProductManageProxy_GetProductInfoCacheForPDA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfoCacheAndroid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetProductInfoCacheAndroid" message="tns:IProductManageProxy_GetProductInfoCacheAndroid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetProductInfoCacheAndroidResponse" message="tns:IProductManageProxy_GetProductInfoCacheAndroid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialsCacheAndroid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetMaterialsCacheAndroid" message="tns:IProductManageProxy_GetMaterialsCacheAndroid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetMaterialsCacheAndroidResponse" message="tns:IProductManageProxy_GetMaterialsCacheAndroid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportPro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/ImportPro" message="tns:IProductManageProxy_ImportPro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/ImportProResponse" message="tns:IProductManageProxy_ImportPro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportPna">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/ImportPna" message="tns:IProductManageProxy_ImportPna_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/ImportPnaResponse" message="tns:IProductManageProxy_ImportPna_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetProductName" message="tns:IProductManageProxy_GetProductName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetProductNameResponse" message="tns:IProductManageProxy_GetProductName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddProductName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/AddProductName" message="tns:IProductManageProxy_AddProductName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/AddProductNameResponse" message="tns:IProductManageProxy_AddProductName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditProductName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/EditProductName" message="tns:IProductManageProxy_EditProductName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/EditProductNameResponse" message="tns:IProductManageProxy_EditProductName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductNameByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetProductNameByName" message="tns:IProductManageProxy_GetProductNameByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetProductNameByNameResponse" message="tns:IProductManageProxy_GetProductNameByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductNameByNameAndId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetProductNameByNameAndId" message="tns:IProductManageProxy_GetProductNameByNameAndId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetProductNameByNameAndIdResponse" message="tns:IProductManageProxy_GetProductNameByNameAndId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateProductNameEntity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GenerateProductNameEntity" message="tns:IProductManageProxy_GenerateProductNameEntity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GenerateProductNameEntityResponse" message="tns:IProductManageProxy_GenerateProductNameEntity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelProductName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/DelProductName" message="tns:IProductManageProxy_DelProductName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/DelProductNameResponse" message="tns:IProductManageProxy_DelProductName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductNameIfUse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetProductNameIfUse" message="tns:IProductManageProxy_GetProductNameIfUse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetProductNameIfUseResponse" message="tns:IProductManageProxy_GetProductNameIfUse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGoodsBreedByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetGoodsBreedByName" message="tns:IProductManageProxy_GetGoodsBreedByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetGoodsBreedByNameResponse" message="tns:IProductManageProxy_GetGoodsBreedByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateGoodsBreedEntity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GenerateGoodsBreedEntity" message="tns:IProductManageProxy_GenerateGoodsBreedEntity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GenerateGoodsBreedEntityResponse" message="tns:IProductManageProxy_GenerateGoodsBreedEntity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGoodsClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetGoodsClass" message="tns:IProductManageProxy_GetGoodsClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetGoodsClassResponse" message="tns:IProductManageProxy_GetGoodsClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateGoodsClassEntity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GenerateGoodsClassEntity" message="tns:IProductManageProxy_GenerateGoodsClassEntity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GenerateGoodsClassEntityResponse" message="tns:IProductManageProxy_GenerateGoodsClassEntity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateManufacturerEntityClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GenerateManufacturerEntityClass" message="tns:IProductManageProxy_GenerateManufacturerEntityClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GenerateManufacturerEntityClassResponse" message="tns:IProductManageProxy_GenerateManufacturerEntityClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManufacturerIfUse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetManufacturerIfUse" message="tns:IProductManageProxy_GetManufacturerIfUse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetManufacturerIfUseResponse" message="tns:IProductManageProxy_GetManufacturerIfUse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllManufacturer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetAllManufacturer" message="tns:IProductManageProxy_GetAllManufacturer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetAllManufacturerResponse" message="tns:IProductManageProxy_GetAllManufacturer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveManufacturer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/SaveManufacturer" message="tns:IProductManageProxy_SaveManufacturer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/SaveManufacturerResponse" message="tns:IProductManageProxy_SaveManufacturer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelManufacturer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/DelManufacturer" message="tns:IProductManageProxy_DelManufacturer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/DelManufacturerResponse" message="tns:IProductManageProxy_DelManufacturer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePlasticizingProductsEntityClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GeneratePlasticizingProductsEntityClass" message="tns:IProductManageProxy_GeneratePlasticizingProductsEntityClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GeneratePlasticizingProductsEntityClassResponse" message="tns:IProductManageProxy_GeneratePlasticizingProductsEntityClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPlasticizingProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetAllPlasticizingProducts" message="tns:IProductManageProxy_GetAllPlasticizingProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetAllPlasticizingProductsResponse" message="tns:IProductManageProxy_GetAllPlasticizingProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePlasticizingProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/SavePlasticizingProducts" message="tns:IProductManageProxy_SavePlasticizingProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/SavePlasticizingProductsResponse" message="tns:IProductManageProxy_SavePlasticizingProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPprName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/CheckPprName" message="tns:IProductManageProxy_CheckPprName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/CheckPprNameResponse" message="tns:IProductManageProxy_CheckPprName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlasticizingProductsPage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetPlasticizingProductsPage" message="tns:IProductManageProxy_GetPlasticizingProductsPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetPlasticizingProductsPageResponse" message="tns:IProductManageProxy_GetPlasticizingProductsPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlasticizingProductsById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetPlasticizingProductsById" message="tns:IProductManageProxy_GetPlasticizingProductsById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetPlasticizingProductsByIdResponse" message="tns:IProductManageProxy_GetPlasticizingProductsById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateCustomerProductEntityClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GenerateCustomerProductEntityClass" message="tns:IProductManageProxy_GenerateCustomerProductEntityClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GenerateCustomerProductEntityClassResponse" message="tns:IProductManageProxy_GenerateCustomerProductEntityClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCustomerProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetAllCustomerProduct" message="tns:IProductManageProxy_GetAllCustomerProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetAllCustomerProductResponse" message="tns:IProductManageProxy_GetAllCustomerProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCustomerProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/SaveCustomerProduct" message="tns:IProductManageProxy_SaveCustomerProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/SaveCustomerProductResponse" message="tns:IProductManageProxy_SaveCustomerProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerProductPage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetCustomerProductPage" message="tns:IProductManageProxy_GetCustomerProductPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetCustomerProductPageResponse" message="tns:IProductManageProxy_GetCustomerProductPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerProductById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetCustomerProductById" message="tns:IProductManageProxy_GetCustomerProductById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetCustomerProductByIdResponse" message="tns:IProductManageProxy_GetCustomerProductById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateProductInfoEntityClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GenerateProductInfoEntityClass" message="tns:IProductManageProxy_GenerateProductInfoEntityClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GenerateProductInfoEntityClassResponse" message="tns:IProductManageProxy_GenerateProductInfoEntityClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfoPage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetProductInfoPage" message="tns:IProductManageProxy_GetProductInfoPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetProductInfoPageResponse" message="tns:IProductManageProxy_GetProductInfoPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfoById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetProductInfoById" message="tns:IProductManageProxy_GetProductInfoById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetProductInfoByIdResponse" message="tns:IProductManageProxy_GetProductInfoById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProductInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetAllProductInfo" message="tns:IProductManageProxy_GetAllProductInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetAllProductInfoResponse" message="tns:IProductManageProxy_GetAllProductInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectProductInfoList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/SelectProductInfoList" message="tns:IProductManageProxy_SelectProductInfoList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/SelectProductInfoListResponse" message="tns:IProductManageProxy_SelectProductInfoList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveProductInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/SaveProductInfo" message="tns:IProductManageProxy_SaveProductInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/SaveProductInfoResponse" message="tns:IProductManageProxy_SaveProductInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelProductInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/DelProductInfo" message="tns:IProductManageProxy_DelProductInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/DelProductInfoResponse" message="tns:IProductManageProxy_DelProductInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpec">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetSpec" message="tns:IProductManageProxy_GetSpec_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetSpecResponse" message="tns:IProductManageProxy_GetSpec_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecIfUse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetSpecIfUse" message="tns:IProductManageProxy_GetSpecIfUse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetSpecIfUseResponse" message="tns:IProductManageProxy_GetSpecIfUse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSpec">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/AddSpec" message="tns:IProductManageProxy_AddSpec_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/AddSpecResponse" message="tns:IProductManageProxy_AddSpec_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditSpec">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/EditSpec" message="tns:IProductManageProxy_EditSpec_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/EditSpecResponse" message="tns:IProductManageProxy_EditSpec_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetSpecByName" message="tns:IProductManageProxy_GetSpecByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetSpecByNameResponse" message="tns:IProductManageProxy_GetSpecByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecByNameAndId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetSpecByNameAndId" message="tns:IProductManageProxy_GetSpecByNameAndId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetSpecByNameAndIdResponse" message="tns:IProductManageProxy_GetSpecByNameAndId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateSpecEntity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GenerateSpecEntity" message="tns:IProductManageProxy_GenerateSpecEntity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GenerateSpecEntityResponse" message="tns:IProductManageProxy_GenerateSpecEntity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelSpec">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/DelSpec" message="tns:IProductManageProxy_DelSpec_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/DelSpecResponse" message="tns:IProductManageProxy_DelSpec_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGrade">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetGrade" message="tns:IProductManageProxy_GetGrade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetGradeResponse" message="tns:IProductManageProxy_GetGrade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGradeIfUse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetGradeIfUse" message="tns:IProductManageProxy_GetGradeIfUse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetGradeIfUseResponse" message="tns:IProductManageProxy_GetGradeIfUse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddGrade">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/AddGrade" message="tns:IProductManageProxy_AddGrade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/AddGradeResponse" message="tns:IProductManageProxy_AddGrade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditGrade">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/EditGrade" message="tns:IProductManageProxy_EditGrade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/EditGradeResponse" message="tns:IProductManageProxy_EditGrade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGradeByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetGradeByName" message="tns:IProductManageProxy_GetGradeByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetGradeByNameResponse" message="tns:IProductManageProxy_GetGradeByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGradeByNameAndId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetGradeByNameAndId" message="tns:IProductManageProxy_GetGradeByNameAndId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetGradeByNameAndIdResponse" message="tns:IProductManageProxy_GetGradeByNameAndId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateGradeEntityClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GenerateGradeEntityClass" message="tns:IProductManageProxy_GenerateGradeEntityClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GenerateGradeEntityClassResponse" message="tns:IProductManageProxy_GenerateGradeEntityClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelGrade">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/DelGrade" message="tns:IProductManageProxy_DelGrade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/DelGradeResponse" message="tns:IProductManageProxy_DelGrade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackaging">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetPackaging" message="tns:IProductManageProxy_GetPackaging_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetPackagingResponse" message="tns:IProductManageProxy_GetPackaging_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackagingIfUse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetPackagingIfUse" message="tns:IProductManageProxy_GetPackagingIfUse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetPackagingIfUseResponse" message="tns:IProductManageProxy_GetPackagingIfUse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPackaging">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/AddPackaging" message="tns:IProductManageProxy_AddPackaging_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/AddPackagingResponse" message="tns:IProductManageProxy_AddPackaging_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPackaging">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/EditPackaging" message="tns:IProductManageProxy_EditPackaging_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/EditPackagingResponse" message="tns:IProductManageProxy_EditPackaging_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackagingByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetPackagingByName" message="tns:IProductManageProxy_GetPackagingByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetPackagingByNameResponse" message="tns:IProductManageProxy_GetPackagingByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackagingByNameAndId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetPackagingByNameAndId" message="tns:IProductManageProxy_GetPackagingByNameAndId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetPackagingByNameAndIdResponse" message="tns:IProductManageProxy_GetPackagingByNameAndId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePackagingEntityClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GeneratePackagingEntityClass" message="tns:IProductManageProxy_GeneratePackagingEntityClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GeneratePackagingEntityClassResponse" message="tns:IProductManageProxy_GeneratePackagingEntityClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelPackaging">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/DelPackaging" message="tns:IProductManageProxy_DelPackaging_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/DelPackagingResponse" message="tns:IProductManageProxy_DelPackaging_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductNameCache">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetProductNameCache" message="tns:IProductManageProxy_GetProductNameCache_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetProductNameCacheResponse" message="tns:IProductManageProxy_GetProductNameCache_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecCache">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetSpecCache" message="tns:IProductManageProxy_GetSpecCache_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetSpecCacheResponse" message="tns:IProductManageProxy_GetSpecCache_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManufacturerCache">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetManufacturerCache" message="tns:IProductManageProxy_GetManufacturerCache_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetManufacturerCacheResponse" message="tns:IProductManageProxy_GetManufacturerCache_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGradeCache">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetGradeCache" message="tns:IProductManageProxy_GetGradeCache_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetGradeCacheResponse" message="tns:IProductManageProxy_GetGradeCache_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackagingCache">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManage/GetPackagingCache" message="tns:IProductManageProxy_GetPackagingCache_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManage/GetPackagingCacheResponse" message="tns:IProductManageProxy_GetPackagingCache_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IProductManageProxy" type="tns:IProductManageProxy">
+    <wsp:PolicyReference URI="#NetTcpBinding_IProductManageProxy_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetProductInfoCache">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetProductInfoCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfoCacheForPDA">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetProductInfoCacheForPDA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfoCacheAndroid">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetProductInfoCacheAndroid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialsCacheAndroid">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetMaterialsCacheAndroid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportPro">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/ImportPro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportPna">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/ImportPna" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductName">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetProductName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProductName">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/AddProductName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditProductName">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/EditProductName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductNameByName">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetProductNameByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductNameByNameAndId">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetProductNameByNameAndId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateProductNameEntity">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GenerateProductNameEntity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelProductName">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/DelProductName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductNameIfUse">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetProductNameIfUse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGoodsBreedByName">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetGoodsBreedByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateGoodsBreedEntity">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GenerateGoodsBreedEntity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGoodsClass">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetGoodsClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateGoodsClassEntity">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GenerateGoodsClassEntity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateManufacturerEntityClass">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GenerateManufacturerEntityClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManufacturerIfUse">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetManufacturerIfUse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllManufacturer">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetAllManufacturer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveManufacturer">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/SaveManufacturer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelManufacturer">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/DelManufacturer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePlasticizingProductsEntityClass">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GeneratePlasticizingProductsEntityClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPlasticizingProducts">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetAllPlasticizingProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePlasticizingProducts">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/SavePlasticizingProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPprName">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/CheckPprName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlasticizingProductsPage">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetPlasticizingProductsPage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlasticizingProductsById">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetPlasticizingProductsById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateCustomerProductEntityClass">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GenerateCustomerProductEntityClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCustomerProduct">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetAllCustomerProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCustomerProduct">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/SaveCustomerProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerProductPage">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetCustomerProductPage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerProductById">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetCustomerProductById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateProductInfoEntityClass">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GenerateProductInfoEntityClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfoPage">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetProductInfoPage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfoById">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetProductInfoById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProductInfo">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetAllProductInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectProductInfoList">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/SelectProductInfoList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveProductInfo">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/SaveProductInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelProductInfo">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/DelProductInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpec">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetSpec" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecIfUse">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetSpecIfUse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSpec">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/AddSpec" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditSpec">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/EditSpec" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecByName">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetSpecByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecByNameAndId">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetSpecByNameAndId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateSpecEntity">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GenerateSpecEntity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelSpec">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/DelSpec" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGrade">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetGrade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGradeIfUse">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetGradeIfUse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddGrade">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/AddGrade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditGrade">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/EditGrade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGradeByName">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetGradeByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGradeByNameAndId">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetGradeByNameAndId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateGradeEntityClass">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GenerateGradeEntityClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelGrade">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/DelGrade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackaging">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetPackaging" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackagingIfUse">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetPackagingIfUse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPackaging">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/AddPackaging" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditPackaging">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/EditPackaging" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackagingByName">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetPackagingByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackagingByNameAndId">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetPackagingByNameAndId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePackagingEntityClass">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GeneratePackagingEntityClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelPackaging">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/DelPackaging" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductNameCache">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetProductNameCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecCache">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetSpecCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManufacturerCache">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetManufacturerCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGradeCache">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetGradeCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackagingCache">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetPackagingCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSHttpBinding_IProductManageProxy" type="tns:IProductManageProxy">
+    <wsp:PolicyReference URI="#WSHttpBinding_IProductManageProxy_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProductInfoCache">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetProductInfoCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfoCacheForPDA">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetProductInfoCacheForPDA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfoCacheAndroid">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetProductInfoCacheAndroid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialsCacheAndroid">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetMaterialsCacheAndroid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportPro">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/ImportPro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportPna">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/ImportPna" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductName">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetProductName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProductName">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/AddProductName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditProductName">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/EditProductName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductNameByName">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetProductNameByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductNameByNameAndId">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetProductNameByNameAndId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateProductNameEntity">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GenerateProductNameEntity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelProductName">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/DelProductName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductNameIfUse">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetProductNameIfUse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGoodsBreedByName">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetGoodsBreedByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateGoodsBreedEntity">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GenerateGoodsBreedEntity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGoodsClass">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetGoodsClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateGoodsClassEntity">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GenerateGoodsClassEntity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateManufacturerEntityClass">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GenerateManufacturerEntityClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManufacturerIfUse">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetManufacturerIfUse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllManufacturer">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetAllManufacturer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveManufacturer">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/SaveManufacturer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelManufacturer">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/DelManufacturer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePlasticizingProductsEntityClass">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GeneratePlasticizingProductsEntityClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPlasticizingProducts">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetAllPlasticizingProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePlasticizingProducts">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/SavePlasticizingProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPprName">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/CheckPprName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlasticizingProductsPage">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetPlasticizingProductsPage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlasticizingProductsById">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetPlasticizingProductsById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateCustomerProductEntityClass">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GenerateCustomerProductEntityClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCustomerProduct">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetAllCustomerProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCustomerProduct">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/SaveCustomerProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerProductPage">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetCustomerProductPage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerProductById">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetCustomerProductById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateProductInfoEntityClass">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GenerateProductInfoEntityClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfoPage">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetProductInfoPage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfoById">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetProductInfoById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProductInfo">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetAllProductInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectProductInfoList">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/SelectProductInfoList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveProductInfo">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/SaveProductInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelProductInfo">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/DelProductInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpec">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetSpec" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecIfUse">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetSpecIfUse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSpec">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/AddSpec" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditSpec">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/EditSpec" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecByName">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetSpecByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecByNameAndId">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetSpecByNameAndId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateSpecEntity">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GenerateSpecEntity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelSpec">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/DelSpec" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGrade">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetGrade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGradeIfUse">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetGradeIfUse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddGrade">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/AddGrade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditGrade">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/EditGrade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGradeByName">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetGradeByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGradeByNameAndId">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetGradeByNameAndId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateGradeEntityClass">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GenerateGradeEntityClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelGrade">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/DelGrade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackaging">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetPackaging" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackagingIfUse">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetPackagingIfUse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPackaging">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/AddPackaging" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditPackaging">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/EditPackaging" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackagingByName">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetPackagingByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackagingByNameAndId">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetPackagingByNameAndId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePackagingEntityClass">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GeneratePackagingEntityClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelPackaging">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/DelPackaging" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductNameCache">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetProductNameCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecCache">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetSpecCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManufacturerCache">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetManufacturerCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGradeCache">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetGradeCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackagingCache">
+      <soap12:operation soapAction="http://tempuri.org/IProductManage/GetPackagingCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProductManage">
+    <wsdl:port name="NetTcpBinding_IProductManageProxy" binding="tns:NetTcpBinding_IProductManageProxy">
+      <soap12:address location="net.tcp://192.168.4.80:8081/ProductManage" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://192.168.4.80:8081/ProductManage</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="WSHttpBinding_IProductManageProxy" binding="tns:WSHttpBinding_IProductManageProxy">
+      <soap12:address location="http://192.168.4.80:8082/ProductManage" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://192.168.4.80:8082/ProductManage</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

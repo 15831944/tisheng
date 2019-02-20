@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5a3c248c-0a69-44e3-9e9a-44e4223729d3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://127.0.0.1:8082/AdjustManage" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AdjustManage1.wsdl" MetadataType="Wsdl" ID="2ef60f1f-3ea6-44fd-a9fc-34b17b3ab073" SourceId="1" SourceUrl="http://192.168.4.80:8082/AdjustManage?wsdl" />
+    <MetadataFile FileName="AdjustManage3.xsd" MetadataType="Schema" ID="5309ace0-9df5-468b-b028-bc47772aff16" SourceId="1" SourceUrl="http://192.168.4.80:8082/AdjustManage?xsd=xsd0" />
+    <MetadataFile FileName="AdjustManage1.disco" MetadataType="Disco" ID="903d6620-d5e6-4b1e-9067-4f6cf565ebe4" SourceId="1" SourceUrl="http://192.168.4.80:8082/AdjustManage?disco" />
+    <MetadataFile FileName="AdjustManage31.xsd" MetadataType="Schema" ID="e0b54de2-4a9d-46ef-8694-a021a1289e1a" SourceId="1" SourceUrl="http://192.168.4.80:8082/AdjustManage?xsd=xsd1" />
+    <MetadataFile FileName="AdjustManage32.xsd" MetadataType="Schema" ID="cc8eb7a6-2613-4757-a362-667cd034c094" SourceId="1" SourceUrl="http://192.168.4.80:8082/AdjustManage?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

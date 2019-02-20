@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.SpecialBusiness" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.SpecialBusiness" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Adjust">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdjustID" type="xs:long" />
+      <xs:element minOccurs="0" name="AdjustTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Ads" nillable="true" type="tns:ArrayOfAdjustDetail" />
+      <xs:element minOccurs="0" name="CheckTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Checker" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CheckerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CmstID" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyID" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DepID" type="xs:int" />
+      <xs:element minOccurs="0" name="DepName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IfDel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IfOperate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MakeTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Maker" type="xs:int" />
+      <xs:element minOccurs="0" name="MakerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="StatusName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Adjust" nillable="true" type="tns:Adjust" />
+  <xs:complexType name="ArrayOfAdjustDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AdjustDetail" nillable="true" type="tns:AdjustDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdjustDetail" nillable="true" type="tns:ArrayOfAdjustDetail" />
+  <xs:complexType name="AdjustDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AN" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AdjustDetailID" type="xs:long" />
+      <xs:element minOccurs="0" name="AdjustID" type="xs:long" />
+      <xs:element minOccurs="0" name="Descript" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GalDescript" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GalID" type="xs:int" />
+      <xs:element minOccurs="0" name="GalName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GoodsName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GradeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ManName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PN" type="xs:int" />
+      <xs:element minOccurs="0" name="PackageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecordID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SignName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SignNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SkuID" type="xs:int" />
+      <xs:element minOccurs="0" name="SkuName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Spare" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpecName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdjustDetail" nillable="true" type="tns:AdjustDetail" />
+  <xs:complexType name="AdjustQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdjustID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="CmstID" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DepID" type="xs:int" />
+      <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GalName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GoodsName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GradeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ManName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PackageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Requester" type="xs:int" />
+      <xs:element minOccurs="0" name="SpecName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TimeType" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdjustQuery" nillable="true" type="tns:AdjustQuery" />
+</xs:schema>

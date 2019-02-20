@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e8f4a12d-2b4e-4057-b357-b4d4a4e00126" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://127.0.0.1:8082/OutStoreManage" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OutStoreManage4.xsd" MetadataType="Schema" ID="ec32fedf-7805-412f-95a7-fbdcec1d1334" SourceId="1" SourceUrl="http://192.168.4.80:8082/OutStoreManage?xsd=xsd0" />
+    <MetadataFile FileName="OutStoreManage1.wsdl" MetadataType="Wsdl" ID="423ca4c6-6bea-43af-8192-390abd561a1e" SourceId="1" SourceUrl="http://192.168.4.80:8082/OutStoreManage?wsdl" />
+    <MetadataFile FileName="OutStoreManage41.xsd" MetadataType="Schema" ID="da225bed-199f-4e52-aefa-28c3b5cb2c8a" SourceId="1" SourceUrl="http://192.168.4.80:8082/OutStoreManage?xsd=xsd2" />
+    <MetadataFile FileName="OutStoreManage42.xsd" MetadataType="Schema" ID="157c39c1-ccec-4d1d-a49c-1479d783763f" SourceId="1" SourceUrl="http://192.168.4.80:8082/OutStoreManage?xsd=xsd3" />
+    <MetadataFile FileName="OutStoreManage43.xsd" MetadataType="Schema" ID="ef18b6f4-91ef-4ef1-b876-33aa44c6e0b0" SourceId="1" SourceUrl="http://192.168.4.80:8082/OutStoreManage?xsd=xsd1" />
+    <MetadataFile FileName="OutStoreManage1.disco" MetadataType="Disco" ID="4e813f37-0382-4045-8d25-b80ef7876b72" SourceId="1" SourceUrl="http://192.168.4.80:8082/OutStoreManage?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

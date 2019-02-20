@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB12C112-022F-458B-AB9D-55C2B40D6C60}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMST.Storage.BackgroundManage</RootNamespace>
+    <AssemblyName>CMST.Storage.BackgroundManage</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CMSTMsgBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CMSTMsgBox.dll</HintPath>
+    </Reference>
+    <Reference Include="MD5, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CMST.Storage.BackgroundManage.BLL\bin\Debug\MD5.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmAuthorityManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAuthorityManage.Designer.cs">
+      <DependentUpon>FrmAuthorityManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBaseMessageManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBaseMessageManage.Designer.cs">
+      <DependentUpon>FrmBaseMessageManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBackgroundManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBackgroundManage.Designer.cs">
+      <DependentUpon>FrmBackgroundManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBackgroundPresent.cs" />
+    <Compile Include="FrmDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDatabase.Designer.cs">
+      <DependentUpon>FrmDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOrganizationManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOrganizationManage.Designer.cs">
+      <DependentUpon>FrmOrganizationManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBaseMessageManagePresenter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAuthorityManage.resx">
+      <DependentUpon>FrmAuthorityManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBaseMessageManage.resx">
+      <DependentUpon>FrmBaseMessageManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBackgroundManage.resx">
+      <DependentUpon>FrmBackgroundManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDatabase.resx">
+      <DependentUpon>FrmDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOrganizationManage.resx">
+      <DependentUpon>FrmOrganizationManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CMST.Storage.BackgroundManage.BLL\CMST.Storage.BackgroundManage.BLL.csproj">
+      <Project>{B78AA34A-1BDB-4BE9-9F17-63C67F43F685}</Project>
+      <Name>CMST.Storage.BackgroundManage.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMST.Storage.BackgroundManage.Common\CMST.Storage.BackgroundManage.Common.csproj">
+      <Project>{1FB806C9-746B-484E-9FF0-6BD6ABDA7A52}</Project>
+      <Name>CMST.Storage.BackgroundManage.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMST.Storage.BackgroundManage.DAL\CMST.Storage.BackgroundManage.DAL.csproj">
+      <Project>{4229BEEC-8C2C-402F-8CC2-8B28FDF854AE}</Project>
+      <Name>CMST.Storage.BackgroundManage.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMST.Storage.BackgroundManage.Data\CMST.Storage.BackgroundManage.Data.csproj">
+      <Project>{976077B0-C0D8-4FEF-9B33-BDFC561893AE}</Project>
+      <Name>CMST.Storage.BackgroundManage.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMST.Storage.BackgroundManage.Service\CMST.Storage.BackgroundManage.Service.csproj">
+      <Project>{99AF3AC0-FF3C-4842-8B48-FAA30AFC4725}</Project>
+      <Name>CMST.Storage.BackgroundManage.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1366768bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="logo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

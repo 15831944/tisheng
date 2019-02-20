@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.4.80:8082/CarManage?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.CarManage" />
+  <xs:element name="SaveCarRegister">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.CarManage" minOccurs="0" name="cr" nillable="true" type="q1:CarRegister" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCarRegisterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveCarRegisterResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BindCarRegisterWithBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BillNo" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.CarManage" minOccurs="0" name="crd" nillable="true" type="q2:CarRegisterDetail" />
+        <xs:element minOccurs="0" name="cmstId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BindCarRegisterWithBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BindCarRegisterWithBillResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryCarRegisterById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="creId" type="xs:long" />
+        <xs:element minOccurs="0" name="cmstId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryCarRegisterByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryCarRegisterByIdResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryCarRegisterByBillNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BillNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cmstId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryCarRegisterByBillNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryCarRegisterByBillNoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryCarRegisterByCarNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="carNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cmstId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryCarRegisterByCarNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryCarRegisterByCarNoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryCarRegisterPageInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.CarManage" minOccurs="0" name="crq" nillable="true" type="q3:CarRegisterQuery" />
+        <xs:element minOccurs="0" name="queryFields" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="page" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryCarRegisterPageInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryCarRegisterPageInfoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryOutPlanByCarRegisterNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CarRegisterNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cmstId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryOutPlanByCarRegisterNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryOutPlanByCarRegisterNoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryInStoreBillByCarRegisterNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CarRegisterNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cmstId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryInStoreBillByCarRegisterNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryInStoreBillByCarRegisterNoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckCarRegister">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.CarManage" minOccurs="0" name="c" nillable="true" type="q4:CarRegister" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckCarRegisterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckCarRegisterResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryAllCarRegister">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cmstId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryAllCarRegisterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryAllCarRegisterResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryAllCarRegisterId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cmstId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryAllCarRegisterIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryAllCarRegisterIdResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryCarRegisterByCarNum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="carNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="carType" type="xs:int" />
+        <xs:element minOccurs="0" name="cmstId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryCarRegisterByCarNumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryCarRegisterByCarNumResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryCarRegisterDetailCountByBillNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="crdBillNo" type="xs:long" />
+        <xs:element minOccurs="0" name="Type" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryCarRegisterDetailCountByBillNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryCarRegisterDetailCountByBillNoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryCarRegistersByBillNoAndBillType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="billNo" type="xs:long" />
+        <xs:element minOccurs="0" name="billType" type="xs:int" />
+        <xs:element minOccurs="0" name="cmstId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryCarRegistersByBillNoAndBillTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryCarRegistersByBillNoAndBillTypeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnBindCarRegisterWithBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BillNo" type="xs:long" />
+        <xs:element minOccurs="0" name="carRegisterId" type="xs:long" />
+        <xs:element minOccurs="0" name="cmstId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnBindCarRegisterWithBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UnBindCarRegisterWithBillResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateCarRegisterClass">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateCarRegisterClassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.CarManage" minOccurs="0" name="GenerateCarRegisterClassResult" nillable="true" type="q5:CarRegister" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateOutStoreCheckClass">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateOutStoreCheckClassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.CarManage" minOccurs="0" name="GenerateOutStoreCheckClassResult" nillable="true" type="q6:OutStoreCheck" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateInStoreCheckClass">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateInStoreCheckClassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.CarManage" minOccurs="0" name="GenerateInStoreCheckClassResult" nillable="true" type="q7:InStoreCheck" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRemakeByCreID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.CarManage" minOccurs="0" name="c" nillable="true" type="q8:CarRegister" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRemakeByCreIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateRemakeByCreIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

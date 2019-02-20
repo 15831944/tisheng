@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6ed7d365-33b8-4ff8-b9a4-a6e32305fe2a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://127.0.0.1:8082/ProductManage" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProductManage4.xsd" MetadataType="Schema" ID="532cbba6-9d40-433b-bcc8-f1e437168a71" SourceId="1" SourceUrl="http://192.168.4.80:8082/ProductManage?xsd=xsd3" />
+    <MetadataFile FileName="ProductManage41.xsd" MetadataType="Schema" ID="b112c279-1098-40a2-9a5e-646a2456e27f" SourceId="1" SourceUrl="http://192.168.4.80:8082/ProductManage?xsd=xsd1" />
+    <MetadataFile FileName="ProductManage42.xsd" MetadataType="Schema" ID="ee122a94-6d75-439e-ac1c-cd449f997cfa" SourceId="1" SourceUrl="http://192.168.4.80:8082/ProductManage?xsd=xsd0" />
+    <MetadataFile FileName="ProductManage1.wsdl" MetadataType="Wsdl" ID="6b21f4f5-21d8-4904-a8d3-91b44083c6f8" SourceId="1" SourceUrl="http://192.168.4.80:8082/ProductManage?wsdl" />
+    <MetadataFile FileName="ProductManage43.xsd" MetadataType="Schema" ID="71137cff-eeca-47a4-b7af-7fa656c7e21a" SourceId="1" SourceUrl="http://192.168.4.80:8082/ProductManage?xsd=xsd2" />
+    <MetadataFile FileName="ProductManage1.disco" MetadataType="Disco" ID="fbd0f167-726d-45ce-9782-e6a4299afbe0" SourceId="1" SourceUrl="http://192.168.4.80:8082/ProductManage?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

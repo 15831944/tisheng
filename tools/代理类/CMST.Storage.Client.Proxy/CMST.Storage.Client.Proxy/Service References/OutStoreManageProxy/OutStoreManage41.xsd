@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.OutStore" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="OutStoreBill">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfOutStoreDetail" />
+      <xs:element minOccurs="0" name="OsbBillOfLadingNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsbCarNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsbCmstId" type="xs:int" />
+      <xs:element minOccurs="0" name="OsbComId" type="xs:int" />
+      <xs:element minOccurs="0" name="OsbDeliveryPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsbDeliveryTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OsbDepId" type="xs:int" />
+      <xs:element minOccurs="0" name="OsbDmoId" type="xs:int" />
+      <xs:element minOccurs="0" name="OsbFcheckTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OsbId" type="xs:long" />
+      <xs:element minOccurs="0" name="OsbIdentityNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsbIdentityType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsbIfDel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OsbIfOperate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OsbMakeTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OsbOnlineNo" type="xs:long" />
+      <xs:element minOccurs="0" name="OsbOpeFchecker" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="OsbOpeMaker" type="xs:int" />
+      <xs:element minOccurs="0" name="OsbOpePchecker" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="OsbOpePrinter" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="OsbOpeTallyClerk" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="OsbPcheckTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OsbPrintCount" type="xs:int" />
+      <xs:element minOccurs="0" name="OsbPrintTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OsbRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsbStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="OsbTallyClerkTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OsbTrackNo" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OutStoreBill" nillable="true" type="tns:OutStoreBill" />
+  <xs:complexType name="ArrayOfOutStoreDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OutStoreDetail" nillable="true" type="tns:OutStoreDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOutStoreDetail" nillable="true" type="tns:ArrayOfOutStoreDetail" />
+  <xs:complexType name="OutStoreDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OsdBreId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="OsdCmstId" type="xs:int" />
+      <xs:element minOccurs="0" name="OsdFactAN" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OsdFactPN" type="xs:int" />
+      <xs:element minOccurs="0" name="OsdGalId" type="xs:int" />
+      <xs:element minOccurs="0" name="OsdGalName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdGraName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdId" type="xs:long" />
+      <xs:element minOccurs="0" name="OsdManName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdOodId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="OsdOsbId" type="xs:long" />
+      <xs:element minOccurs="0" name="OsdPacName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdPlanAN" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OsdPlanPN" type="xs:int" />
+      <xs:element minOccurs="0" name="OsdPnaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdProHelpCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdProId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="OsdProName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdSatId" type="xs:int" />
+      <xs:element minOccurs="0" name="OsdSatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdSignNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdSkuId" type="xs:int" />
+      <xs:element minOccurs="0" name="OsdSkuName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdSpare" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdSpeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdStyId" type="xs:int" />
+      <xs:element minOccurs="0" name="OsdStyName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OutStoreDetail" nillable="true" type="tns:OutStoreDetail" />
+  <xs:complexType name="OutStoreDetailStock">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OsdCmstId" type="xs:int" />
+      <xs:element minOccurs="0" name="OsdFactAN" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OsdFactPN" type="xs:int" />
+      <xs:element minOccurs="0" name="OsdGalId" type="xs:int" />
+      <xs:element minOccurs="0" name="OsdGalName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdGraName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdManName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdPacName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdPlanAN" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OsdPlanPN" type="xs:int" />
+      <xs:element minOccurs="0" name="OsdPnaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdProName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdSignNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdSkuId" type="xs:int" />
+      <xs:element minOccurs="0" name="OsdSpare" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdSpeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdStyName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OutStoreDetailStock" nillable="true" type="tns:OutStoreDetailStock" />
+  <xs:complexType name="OutPlanView">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillOfLading" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CarNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CheckTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Checker" type="xs:int" />
+      <xs:element minOccurs="0" name="CheckerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CmstId" type="xs:int" />
+      <xs:element minOccurs="0" name="ComId" type="xs:int" />
+      <xs:element minOccurs="0" name="ComName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliverPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliverTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeliveryCompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DepId" type="xs:int" />
+      <xs:element minOccurs="0" name="DepName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DmoId" type="xs:int" />
+      <xs:element minOccurs="0" name="DmoName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="IdentityNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdentityType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MakeTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Maker" type="xs:int" />
+      <xs:element minOccurs="0" name="MakerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutPlanDetails" nillable="true" type="tns:ArrayOfOutPlanDetailView" />
+      <xs:element minOccurs="0" name="PreGoods" nillable="true" type="tns:ArrayOfPreGoodsViewDelivery" />
+      <xs:element minOccurs="0" name="PrintCount" type="xs:int" />
+      <xs:element minOccurs="0" name="PrintTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Printer" type="xs:int" />
+      <xs:element minOccurs="0" name="PrinterName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReviewTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Reviewer" type="xs:int" />
+      <xs:element minOccurs="0" name="ReviewerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="TrackNo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OutPlanView" nillable="true" type="tns:OutPlanView" />
+  <xs:complexType name="ArrayOfOutPlanDetailView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OutPlanDetailView" nillable="true" type="tns:OutPlanDetailView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOutPlanDetailView" nillable="true" type="tns:ArrayOfOutPlanDetailView" />
+  <xs:complexType name="OutPlanDetailView">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OsdCmstId" type="xs:int" />
+      <xs:element minOccurs="0" name="OsdFactAN" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OsdFactPN" type="xs:int" />
+      <xs:element minOccurs="0" name="OsdGalName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdGraName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdId" type="xs:long" />
+      <xs:element minOccurs="0" name="OsdManName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdOsbId" type="xs:long" />
+      <xs:element minOccurs="0" name="OsdPacName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdPlanAN" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OsdPlanPN" type="xs:int" />
+      <xs:element minOccurs="0" name="OsdPnaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdProHelpCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdProName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdSatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdSignNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdSkuId" type="xs:int" />
+      <xs:element minOccurs="0" name="OsdSkuName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdSpare" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdSpeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OsdStyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PreGoods" nillable="true" type="tns:ArrayOfPreGoodsView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OutPlanDetailView" nillable="true" type="tns:OutPlanDetailView" />
+  <xs:complexType name="ArrayOfPreGoodsView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PreGoodsView" nillable="true" type="tns:PreGoodsView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPreGoodsView" nillable="true" type="tns:ArrayOfPreGoodsView" />
+  <xs:complexType name="PreGoodsView">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CheckTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Checker" type="xs:int" />
+      <xs:element minOccurs="0" name="CheckerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GalId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="MakeTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Maker" type="xs:int" />
+      <xs:element minOccurs="0" name="MakerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Num" type="xs:int" />
+      <xs:element minOccurs="0" name="OutPlanDetailId" type="xs:long" />
+      <xs:element minOccurs="0" name="OutPlanId" type="xs:long" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="Weight" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PreGoodsView" nillable="true" type="tns:PreGoodsView" />
+  <xs:complexType name="ArrayOfPreGoodsViewDelivery">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PreGoodsViewDelivery" nillable="true" type="tns:PreGoodsViewDelivery" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPreGoodsViewDelivery" nillable="true" type="tns:ArrayOfPreGoodsViewDelivery" />
+  <xs:complexType name="PreGoodsViewDelivery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CheckTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Checker" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CheckerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ComID" type="xs:int" />
+      <xs:element minOccurs="0" name="ComName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FactAN" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FactPN" type="xs:int" />
+      <xs:element minOccurs="0" name="GalDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GalId" type="xs:int" />
+      <xs:element minOccurs="0" name="GalName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GraName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="MakeTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Maker" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MakerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ManName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Num" type="xs:int" />
+      <xs:element minOccurs="0" name="OutPlanDetailId" type="xs:long" />
+      <xs:element minOccurs="0" name="OutPlanId" type="xs:long" />
+      <xs:element minOccurs="0" name="PacName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PnaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SkuId" type="xs:int" />
+      <xs:element minOccurs="0" name="Sku_SignNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sku_Spare" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sku_Styname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="StatusName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Weight" type="xs:decimal" />
+      <xs:element minOccurs="0" name="control" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PreGoodsViewDelivery" nillable="true" type="tns:PreGoodsViewDelivery" />
+  <xs:complexType name="SwapOutStore">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CheckTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Cmst_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfSwapOutDetail" />
+      <xs:element minOccurs="0" name="DispatchTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="IfDel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MakeTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Ope_Checker" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Ope_Dispatcher" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Ope_Maker" type="xs:int" />
+      <xs:element minOccurs="0" name="Osb_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SwapOutStore" nillable="true" type="tns:SwapOutStore" />
+  <xs:complexType name="ArrayOfSwapOutDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SwapOutDetail" nillable="true" type="tns:SwapOutDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSwapOutDetail" nillable="true" type="tns:ArrayOfSwapOutDetail" />
+  <xs:complexType name="SwapOutDetail">
+    <xs:sequence>
+      <xs:element name="_sod_an" type="xs:decimal" />
+      <xs:element name="_sod_bre_id" nillable="true" type="xs:long" />
+      <xs:element name="_sod_com_id" type="xs:int" />
+      <xs:element name="_sod_gal_id" type="xs:int" />
+      <xs:element name="_sod_id" type="xs:long" />
+      <xs:element name="_sod_osd_id" type="xs:long" />
+      <xs:element name="_sod_pn" type="xs:int" />
+      <xs:element name="_sod_sos_id" type="xs:long" />
+      <xs:element name="_sod_type" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SwapOutDetail" nillable="true" type="tns:SwapOutDetail" />
+</xs:schema>

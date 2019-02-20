@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CustomerManage" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_ICustomerManageProxy_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <msf:Streamed xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICustomerManageProxy_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.4.80:8082/CustomerManage?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/CustomerManage?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/CustomerManage?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.CustomerManage" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/CustomerManage?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.ContractManage" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/CustomerManage?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/CustomerManage?xsd=xsd5" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICustomerManageProxy_GetCompanyInfoByCode_Name_HelpCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyInfoByCode_Name_HelpCode" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_GetCompanyInfoByCode_Name_HelpCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyInfoByCode_Name_HelpCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_GetCompanyALLorByCode_Name_HelpCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyALLorByCode_Name_HelpCode" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_GetCompanyALLorByCode_Name_HelpCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyALLorByCode_Name_HelpCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_SaveCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCompany" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_SaveCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_GetCompanyById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyById" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_GetCompanyById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_QueryCompanyALLorByCode_Name_HelpCodePageInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCompanyALLorByCode_Name_HelpCodePageInfo" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_QueryCompanyALLorByCode_Name_HelpCodePageInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCompanyALLorByCode_Name_HelpCodePageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_GetCompanyAllIsUse_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyAllIsUse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_GetCompanyAllIsUse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyAllIsUseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_GetCompanySelectList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanySelectList" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_GetCompanySelectList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanySelectListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_GetCompanyServicesTypeAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyServicesTypeAll" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_GetCompanyServicesTypeAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyServicesTypeAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_GetCustomerCache_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerCache" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_GetCustomerCache_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_GetCustomerCacheAndroid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerCacheAndroid" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_GetCustomerCacheAndroid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerCacheAndroidResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_QueryContractsPageInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryContractsPageInfo" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_QueryContractsPageInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryContractsPageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_SaveContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveContract" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_SaveContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_GetCompanyContractsByCompanyID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyContractsByCompanyID" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_GetCompanyContractsByCompanyID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyContractsByCompanyIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_XQContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:XQContract" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_XQContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XQContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_UpdateContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateContract" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerManageProxy_UpdateContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateContractResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICustomerManageProxy">
+    <wsdl:operation name="GetCompanyInfoByCode_Name_HelpCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerManage/GetCompanyInfoByCode_Name_HelpCode" message="tns:ICustomerManageProxy_GetCompanyInfoByCode_Name_HelpCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerManage/GetCompanyInfoByCode_Name_HelpCodeResponse" message="tns:ICustomerManageProxy_GetCompanyInfoByCode_Name_HelpCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyALLorByCode_Name_HelpCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerManage/GetCompanyALLorByCode_Name_HelpCode" message="tns:ICustomerManageProxy_GetCompanyALLorByCode_Name_HelpCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerManage/GetCompanyALLorByCode_Name_HelpCodeResponse" message="tns:ICustomerManageProxy_GetCompanyALLorByCode_Name_HelpCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerManage/SaveCompany" message="tns:ICustomerManageProxy_SaveCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerManage/SaveCompanyResponse" message="tns:ICustomerManageProxy_SaveCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerManage/GetCompanyById" message="tns:ICustomerManageProxy_GetCompanyById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerManage/GetCompanyByIdResponse" message="tns:ICustomerManageProxy_GetCompanyById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCompanyALLorByCode_Name_HelpCodePageInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerManage/QueryCompanyALLorByCode_Name_HelpCodePageInfo" message="tns:ICustomerManageProxy_QueryCompanyALLorByCode_Name_HelpCodePageInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerManage/QueryCompanyALLorByCode_Name_HelpCodePageInfoResponse" message="tns:ICustomerManageProxy_QueryCompanyALLorByCode_Name_HelpCodePageInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyAllIsUse">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerManage/GetCompanyAllIsUse" message="tns:ICustomerManageProxy_GetCompanyAllIsUse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerManage/GetCompanyAllIsUseResponse" message="tns:ICustomerManageProxy_GetCompanyAllIsUse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanySelectList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerManage/GetCompanySelectList" message="tns:ICustomerManageProxy_GetCompanySelectList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerManage/GetCompanySelectListResponse" message="tns:ICustomerManageProxy_GetCompanySelectList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyServicesTypeAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerManage/GetCompanyServicesTypeAll" message="tns:ICustomerManageProxy_GetCompanyServicesTypeAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerManage/GetCompanyServicesTypeAllResponse" message="tns:ICustomerManageProxy_GetCompanyServicesTypeAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerCache">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerManage/GetCustomerCache" message="tns:ICustomerManageProxy_GetCustomerCache_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerManage/GetCustomerCacheResponse" message="tns:ICustomerManageProxy_GetCustomerCache_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerCacheAndroid">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerManage/GetCustomerCacheAndroid" message="tns:ICustomerManageProxy_GetCustomerCacheAndroid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerManage/GetCustomerCacheAndroidResponse" message="tns:ICustomerManageProxy_GetCustomerCacheAndroid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryContractsPageInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerManage/QueryContractsPageInfo" message="tns:ICustomerManageProxy_QueryContractsPageInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerManage/QueryContractsPageInfoResponse" message="tns:ICustomerManageProxy_QueryContractsPageInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerManage/SaveContract" message="tns:ICustomerManageProxy_SaveContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerManage/SaveContractResponse" message="tns:ICustomerManageProxy_SaveContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyContractsByCompanyID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerManage/GetCompanyContractsByCompanyID" message="tns:ICustomerManageProxy_GetCompanyContractsByCompanyID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerManage/GetCompanyContractsByCompanyIDResponse" message="tns:ICustomerManageProxy_GetCompanyContractsByCompanyID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XQContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerManage/XQContract" message="tns:ICustomerManageProxy_XQContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerManage/XQContractResponse" message="tns:ICustomerManageProxy_XQContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerManage/UpdateContract" message="tns:ICustomerManageProxy_UpdateContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerManage/UpdateContractResponse" message="tns:ICustomerManageProxy_UpdateContract_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_ICustomerManageProxy" type="tns:ICustomerManageProxy">
+    <wsp:PolicyReference URI="#NetTcpBinding_ICustomerManageProxy_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetCompanyInfoByCode_Name_HelpCode">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/GetCompanyInfoByCode_Name_HelpCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyALLorByCode_Name_HelpCode">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/GetCompanyALLorByCode_Name_HelpCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCompany">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/SaveCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyById">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/GetCompanyById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCompanyALLorByCode_Name_HelpCodePageInfo">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/QueryCompanyALLorByCode_Name_HelpCodePageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyAllIsUse">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/GetCompanyAllIsUse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanySelectList">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/GetCompanySelectList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyServicesTypeAll">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/GetCompanyServicesTypeAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerCache">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/GetCustomerCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerCacheAndroid">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/GetCustomerCacheAndroid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryContractsPageInfo">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/QueryContractsPageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveContract">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/SaveContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyContractsByCompanyID">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/GetCompanyContractsByCompanyID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XQContract">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/XQContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContract">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/UpdateContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSHttpBinding_ICustomerManageProxy" type="tns:ICustomerManageProxy">
+    <wsp:PolicyReference URI="#WSHttpBinding_ICustomerManageProxy_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCompanyInfoByCode_Name_HelpCode">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/GetCompanyInfoByCode_Name_HelpCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyALLorByCode_Name_HelpCode">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/GetCompanyALLorByCode_Name_HelpCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCompany">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/SaveCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyById">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/GetCompanyById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCompanyALLorByCode_Name_HelpCodePageInfo">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/QueryCompanyALLorByCode_Name_HelpCodePageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyAllIsUse">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/GetCompanyAllIsUse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanySelectList">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/GetCompanySelectList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyServicesTypeAll">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/GetCompanyServicesTypeAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerCache">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/GetCustomerCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerCacheAndroid">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/GetCustomerCacheAndroid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryContractsPageInfo">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/QueryContractsPageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveContract">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/SaveContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyContractsByCompanyID">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/GetCompanyContractsByCompanyID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XQContract">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/XQContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContract">
+      <soap12:operation soapAction="http://tempuri.org/ICustomerManage/UpdateContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CustomerManage">
+    <wsdl:port name="NetTcpBinding_ICustomerManageProxy" binding="tns:NetTcpBinding_ICustomerManageProxy">
+      <soap12:address location="net.tcp://192.168.4.80:8081/CustomerManage" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://192.168.4.80:8081/CustomerManage</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="WSHttpBinding_ICustomerManageProxy" binding="tns:WSHttpBinding_ICustomerManageProxy">
+      <soap12:address location="http://192.168.4.80:8082/CustomerManage" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://192.168.4.80:8082/CustomerManage</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

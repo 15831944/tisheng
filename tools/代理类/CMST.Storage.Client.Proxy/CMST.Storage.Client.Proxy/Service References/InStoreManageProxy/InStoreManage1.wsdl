@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="InStoreManage" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IInStoreManageProxy_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <msf:Streamed xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IInStoreManageProxy_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.4.80:8082/InStoreManage?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/InStoreManage?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/InStoreManage?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.InStore" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IInStoreManageProxy_SaveInNotice_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveInNotice" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_SaveInNotice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveInNoticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_CheckInNotice_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckInNotice" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_CheckInNotice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckInNoticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_InvalidInNotice_InputMessage">
+    <wsdl:part name="parameters" element="tns:InvalidInNotice" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_InvalidInNotice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InvalidInNoticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_EndInNotice_InputMessage">
+    <wsdl:part name="parameters" element="tns:EndInNotice" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_EndInNotice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EndInNoticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_RestartInNotice_InputMessage">
+    <wsdl:part name="parameters" element="tns:RestartInNotice" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_RestartInNotice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RestartInNoticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_SavaAndCheckInNotice_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavaAndCheckInNotice" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_SavaAndCheckInNotice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavaAndCheckInNoticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_GetInNoticeByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInNoticeByID" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_GetInNoticeByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInNoticeByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_QueryInNoticeByCmstID_OpeID_DepID_AmoIDPageInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryInNoticeByCmstID_OpeID_DepID_AmoIDPageInfo" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_QueryInNoticeByCmstID_OpeID_DepID_AmoIDPageInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryInNoticeByCmstID_OpeID_DepID_AmoIDPageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_GetAllInNoticeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInNoticeList" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_GetAllInNoticeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInNoticeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_QueryInNoticeByConditionsPageInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryInNoticeByConditionsPageInfo" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_QueryInNoticeByConditionsPageInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryInNoticeByConditionsPageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_QueryStockByConditionsPageInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStockByConditionsPageInfo" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_QueryStockByConditionsPageInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStockByConditionsPageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_QueryStockInfoByConditions_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStockInfoByConditions" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_QueryStockInfoByConditions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStockInfoByConditionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_QueryStockInfoBySkuID_RarID_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStockInfoBySkuID_RarID" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_QueryStockInfoBySkuID_RarID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStockInfoBySkuID_RarIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_QueryStockById_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStockById" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_QueryStockById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStockByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_QueryStockByConditions_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStockByConditions" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_QueryStockByConditions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStockByConditionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_SaveInStoreBillTemporary_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveInStoreBillTemporary" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_SaveInStoreBillTemporary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveInStoreBillTemporaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_SaveInStoreInAddAndCheck_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveInStoreInAddAndCheck" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_SaveInStoreInAddAndCheck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveInStoreInAddAndCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_TallyClerkConfirm_InputMessage">
+    <wsdl:part name="parameters" element="tns:TallyClerkConfirm" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_TallyClerkConfirm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TallyClerkConfirmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_SaveInStoreCheck_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveInStoreCheck" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_SaveInStoreCheck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveInStoreCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_QueryInStoreBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryInStoreBill" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_QueryInStoreBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryInStoreBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_QueryInStoreBillPageInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryInStoreBillPageInfo" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_QueryInStoreBillPageInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryInStoreBillPageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_ReverseInStoreBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReverseInStoreBill" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_ReverseInStoreBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReverseInStoreBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_SaveInvalidInStoreBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveInvalidInStoreBill" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_SaveInvalidInStoreBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveInvalidInStoreBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_WithdrawInStoreBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:WithdrawInStoreBill" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_WithdrawInStoreBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WithdrawInStoreBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_PrintInStoreBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrintInStoreBill" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_PrintInStoreBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrintInStoreBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_QueryIsbByTrackingNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryIsbByTrackingNum" />
+  </wsdl:message>
+  <wsdl:message name="IInStoreManageProxy_QueryIsbByTrackingNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryIsbByTrackingNumResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IInStoreManageProxy">
+    <wsdl:operation name="SaveInNotice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/SaveInNotice" message="tns:IInStoreManageProxy_SaveInNotice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/SaveInNoticeResponse" message="tns:IInStoreManageProxy_SaveInNotice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckInNotice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/CheckInNotice" message="tns:IInStoreManageProxy_CheckInNotice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/CheckInNoticeResponse" message="tns:IInStoreManageProxy_CheckInNotice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InvalidInNotice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/InvalidInNotice" message="tns:IInStoreManageProxy_InvalidInNotice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/InvalidInNoticeResponse" message="tns:IInStoreManageProxy_InvalidInNotice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EndInNotice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/EndInNotice" message="tns:IInStoreManageProxy_EndInNotice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/EndInNoticeResponse" message="tns:IInStoreManageProxy_EndInNotice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RestartInNotice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/RestartInNotice" message="tns:IInStoreManageProxy_RestartInNotice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/RestartInNoticeResponse" message="tns:IInStoreManageProxy_RestartInNotice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavaAndCheckInNotice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/SavaAndCheckInNotice" message="tns:IInStoreManageProxy_SavaAndCheckInNotice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/SavaAndCheckInNoticeResponse" message="tns:IInStoreManageProxy_SavaAndCheckInNotice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInNoticeByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/GetInNoticeByID" message="tns:IInStoreManageProxy_GetInNoticeByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/GetInNoticeByIDResponse" message="tns:IInStoreManageProxy_GetInNoticeByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryInNoticeByCmstID_OpeID_DepID_AmoIDPageInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/QueryInNoticeByCmstID_OpeID_DepID_AmoIDPageInfo" message="tns:IInStoreManageProxy_QueryInNoticeByCmstID_OpeID_DepID_AmoIDPageInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/QueryInNoticeByCmstID_OpeID_DepID_AmoIDPageInfoResponse" message="tns:IInStoreManageProxy_QueryInNoticeByCmstID_OpeID_DepID_AmoIDPageInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInNoticeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/GetAllInNoticeList" message="tns:IInStoreManageProxy_GetAllInNoticeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/GetAllInNoticeListResponse" message="tns:IInStoreManageProxy_GetAllInNoticeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryInNoticeByConditionsPageInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/QueryInNoticeByConditionsPageInfo" message="tns:IInStoreManageProxy_QueryInNoticeByConditionsPageInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/QueryInNoticeByConditionsPageInfoResponse" message="tns:IInStoreManageProxy_QueryInNoticeByConditionsPageInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockByConditionsPageInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/QueryStockByConditionsPageInfo" message="tns:IInStoreManageProxy_QueryStockByConditionsPageInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/QueryStockByConditionsPageInfoResponse" message="tns:IInStoreManageProxy_QueryStockByConditionsPageInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockInfoByConditions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/QueryStockInfoByConditions" message="tns:IInStoreManageProxy_QueryStockInfoByConditions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/QueryStockInfoByConditionsResponse" message="tns:IInStoreManageProxy_QueryStockInfoByConditions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockInfoBySkuID_RarID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/QueryStockInfoBySkuID_RarID" message="tns:IInStoreManageProxy_QueryStockInfoBySkuID_RarID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/QueryStockInfoBySkuID_RarIDResponse" message="tns:IInStoreManageProxy_QueryStockInfoBySkuID_RarID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/QueryStockById" message="tns:IInStoreManageProxy_QueryStockById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/QueryStockByIdResponse" message="tns:IInStoreManageProxy_QueryStockById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockByConditions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/QueryStockByConditions" message="tns:IInStoreManageProxy_QueryStockByConditions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/QueryStockByConditionsResponse" message="tns:IInStoreManageProxy_QueryStockByConditions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveInStoreBillTemporary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/SaveInStoreBillTemporary" message="tns:IInStoreManageProxy_SaveInStoreBillTemporary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/SaveInStoreBillTemporaryResponse" message="tns:IInStoreManageProxy_SaveInStoreBillTemporary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveInStoreInAddAndCheck">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/SaveInStoreInAddAndCheck" message="tns:IInStoreManageProxy_SaveInStoreInAddAndCheck_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/SaveInStoreInAddAndCheckResponse" message="tns:IInStoreManageProxy_SaveInStoreInAddAndCheck_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TallyClerkConfirm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/TallyClerkConfirm" message="tns:IInStoreManageProxy_TallyClerkConfirm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/TallyClerkConfirmResponse" message="tns:IInStoreManageProxy_TallyClerkConfirm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveInStoreCheck">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/SaveInStoreCheck" message="tns:IInStoreManageProxy_SaveInStoreCheck_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/SaveInStoreCheckResponse" message="tns:IInStoreManageProxy_SaveInStoreCheck_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryInStoreBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/QueryInStoreBill" message="tns:IInStoreManageProxy_QueryInStoreBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/QueryInStoreBillResponse" message="tns:IInStoreManageProxy_QueryInStoreBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryInStoreBillPageInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/QueryInStoreBillPageInfo" message="tns:IInStoreManageProxy_QueryInStoreBillPageInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/QueryInStoreBillPageInfoResponse" message="tns:IInStoreManageProxy_QueryInStoreBillPageInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReverseInStoreBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/ReverseInStoreBill" message="tns:IInStoreManageProxy_ReverseInStoreBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/ReverseInStoreBillResponse" message="tns:IInStoreManageProxy_ReverseInStoreBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveInvalidInStoreBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/SaveInvalidInStoreBill" message="tns:IInStoreManageProxy_SaveInvalidInStoreBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/SaveInvalidInStoreBillResponse" message="tns:IInStoreManageProxy_SaveInvalidInStoreBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WithdrawInStoreBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/WithdrawInStoreBill" message="tns:IInStoreManageProxy_WithdrawInStoreBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/WithdrawInStoreBillResponse" message="tns:IInStoreManageProxy_WithdrawInStoreBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrintInStoreBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/PrintInStoreBill" message="tns:IInStoreManageProxy_PrintInStoreBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/PrintInStoreBillResponse" message="tns:IInStoreManageProxy_PrintInStoreBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryIsbByTrackingNum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInStoreManage/QueryIsbByTrackingNum" message="tns:IInStoreManageProxy_QueryIsbByTrackingNum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInStoreManage/QueryIsbByTrackingNumResponse" message="tns:IInStoreManageProxy_QueryIsbByTrackingNum_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IInStoreManageProxy" type="tns:IInStoreManageProxy">
+    <wsp:PolicyReference URI="#NetTcpBinding_IInStoreManageProxy_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="SaveInNotice">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/SaveInNotice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckInNotice">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/CheckInNotice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvalidInNotice">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/InvalidInNotice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndInNotice">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/EndInNotice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RestartInNotice">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/RestartInNotice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavaAndCheckInNotice">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/SavaAndCheckInNotice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInNoticeByID">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/GetInNoticeByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryInNoticeByCmstID_OpeID_DepID_AmoIDPageInfo">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/QueryInNoticeByCmstID_OpeID_DepID_AmoIDPageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInNoticeList">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/GetAllInNoticeList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryInNoticeByConditionsPageInfo">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/QueryInNoticeByConditionsPageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockByConditionsPageInfo">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/QueryStockByConditionsPageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockInfoByConditions">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/QueryStockInfoByConditions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockInfoBySkuID_RarID">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/QueryStockInfoBySkuID_RarID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockById">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/QueryStockById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockByConditions">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/QueryStockByConditions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveInStoreBillTemporary">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/SaveInStoreBillTemporary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveInStoreInAddAndCheck">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/SaveInStoreInAddAndCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TallyClerkConfirm">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/TallyClerkConfirm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveInStoreCheck">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/SaveInStoreCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryInStoreBill">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/QueryInStoreBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryInStoreBillPageInfo">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/QueryInStoreBillPageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReverseInStoreBill">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/ReverseInStoreBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveInvalidInStoreBill">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/SaveInvalidInStoreBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WithdrawInStoreBill">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/WithdrawInStoreBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintInStoreBill">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/PrintInStoreBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryIsbByTrackingNum">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/QueryIsbByTrackingNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSHttpBinding_IInStoreManageProxy" type="tns:IInStoreManageProxy">
+    <wsp:PolicyReference URI="#WSHttpBinding_IInStoreManageProxy_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveInNotice">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/SaveInNotice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckInNotice">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/CheckInNotice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvalidInNotice">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/InvalidInNotice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndInNotice">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/EndInNotice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RestartInNotice">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/RestartInNotice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavaAndCheckInNotice">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/SavaAndCheckInNotice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInNoticeByID">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/GetInNoticeByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryInNoticeByCmstID_OpeID_DepID_AmoIDPageInfo">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/QueryInNoticeByCmstID_OpeID_DepID_AmoIDPageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInNoticeList">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/GetAllInNoticeList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryInNoticeByConditionsPageInfo">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/QueryInNoticeByConditionsPageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockByConditionsPageInfo">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/QueryStockByConditionsPageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockInfoByConditions">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/QueryStockInfoByConditions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockInfoBySkuID_RarID">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/QueryStockInfoBySkuID_RarID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockById">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/QueryStockById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryStockByConditions">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/QueryStockByConditions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveInStoreBillTemporary">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/SaveInStoreBillTemporary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveInStoreInAddAndCheck">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/SaveInStoreInAddAndCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TallyClerkConfirm">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/TallyClerkConfirm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveInStoreCheck">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/SaveInStoreCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryInStoreBill">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/QueryInStoreBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryInStoreBillPageInfo">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/QueryInStoreBillPageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReverseInStoreBill">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/ReverseInStoreBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveInvalidInStoreBill">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/SaveInvalidInStoreBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WithdrawInStoreBill">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/WithdrawInStoreBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintInStoreBill">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/PrintInStoreBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryIsbByTrackingNum">
+      <soap12:operation soapAction="http://tempuri.org/IInStoreManage/QueryIsbByTrackingNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InStoreManage">
+    <wsdl:port name="NetTcpBinding_IInStoreManageProxy" binding="tns:NetTcpBinding_IInStoreManageProxy">
+      <soap12:address location="net.tcp://192.168.4.80:8081/InStoreManage" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://192.168.4.80:8081/InStoreManage</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="WSHttpBinding_IInStoreManageProxy" binding="tns:WSHttpBinding_IInStoreManageProxy">
+      <soap12:address location="http://192.168.4.80:8082/InStoreManage" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://192.168.4.80:8082/InStoreManage</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

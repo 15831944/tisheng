@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SpecialBusinessManage" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_ISpecialBusinessManageProxy_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <msf:Streamed xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ISpecialBusinessManageProxy_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.4.80:8082/SpecialBusinessManage?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/SpecialBusinessManage?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.4.80:8082/SpecialBusinessManage?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.SpecialBusiness" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISpecialBusinessManageProxy_SaveAndCheckFrozen_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAndCheckFrozen" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_SaveAndCheckFrozen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAndCheckFrozenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_GetFrozenByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFrozenByID" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_GetFrozenByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFrozenByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_QueryFrozenByCmstID_ComID_TypePageInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryFrozenByCmstID_ComID_TypePageInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_QueryFrozenByCmstID_ComID_TypePageInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryFrozenByCmstID_ComID_TypePageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_GenerateFrozenClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateFrozenClass" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_GenerateFrozenClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateFrozenClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_SaveTransferGoods_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTransferGoods" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_SaveTransferGoods_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTransferGoodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_CheckTransferGoods_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckTransferGoods" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_CheckTransferGoods_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckTransferGoodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_InvalidTransferGoods_InputMessage">
+    <wsdl:part name="parameters" element="tns:InvalidTransferGoods" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_InvalidTransferGoods_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InvalidTransferGoodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_GetTranfersGoodsByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTranfersGoodsByID" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_GetTranfersGoodsByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTranfersGoodsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_QueryAllTranfersGoodsPageInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllTranfersGoodsPageInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_QueryAllTranfersGoodsPageInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllTranfersGoodsPageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_GenerateTransferGoodsClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateTransferGoodsClass" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_GenerateTransferGoodsClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateTransferGoodsClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_QueryTranfersGoodsByConditionsForPDA_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryTranfersGoodsByConditionsForPDA" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_QueryTranfersGoodsByConditionsForPDA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryTranfersGoodsByConditionsForPDAResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_JudegeTgoCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:JudegeTgoCode" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_JudegeTgoCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JudegeTgoCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_QueryTgoByTrackingNumComOld_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryTgoByTrackingNumComOld" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_QueryTgoByTrackingNumComOld_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryTgoByTrackingNumComOldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_QueryTgoByTrackingNumComNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryTgoByTrackingNumComNew" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_QueryTgoByTrackingNumComNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryTgoByTrackingNumComNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_QueryCompanyByTrackingNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCompanyByTrackingNum" />
+  </wsdl:message>
+  <wsdl:message name="ISpecialBusinessManageProxy_QueryCompanyByTrackingNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCompanyByTrackingNumResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISpecialBusinessManageProxy">
+    <wsdl:operation name="SaveAndCheckFrozen">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpecialBusinessManage/SaveAndCheckFrozen" message="tns:ISpecialBusinessManageProxy_SaveAndCheckFrozen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpecialBusinessManage/SaveAndCheckFrozenResponse" message="tns:ISpecialBusinessManageProxy_SaveAndCheckFrozen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFrozenByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpecialBusinessManage/GetFrozenByID" message="tns:ISpecialBusinessManageProxy_GetFrozenByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpecialBusinessManage/GetFrozenByIDResponse" message="tns:ISpecialBusinessManageProxy_GetFrozenByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryFrozenByCmstID_ComID_TypePageInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpecialBusinessManage/QueryFrozenByCmstID_ComID_TypePageInfo" message="tns:ISpecialBusinessManageProxy_QueryFrozenByCmstID_ComID_TypePageInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpecialBusinessManage/QueryFrozenByCmstID_ComID_TypePageInfoResponse" message="tns:ISpecialBusinessManageProxy_QueryFrozenByCmstID_ComID_TypePageInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateFrozenClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpecialBusinessManage/GenerateFrozenClass" message="tns:ISpecialBusinessManageProxy_GenerateFrozenClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpecialBusinessManage/GenerateFrozenClassResponse" message="tns:ISpecialBusinessManageProxy_GenerateFrozenClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTransferGoods">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpecialBusinessManage/SaveTransferGoods" message="tns:ISpecialBusinessManageProxy_SaveTransferGoods_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpecialBusinessManage/SaveTransferGoodsResponse" message="tns:ISpecialBusinessManageProxy_SaveTransferGoods_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckTransferGoods">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpecialBusinessManage/CheckTransferGoods" message="tns:ISpecialBusinessManageProxy_CheckTransferGoods_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpecialBusinessManage/CheckTransferGoodsResponse" message="tns:ISpecialBusinessManageProxy_CheckTransferGoods_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InvalidTransferGoods">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpecialBusinessManage/InvalidTransferGoods" message="tns:ISpecialBusinessManageProxy_InvalidTransferGoods_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpecialBusinessManage/InvalidTransferGoodsResponse" message="tns:ISpecialBusinessManageProxy_InvalidTransferGoods_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTranfersGoodsByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpecialBusinessManage/GetTranfersGoodsByID" message="tns:ISpecialBusinessManageProxy_GetTranfersGoodsByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpecialBusinessManage/GetTranfersGoodsByIDResponse" message="tns:ISpecialBusinessManageProxy_GetTranfersGoodsByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllTranfersGoodsPageInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpecialBusinessManage/QueryAllTranfersGoodsPageInfo" message="tns:ISpecialBusinessManageProxy_QueryAllTranfersGoodsPageInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpecialBusinessManage/QueryAllTranfersGoodsPageInfoResponse" message="tns:ISpecialBusinessManageProxy_QueryAllTranfersGoodsPageInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateTransferGoodsClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpecialBusinessManage/GenerateTransferGoodsClass" message="tns:ISpecialBusinessManageProxy_GenerateTransferGoodsClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpecialBusinessManage/GenerateTransferGoodsClassResponse" message="tns:ISpecialBusinessManageProxy_GenerateTransferGoodsClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryTranfersGoodsByConditionsForPDA">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpecialBusinessManage/QueryTranfersGoodsByConditionsForPDA" message="tns:ISpecialBusinessManageProxy_QueryTranfersGoodsByConditionsForPDA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpecialBusinessManage/QueryTranfersGoodsByConditionsForPDAResponse" message="tns:ISpecialBusinessManageProxy_QueryTranfersGoodsByConditionsForPDA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JudegeTgoCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpecialBusinessManage/JudegeTgoCode" message="tns:ISpecialBusinessManageProxy_JudegeTgoCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpecialBusinessManage/JudegeTgoCodeResponse" message="tns:ISpecialBusinessManageProxy_JudegeTgoCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryTgoByTrackingNumComOld">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpecialBusinessManage/QueryTgoByTrackingNumComOld" message="tns:ISpecialBusinessManageProxy_QueryTgoByTrackingNumComOld_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpecialBusinessManage/QueryTgoByTrackingNumComOldResponse" message="tns:ISpecialBusinessManageProxy_QueryTgoByTrackingNumComOld_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryTgoByTrackingNumComNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpecialBusinessManage/QueryTgoByTrackingNumComNew" message="tns:ISpecialBusinessManageProxy_QueryTgoByTrackingNumComNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpecialBusinessManage/QueryTgoByTrackingNumComNewResponse" message="tns:ISpecialBusinessManageProxy_QueryTgoByTrackingNumComNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCompanyByTrackingNum">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISpecialBusinessManage/QueryCompanyByTrackingNum" message="tns:ISpecialBusinessManageProxy_QueryCompanyByTrackingNum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISpecialBusinessManage/QueryCompanyByTrackingNumResponse" message="tns:ISpecialBusinessManageProxy_QueryCompanyByTrackingNum_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_ISpecialBusinessManageProxy" type="tns:ISpecialBusinessManageProxy">
+    <wsp:PolicyReference URI="#NetTcpBinding_ISpecialBusinessManageProxy_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="SaveAndCheckFrozen">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/SaveAndCheckFrozen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFrozenByID">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/GetFrozenByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFrozenByCmstID_ComID_TypePageInfo">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/QueryFrozenByCmstID_ComID_TypePageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateFrozenClass">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/GenerateFrozenClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTransferGoods">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/SaveTransferGoods" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckTransferGoods">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/CheckTransferGoods" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvalidTransferGoods">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/InvalidTransferGoods" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTranfersGoodsByID">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/GetTranfersGoodsByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllTranfersGoodsPageInfo">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/QueryAllTranfersGoodsPageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateTransferGoodsClass">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/GenerateTransferGoodsClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryTranfersGoodsByConditionsForPDA">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/QueryTranfersGoodsByConditionsForPDA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JudegeTgoCode">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/JudegeTgoCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryTgoByTrackingNumComOld">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/QueryTgoByTrackingNumComOld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryTgoByTrackingNumComNew">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/QueryTgoByTrackingNumComNew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCompanyByTrackingNum">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/QueryCompanyByTrackingNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSHttpBinding_ISpecialBusinessManageProxy" type="tns:ISpecialBusinessManageProxy">
+    <wsp:PolicyReference URI="#WSHttpBinding_ISpecialBusinessManageProxy_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveAndCheckFrozen">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/SaveAndCheckFrozen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFrozenByID">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/GetFrozenByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFrozenByCmstID_ComID_TypePageInfo">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/QueryFrozenByCmstID_ComID_TypePageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateFrozenClass">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/GenerateFrozenClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTransferGoods">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/SaveTransferGoods" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckTransferGoods">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/CheckTransferGoods" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvalidTransferGoods">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/InvalidTransferGoods" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTranfersGoodsByID">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/GetTranfersGoodsByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllTranfersGoodsPageInfo">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/QueryAllTranfersGoodsPageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateTransferGoodsClass">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/GenerateTransferGoodsClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryTranfersGoodsByConditionsForPDA">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/QueryTranfersGoodsByConditionsForPDA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JudegeTgoCode">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/JudegeTgoCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryTgoByTrackingNumComOld">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/QueryTgoByTrackingNumComOld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryTgoByTrackingNumComNew">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/QueryTgoByTrackingNumComNew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCompanyByTrackingNum">
+      <soap12:operation soapAction="http://tempuri.org/ISpecialBusinessManage/QueryCompanyByTrackingNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SpecialBusinessManage">
+    <wsdl:port name="NetTcpBinding_ISpecialBusinessManageProxy" binding="tns:NetTcpBinding_ISpecialBusinessManageProxy">
+      <soap12:address location="net.tcp://192.168.4.80:8081/SpecialBusinessManage" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://192.168.4.80:8081/SpecialBusinessManage</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="WSHttpBinding_ISpecialBusinessManageProxy" binding="tns:WSHttpBinding_ISpecialBusinessManageProxy">
+      <soap12:address location="http://192.168.4.80:8082/SpecialBusinessManage" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://192.168.4.80:8082/SpecialBusinessManage</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

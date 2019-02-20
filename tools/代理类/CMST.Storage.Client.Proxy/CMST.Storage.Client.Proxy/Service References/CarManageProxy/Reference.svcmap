@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e05a121d-b522-4dd9-b0fc-f0204c53852a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://127.0.0.1:8082/CarManage" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CarManage3.xsd" MetadataType="Schema" ID="a19e7e79-55a8-4c16-bab0-722de591f17f" SourceId="1" SourceUrl="http://192.168.4.80:8082/CarManage?xsd=xsd2" />
+    <MetadataFile FileName="CarManage31.xsd" MetadataType="Schema" ID="4dd45082-222f-4c11-9413-3bf2fafb344e" SourceId="1" SourceUrl="http://192.168.4.80:8082/CarManage?xsd=xsd0" />
+    <MetadataFile FileName="CarManage1.wsdl" MetadataType="Wsdl" ID="22355061-a62d-4a63-a485-e993211665a5" SourceId="1" SourceUrl="http://192.168.4.80:8082/CarManage?wsdl" />
+    <MetadataFile FileName="CarManage32.xsd" MetadataType="Schema" ID="49091c0b-99e3-4205-b43f-6c01bce08d8b" SourceId="1" SourceUrl="http://192.168.4.80:8082/CarManage?xsd=xsd1" />
+    <MetadataFile FileName="CarManage1.disco" MetadataType="Disco" ID="13f2f01e-2833-4101-b223-95e94a826047" SourceId="1" SourceUrl="http://192.168.4.80:8082/CarManage?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

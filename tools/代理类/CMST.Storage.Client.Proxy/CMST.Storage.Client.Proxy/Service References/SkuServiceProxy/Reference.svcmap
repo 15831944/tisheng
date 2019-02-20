@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e4cbae75-bcc6-4b06-9f45-6f0925594180" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://127.0.0.1:8082/SkuService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SkuService2.xsd" MetadataType="Schema" ID="5f21fa12-a504-4c65-a726-9a7f8e329db8" SourceId="1" SourceUrl="http://192.168.4.80:8082/SkuService?xsd=xsd1" />
+    <MetadataFile FileName="SkuService1.wsdl" MetadataType="Wsdl" ID="67aeb0ed-0f4f-445b-ab44-79776cbe6bdc" SourceId="1" SourceUrl="http://192.168.4.80:8082/SkuService?wsdl" />
+    <MetadataFile FileName="SkuService21.xsd" MetadataType="Schema" ID="4fe46443-62bb-4c31-8d19-affae7a33dee" SourceId="1" SourceUrl="http://192.168.4.80:8082/SkuService?xsd=xsd0" />
+    <MetadataFile FileName="SkuService1.disco" MetadataType="Disco" ID="63484b48-bebb-44b0-88c0-a501782c9cd2" SourceId="1" SourceUrl="http://192.168.4.80:8082/SkuService?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

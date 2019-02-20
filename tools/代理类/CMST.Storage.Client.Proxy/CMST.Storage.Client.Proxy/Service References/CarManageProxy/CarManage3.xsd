@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.CarManage" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.CarManage" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CarRegister">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CarNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CarRegisterID" type="xs:long" />
+      <xs:element minOccurs="0" name="CmstID" type="xs:int" />
+      <xs:element minOccurs="0" name="Crds" nillable="true" type="tns:ArrayOfCarRegisterDetail" />
+      <xs:element minOccurs="0" name="CreCheckName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreCheckTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreChecker" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CreCrsId" type="xs:int" />
+      <xs:element minOccurs="0" name="CreCrsName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreItyId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CreItyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreMakeTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreMaker" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CreMakerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarRegister" nillable="true" type="tns:CarRegister" />
+  <xs:complexType name="ArrayOfCarRegisterDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CarRegisterDetail" nillable="true" type="tns:CarRegisterDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCarRegisterDetail" nillable="true" type="tns:ArrayOfCarRegisterDetail" />
+  <xs:complexType name="CarRegisterDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillID" type="xs:long" />
+      <xs:element minOccurs="0" name="BillType" type="xs:int" />
+      <xs:element minOccurs="0" name="BillTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CarRegisterDetailID" type="xs:long" />
+      <xs:element minOccurs="0" name="CarRegisterID" type="xs:long" />
+      <xs:element minOccurs="0" name="CrdMakeTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CrdMaker" type="xs:int" />
+      <xs:element minOccurs="0" name="CrdMakerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CrdRemark" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarRegisterDetail" nillable="true" type="tns:CarRegisterDetail" />
+  <xs:complexType name="CarRegisterQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CarBillNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreCrsId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TimeType" type="xs:int" />
+      <xs:element minOccurs="0" name="carNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cmstId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarRegisterQuery" nillable="true" type="tns:CarRegisterQuery" />
+  <xs:complexType name="OutStoreCheck">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AN" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OscCheckStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OscCrdRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OscGraName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OscManName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OscOPlId" type="xs:long" />
+      <xs:element minOccurs="0" name="OscOplRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OscPacName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OscPnaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OscProName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OscSpeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PN" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OutStoreCheck" nillable="true" type="tns:OutStoreCheck" />
+  <xs:complexType name="InStoreCheck">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AN" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IscCrdRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IscCreCarNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IscGraName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IscIsbId" type="xs:long" />
+      <xs:element minOccurs="0" name="IscIsbRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IscManName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IscPacName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IscPnaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IscSpeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PN" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InStoreCheck" nillable="true" type="tns:InStoreCheck" />
+</xs:schema>

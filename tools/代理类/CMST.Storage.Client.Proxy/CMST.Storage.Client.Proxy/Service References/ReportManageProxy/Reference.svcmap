@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3859837f-1752-47cc-ac7e-5710f750d60b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://127.0.0.1:8902/ReportManage" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ReportManage.xsd" MetadataType="Schema" ID="fc32f3e8-5f0a-4cc5-8a6c-289fc7e3e23e" SourceId="1" SourceUrl="http://127.0.0.1:8902/ReportManage?xsd=xsd3" />
+    <MetadataFile FileName="ReportManage.wsdl" MetadataType="Wsdl" ID="f4eaaef2-94d6-48de-9c60-240e1d6e0005" SourceId="1" SourceUrl="http://127.0.0.1:8902/ReportManage?wsdl" />
+    <MetadataFile FileName="ReportManage4.xsd" MetadataType="Schema" ID="1bbb4072-ce65-441e-94dc-af6f90db1a09" SourceId="1" SourceUrl="http://127.0.0.1:8902/ReportManage?xsd=xsd4" />
+    <MetadataFile FileName="ReportManage1.xsd" MetadataType="Schema" ID="aa269076-cd03-482c-b717-34fb17b1ad0b" SourceId="1" SourceUrl="http://127.0.0.1:8902/ReportManage?xsd=xsd2" />
+    <MetadataFile FileName="ReportManage2.xsd" MetadataType="Schema" ID="753b9c86-ca13-4219-9733-4b943ddf6cb9" SourceId="1" SourceUrl="http://127.0.0.1:8902/ReportManage?xsd=xsd1" />
+    <MetadataFile FileName="ReportManage.disco" MetadataType="Disco" ID="632f4c96-1fa2-4a86-a2b1-1e65c9adfc20" SourceId="1" SourceUrl="http://127.0.0.1:8902/ReportManage?disco" />
+    <MetadataFile FileName="ReportManage3.xsd" MetadataType="Schema" ID="c677aba3-198d-4edc-b7de-ee0c5b5bf77a" SourceId="1" SourceUrl="http://127.0.0.1:8902/ReportManage?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

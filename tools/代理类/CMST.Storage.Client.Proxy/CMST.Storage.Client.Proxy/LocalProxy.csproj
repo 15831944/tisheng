@@ -1,0 +1,836 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A364ADE-C56D-43B4-AFD1-6B38DDC60548}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMST.Storage.Client.Proxy</RootNamespace>
+    <AssemblyName>CMST.Storage.Client.Proxy</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CMST.Storage.WCFInspector, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CMST.Storage.WCFInspector.dll</HintPath>
+    </Reference>
+    <Reference Include="CMSTMsgBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CMSTMsgBox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthorityHelper.cs" />
+    <Compile Include="DESFileClass.cs" />
+    <Compile Include="EntityConvert.cs" />
+    <Compile Include="FileLog.cs" />
+    <Compile Include="LocalClientProxy.cs" />
+    <Compile Include="MachineCode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\AccountServiceProxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AdjustManageProxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BaseManageProxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CarManageProxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ChargeManageProxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CustomerManageProxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DataModelProxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InStoreManageProxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LoginManageProxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MachingManageProxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OutStorageManageServiceProxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OutStoreManageProxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ProductManageProxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ReportManageProxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SkuServiceProxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SpecialBusinessManageProxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\StocktakingManageProxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TranspositionManageProxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UIDisplayProxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceAddress.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Service References\AccountServiceProxy\AccountService1.wsdl" />
+    <None Include="Service References\AccountServiceProxy\AccountService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccountServiceProxy\AccountService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccountServiceProxy\AccountService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccountServiceProxy\AccountService43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccountServiceProxy\CMST.Storage.Client.Proxy.AccountServiceProxy.SignType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdjustManageProxy\AdjustManage1.wsdl" />
+    <None Include="Service References\AdjustManageProxy\AdjustManage3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdjustManageProxy\AdjustManage31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdjustManageProxy\AdjustManage32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BaseManageProxy\BaseManage1.wsdl" />
+    <None Include="Service References\BaseManageProxy\BaseManage7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BaseManageProxy\BaseManage71.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BaseManageProxy\BaseManage72.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BaseManageProxy\BaseManage73.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BaseManageProxy\BaseManage74.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BaseManageProxy\BaseManage75.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BaseManageProxy\BaseManage76.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BaseManageProxy\CMST.Storage.Client.Proxy.BaseManageProxy.ArrivalMode1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BaseManageProxy\CMST.Storage.Client.Proxy.BaseManageProxy.DeliveryMode1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BaseManageProxy\CMST.Storage.Client.Proxy.BaseManageProxy.OrganizationEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BaseManageProxy\CMST.Storage.Client.Proxy.BaseManageProxy.OutboundWay1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BaseManageProxy\CMST.Storage.Client.Proxy.BaseManageProxy.StorageEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BaseManageProxy\CMST.Storage.Client.Proxy.BaseManageProxy.StorageWay1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarManageProxy\CarManage1.wsdl" />
+    <None Include="Service References\CarManageProxy\CarManage3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CarManageProxy\CarManage31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CarManageProxy\CarManage32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CarManageProxy\CMST.Storage.Client.Proxy.CarManageProxy.CarRegister.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarManageProxy\CMST.Storage.Client.Proxy.CarManageProxy.InStoreCheck.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarManageProxy\CMST.Storage.Client.Proxy.CarManageProxy.OutStoreCheck.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ChargeManageProxy\ChargeManage1.wsdl" />
+    <None Include="Service References\ChargeManageProxy\ChargeManage4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ChargeManageProxy\ChargeManage41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ChargeManageProxy\ChargeManage42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ChargeManageProxy\ChargeManage43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerManageProxy\CustomerManage1.wsdl" />
+    <None Include="Service References\CustomerManageProxy\CustomerManage6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerManageProxy\CustomerManage61.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerManageProxy\CustomerManage62.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerManageProxy\CustomerManage63.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerManageProxy\CustomerManage64.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerManageProxy\CustomerManage65.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelProxy\CMST.Storage.Client.Proxy.DataModelProxy.BillType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataModelProxy\CMST.Storage.Client.Proxy.DataModelProxy.FeedbackInfomation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataModelProxy\CMST.Storage.Client.Proxy.DataModelProxy.MenuEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataModelProxy\CMST.Storage.Client.Proxy.DataModelProxy.MenuUI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataModelProxy\CMST.Storage.Client.Proxy.DataModelProxy.OperationEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataModelProxy\CMST.Storage.Client.Proxy.DataModelProxy.PageInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataModelProxy\CMST.Storage.Client.Proxy.DataModelProxy.Sku.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataModelProxy\DataModelService1.wsdl" />
+    <None Include="Service References\DataModelProxy\DataModelService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelProxy\DataModelService61.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelProxy\DataModelService62.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelProxy\DataModelService63.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelProxy\DataModelService64.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelProxy\DataModelService65.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InStoreManageProxy\InStoreManage1.wsdl" />
+    <None Include="Service References\InStoreManageProxy\InStoreManage3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InStoreManageProxy\InStoreManage31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InStoreManageProxy\InStoreManage32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LoginManageProxy\LoginManage1.wsdl" />
+    <None Include="Service References\LoginManageProxy\LoginManage2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LoginManageProxy\LoginManage21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MachingManageProxy\MachingManage1.wsdl" />
+    <None Include="Service References\MachingManageProxy\MachingManage3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MachingManageProxy\MachingManage31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MachingManageProxy\MachingManage32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OutStorageManageServiceProxy\CMST.Storage.Client.Proxy.OutStorageManageServiceProxy.OutOnLine.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OutStorageManageServiceProxy\OutStorageManageService1.wsdl" />
+    <None Include="Service References\OutStorageManageServiceProxy\OutStorageManageService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OutStorageManageServiceProxy\OutStorageManageService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OutStorageManageServiceProxy\OutStorageManageService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OutStorageManageServiceProxy\OutStorageManageService43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OutStoreManageProxy\CMST.Storage.Client.Proxy.OutStoreManageProxy.OutPlanDetailView.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OutStoreManageProxy\CMST.Storage.Client.Proxy.OutStoreManageProxy.OutPlanView.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OutStoreManageProxy\CMST.Storage.Client.Proxy.OutStoreManageProxy.OutStoreBill.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OutStoreManageProxy\CMST.Storage.Client.Proxy.OutStoreManageProxy.OutStoreDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OutStoreManageProxy\CMST.Storage.Client.Proxy.OutStoreManageProxy.OutStoreDetailStock.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OutStoreManageProxy\CMST.Storage.Client.Proxy.OutStoreManageProxy.PreGoodsViewDelivery.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OutStoreManageProxy\OutStoreManage1.wsdl" />
+    <None Include="Service References\OutStoreManageProxy\OutStoreManage4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OutStoreManageProxy\OutStoreManage41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OutStoreManageProxy\OutStoreManage42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OutStoreManageProxy\OutStoreManage43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductManageProxy\CMST.Storage.Client.Proxy.ProductManageProxy.CmstOrganizationEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProductManageProxy\CMST.Storage.Client.Proxy.ProductManageProxy.CustomerProductEntity1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProductManageProxy\CMST.Storage.Client.Proxy.ProductManageProxy.GoodsBreedEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProductManageProxy\CMST.Storage.Client.Proxy.ProductManageProxy.GoodsClassEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProductManageProxy\CMST.Storage.Client.Proxy.ProductManageProxy.GradeEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProductManageProxy\CMST.Storage.Client.Proxy.ProductManageProxy.IndustryEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProductManageProxy\CMST.Storage.Client.Proxy.ProductManageProxy.ManufacturerEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProductManageProxy\CMST.Storage.Client.Proxy.ProductManageProxy.PackagingEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProductManageProxy\CMST.Storage.Client.Proxy.ProductManageProxy.PlasticizingProductsEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProductManageProxy\CMST.Storage.Client.Proxy.ProductManageProxy.ProductInfoEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProductManageProxy\CMST.Storage.Client.Proxy.ProductManageProxy.ProductNameEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProductManageProxy\CMST.Storage.Client.Proxy.ProductManageProxy.SpecEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProductManageProxy\ProductManage1.wsdl" />
+    <None Include="Service References\ProductManageProxy\ProductManage4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductManageProxy\ProductManage41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductManageProxy\ProductManage42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductManageProxy\ProductManage43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReportManageProxy\CMST.Storage.Client.Proxy.ReportManageProxy.GoodsFlowRank.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportManageProxy\CMST.Storage.Client.Proxy.ReportManageProxy.StockBalance.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportManageProxy\CMST.Storage.Client.Proxy.ReportManageProxy.StockHistory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportManageProxy\ReportManage.wsdl" />
+    <None Include="Service References\ReportManageProxy\ReportManage.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReportManageProxy\ReportManage1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReportManageProxy\ReportManage2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReportManageProxy\ReportManage3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReportManageProxy\ReportManage4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SkuServiceProxy\SkuService1.wsdl" />
+    <None Include="Service References\SkuServiceProxy\SkuService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SkuServiceProxy\SkuService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SpecialBusinessManageProxy\CMST.Storage.Client.Proxy.SpecialBusinessManageProxy.Frozen.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SpecialBusinessManageProxy\CMST.Storage.Client.Proxy.SpecialBusinessManageProxy.TransferGoods.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SpecialBusinessManageProxy\SpecialBusinessManage1.wsdl" />
+    <None Include="Service References\SpecialBusinessManageProxy\SpecialBusinessManage3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SpecialBusinessManageProxy\SpecialBusinessManage31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SpecialBusinessManageProxy\SpecialBusinessManage32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StocktakingManageProxy\StocktakingManage1.wsdl" />
+    <None Include="Service References\StocktakingManageProxy\StocktakingManage3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StocktakingManageProxy\StocktakingManage31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StocktakingManageProxy\StocktakingManage32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TranspositionManageProxy\TranspositionManage1.wsdl" />
+    <None Include="Service References\TranspositionManageProxy\TranspositionManage3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TranspositionManageProxy\TranspositionManage31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TranspositionManageProxy\TranspositionManage32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UIDisplayProxy\UIDisplay1.wsdl" />
+    <None Include="Service References\UIDisplayProxy\UIDisplay2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UIDisplayProxy\UIDisplay21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AccountServiceProxy\" />
+    <WCFMetadataStorage Include="Service References\AdjustManageProxy\" />
+    <WCFMetadataStorage Include="Service References\BaseManageProxy\" />
+    <WCFMetadataStorage Include="Service References\CarManageProxy\" />
+    <WCFMetadataStorage Include="Service References\ChargeManageProxy\" />
+    <WCFMetadataStorage Include="Service References\CustomerManageProxy\" />
+    <WCFMetadataStorage Include="Service References\DataModelProxy\" />
+    <WCFMetadataStorage Include="Service References\InStoreManageProxy\" />
+    <WCFMetadataStorage Include="Service References\LoginManageProxy\" />
+    <WCFMetadataStorage Include="Service References\MachingManageProxy\" />
+    <WCFMetadataStorage Include="Service References\OutStorageManageServiceProxy\" />
+    <WCFMetadataStorage Include="Service References\OutStoreManageProxy\" />
+    <WCFMetadataStorage Include="Service References\ProductManageProxy\" />
+    <WCFMetadataStorage Include="Service References\ReportManageProxy\" />
+    <WCFMetadataStorage Include="Service References\SkuServiceProxy\" />
+    <WCFMetadataStorage Include="Service References\SpecialBusinessManageProxy\" />
+    <WCFMetadataStorage Include="Service References\StocktakingManageProxy\" />
+    <WCFMetadataStorage Include="Service References\TranspositionManageProxy\" />
+    <WCFMetadataStorage Include="Service References\UIDisplayProxy\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BaseManageProxy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BaseManageProxy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BaseManageProxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProductManageProxy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProductManageProxy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProductManageProxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataModelProxy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataModelProxy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataModelProxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UIDisplayProxy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UIDisplayProxy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UIDisplayProxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerManageProxy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerManageProxy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerManageProxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InStoreManageProxy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InStoreManageProxy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InStoreManageProxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OutStoreManageProxy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OutStoreManageProxy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OutStoreManageProxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CarManageProxy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CarManageProxy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CarManageProxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TranspositionManageProxy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TranspositionManageProxy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TranspositionManageProxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SpecialBusinessManageProxy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SpecialBusinessManageProxy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SpecialBusinessManageProxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ChargeManageProxy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ChargeManageProxy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ChargeManageProxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AccountServiceProxy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AccountServiceProxy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AccountServiceProxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OutStorageManageServiceProxy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OutStorageManageServiceProxy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OutStorageManageServiceProxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MachingManageProxy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MachingManageProxy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MachingManageProxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SkuServiceProxy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SkuServiceProxy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SkuServiceProxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdjustManageProxy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdjustManageProxy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdjustManageProxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LoginManageProxy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LoginManageProxy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LoginManageProxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReportManageProxy\ReportManage.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReportManageProxy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReportManageProxy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReportManageProxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StocktakingManageProxy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StocktakingManageProxy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StocktakingManageProxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AccountServiceProxy\AccountService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdjustManageProxy\AdjustManage1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BaseManageProxy\BaseManage1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CarManageProxy\CarManage1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ChargeManageProxy\ChargeManage1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerManageProxy\CustomerManage1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataModelProxy\DataModelService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InStoreManageProxy\InStoreManage1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LoginManageProxy\LoginManage1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MachingManageProxy\MachingManage1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OutStorageManageServiceProxy\OutStorageManageService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OutStoreManageProxy\OutStoreManage1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProductManageProxy\ProductManage1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SkuServiceProxy\SkuService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SpecialBusinessManageProxy\SpecialBusinessManage1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StocktakingManageProxy\StocktakingManage1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TranspositionManageProxy\TranspositionManage1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UIDisplayProxy\UIDisplay1.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.CustomerManage" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.CustomerManage" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.4.80:8082/CustomerManage?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.ContractManage" />
+  <xs:import schemaLocation="http://192.168.4.80:8082/CustomerManage?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="CompanyData">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.ContractManage" minOccurs="0" name="Ccos" nillable="true" type="q1:ArrayOfCompanyContract" />
+      <xs:element minOccurs="0" name="Company" nillable="true" type="tns:CompanyEntity" />
+      <xs:element minOccurs="0" name="CompanyDetail" nillable="true" type="tns:CompanyDetailEntity" />
+      <xs:element minOccurs="0" name="Connectors" nillable="true" type="tns:ArrayOfConnectorEntity" />
+      <xs:element minOccurs="0" name="Cses" nillable="true" type="tns:ArrayOfCompanyStorageEntity" />
+      <xs:element minOccurs="0" name="Csse" nillable="true" type="tns:ArrayOfCompanyServicesEntity" />
+      <xs:element minOccurs="0" name="Seals" nillable="true" type="tns:ArrayOfSealEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompanyData" nillable="true" type="tns:CompanyData" />
+  <xs:complexType name="CompanyEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CmstId" type="xs:int" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyID" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomainSite" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HelpCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MessageNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentId" type="xs:int" />
+      <xs:element minOccurs="0" name="PostCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rank" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Register" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegistrationTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reviser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RevisionTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RootId" type="xs:int" />
+      <xs:element minOccurs="0" name="ShortName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SortOrder" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Storages" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Tips" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompanyEntity" nillable="true" type="tns:CompanyEntity" />
+  <xs:complexType name="CompanyDetailEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bank1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Bank1Account" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Bank2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Bank2Account" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyDetailID" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyID" type="xs:int" />
+      <xs:element minOccurs="0" name="CreditRecords" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EconomicType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IfDel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Insititution" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="License" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MainProduct" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ManagementMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ManagementScope" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OpeningAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OpeningBank" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerIdentity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegisteredCapital" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompanyDetailEntity" nillable="true" type="tns:CompanyDetailEntity" />
+  <xs:complexType name="ArrayOfConnectorEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConnectorEntity" nillable="true" type="tns:ConnectorEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConnectorEntity" nillable="true" type="tns:ArrayOfConnectorEntity" />
+  <xs:complexType name="ConnectorEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyID" type="xs:int" />
+      <xs:element minOccurs="0" name="ConnectorID" type="xs:int" />
+      <xs:element minOccurs="0" name="ConnectorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Duty" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Identity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IfDefault" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MobilePhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QQ" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Services" nillable="true" type="tns:ArrayOfCompanyServicesEntity" />
+      <xs:element minOccurs="0" name="Tel1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tel2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TempUpdateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Winxin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zodiac" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConnectorEntity" nillable="true" type="tns:ConnectorEntity" />
+  <xs:complexType name="ArrayOfCompanyServicesEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompanyServicesEntity" nillable="true" type="tns:CompanyServicesEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompanyServicesEntity" nillable="true" type="tns:ArrayOfCompanyServicesEntity" />
+  <xs:complexType name="CompanyServicesEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ComServicesTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyContactID" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyServicesID" type="xs:int" />
+      <xs:element minOccurs="0" name="IfUse" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompanyServicesEntity" nillable="true" type="tns:CompanyServicesEntity" />
+  <xs:complexType name="ArrayOfCompanyStorageEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompanyStorageEntity" nillable="true" type="tns:CompanyStorageEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompanyStorageEntity" nillable="true" type="tns:ArrayOfCompanyStorageEntity" />
+  <xs:complexType name="CompanyStorageEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyID" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyStorageID" type="xs:int" />
+      <xs:element minOccurs="0" name="IfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StorageID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompanyStorageEntity" nillable="true" type="tns:CompanyStorageEntity" />
+  <xs:complexType name="ArrayOfSealEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SealEntity" nillable="true" type="tns:SealEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSealEntity" nillable="true" type="tns:ArrayOfSealEntity" />
+  <xs:complexType name="SealEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyID" type="xs:int" />
+      <xs:element minOccurs="0" name="IfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SealID" type="xs:int" />
+      <xs:element minOccurs="0" name="SealImage" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="SealName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TempUpdateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SealEntity" nillable="true" type="tns:SealEntity" />
+</xs:schema>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.4.80:8082/DataModelService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Common" />
+  <xs:import schemaLocation="http://192.168.4.80:8082/DataModelService?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.BaseManage" />
+  <xs:import schemaLocation="http://192.168.4.80:8082/DataModelService?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.Account" />
+  <xs:element name="GeneratePageInfoClass">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GeneratePageInfoClassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Common" minOccurs="0" name="GeneratePageInfoClassResult" nillable="true" type="q1:PageInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MenuEntityClass">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MenuEntityClassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.BaseManage" minOccurs="0" name="MenuEntityClassResult" nillable="true" type="q2:MenuEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MenuUIClass">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MenuUIClassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.BaseManage" minOccurs="0" name="MenuUIClassResult" nillable="true" type="q3:MenuUI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OperationEntityClass">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OperationEntityClassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.BaseManage" minOccurs="0" name="OperationEntityClassResult" nillable="true" type="q4:OperationEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FeedbackInfomationClass">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FeedbackInfomationClassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Common" minOccurs="0" name="FeedbackInfomationClassResult" nillable="true" type="q5:FeedbackInfomation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SkuClass">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SkuClassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.Account" minOccurs="0" name="SkuClassResult" nillable="true" type="q6:Sku" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BillTypeClass">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BillTypeClassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.Account" minOccurs="0" name="BillTypeClassResult" nillable="true" type="q7:BillType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

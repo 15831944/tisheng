@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2232e54f-65a8-4dff-9988-e77616cfc4b3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://127.0.0.1:8082/MachingManage" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MachingManage1.wsdl" MetadataType="Wsdl" ID="a22b4c6a-815e-4fac-9293-87870ef6959b" SourceId="1" SourceUrl="http://192.168.4.80:8082/MachingManage?wsdl" />
+    <MetadataFile FileName="MachingManage3.xsd" MetadataType="Schema" ID="093613d5-b59b-4dff-ab4a-5d081fbf10a8" SourceId="1" SourceUrl="http://192.168.4.80:8082/MachingManage?xsd=xsd1" />
+    <MetadataFile FileName="MachingManage31.xsd" MetadataType="Schema" ID="6ce8f4ab-426b-431b-9e4b-a1962a3f2a76" SourceId="1" SourceUrl="http://192.168.4.80:8082/MachingManage?xsd=xsd2" />
+    <MetadataFile FileName="MachingManage32.xsd" MetadataType="Schema" ID="ae956fd2-cc32-4f4d-b65a-9632f127ccad" SourceId="1" SourceUrl="http://192.168.4.80:8082/MachingManage?xsd=xsd0" />
+    <MetadataFile FileName="MachingManage1.disco" MetadataType="Disco" ID="44ec707f-9afb-4f7e-b68e-867087790a30" SourceId="1" SourceUrl="http://192.168.4.80:8082/MachingManage?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

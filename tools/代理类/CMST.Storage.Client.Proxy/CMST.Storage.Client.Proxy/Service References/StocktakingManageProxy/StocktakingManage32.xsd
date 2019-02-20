@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.StackingManage" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.StackingManage" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="StocktakingBill">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CmstID" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DepotID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MakeTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Maker" type="xs:int" />
+      <xs:element minOccurs="0" name="MakerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReservoirID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ReservoirName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="StocktakingID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StocktakingBill" nillable="true" type="tns:StocktakingBill" />
+  <xs:complexType name="StocktakingQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CmstID" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyID" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrentMinID" type="xs:long" />
+      <xs:element minOccurs="0" name="DepotID" type="xs:int" />
+      <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GalID" type="xs:int" />
+      <xs:element minOccurs="0" name="Requester" type="xs:int" />
+      <xs:element minOccurs="0" name="ReservoirID" type="xs:int" />
+      <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StocktakingQuery" nillable="true" type="tns:StocktakingQuery" />
+</xs:schema>

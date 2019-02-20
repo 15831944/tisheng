@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <STO_IP>59.110.216.112</STO_IP>
+    <STO_Port>1433</STO_Port>
+    <STO_DBName>CMSTStorageDBTest</STO_DBName>
+    <STO_Account>sa</STO_Account>
+    <STO_Pwd>kingfisher@2018</STO_Pwd>
+  </Table1>
+</NewDataSet>

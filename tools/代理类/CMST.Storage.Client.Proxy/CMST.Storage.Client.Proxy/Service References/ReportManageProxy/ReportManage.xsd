@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CMST.Storage.ReportServer.Data.ReportManage" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CMST.Storage.ReportServer.Data.ReportManage" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="SelectModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Arrivetype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Deliverytype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Goodname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Man" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Package" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Spce" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TcompanyId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TcompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SelectModel" nillable="true" type="tns:SelectModel" />
+  <xs:complexType name="StockHistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GoodsName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:long" />
+      <xs:element minOccurs="0" name="Num" type="xs:int" />
+      <xs:element minOccurs="0" name="SkuName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Weight" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StockHistory" nillable="true" type="tns:StockHistory" />
+  <xs:complexType name="QueryStockBalanceModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CmstID" type="xs:int" />
+      <xs:element minOccurs="0" name="ConfirmTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GraID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ManID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PacId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PnaId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SpeID" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryStockBalanceModel" nillable="true" type="tns:QueryStockBalanceModel" />
+  <xs:complexType name="StockBalance">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:long" />
+      <xs:element minOccurs="0" name="Num" type="xs:int" />
+      <xs:element minOccurs="0" name="Weight" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StockBalance" nillable="true" type="tns:StockBalance" />
+  <xs:complexType name="GoodsFlowRank">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InTotalAN" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OutTotalAN" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ThroughPut" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GoodsFlowRank" nillable="true" type="tns:GoodsFlowRank" />
+</xs:schema>

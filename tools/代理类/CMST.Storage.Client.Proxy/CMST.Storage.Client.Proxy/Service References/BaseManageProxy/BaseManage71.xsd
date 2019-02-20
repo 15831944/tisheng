@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.BaseManage" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.BaseManage" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="DepartmentEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CmstId" type="xs:int" />
+      <xs:element minOccurs="0" name="CmstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeptId" type="xs:int" />
+      <xs:element minOccurs="0" name="DeptName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UseStatus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DepartmentEntity" nillable="true" type="tns:DepartmentEntity" />
+  <xs:complexType name="OperatorEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Account" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CmstID" type="xs:int" />
+      <xs:element minOccurs="0" name="CmstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DepartName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeptId" type="xs:int" />
+      <xs:element minOccurs="0" name="IfSysAccount" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="JtyId" type="xs:int" />
+      <xs:element minOccurs="0" name="JtyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperatorID" type="xs:int" />
+      <xs:element minOccurs="0" name="OperatorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperatorRole" nillable="true" type="tns:RoleEntity" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Raes" nillable="true" type="tns:ArrayOfReservoirAreaEntity" />
+      <xs:element minOccurs="0" name="RoleID" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TempTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UseStatus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperatorEntity" nillable="true" type="tns:OperatorEntity" />
+  <xs:complexType name="RoleEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CmstID" type="xs:int" />
+      <xs:element minOccurs="0" name="CsyID" type="xs:int" />
+      <xs:element minOccurs="0" name="IfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleID" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ros" nillable="true" type="tns:ArrayOfRoleOperations" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RoleEntity" nillable="true" type="tns:RoleEntity" />
+  <xs:complexType name="ArrayOfRoleOperations">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RoleOperations" nillable="true" type="tns:RoleOperations" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRoleOperations" nillable="true" type="tns:ArrayOfRoleOperations" />
+  <xs:complexType name="RoleOperations">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CmstID" type="xs:int" />
+      <xs:element minOccurs="0" name="CmstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperationCode" type="xs:int" />
+      <xs:element minOccurs="0" name="OperationID" type="xs:int" />
+      <xs:element minOccurs="0" name="OperationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleID" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RoleOperations" nillable="true" type="tns:RoleOperations" />
+  <xs:complexType name="ArrayOfReservoirAreaEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReservoirAreaEntity" nillable="true" type="tns:ReservoirAreaEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReservoirAreaEntity" nillable="true" type="tns:ArrayOfReservoirAreaEntity" />
+  <xs:complexType name="ReservoirAreaEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OperatorID" type="xs:int" />
+      <xs:element minOccurs="0" name="RarID" type="xs:int" />
+      <xs:element minOccurs="0" name="RarIfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RarRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReservoirAreaID" type="xs:int" />
+      <xs:element minOccurs="0" name="ReservoirAreaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReservoirAreaNature" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StorageID" type="xs:int" />
+      <xs:element minOccurs="0" name="StorageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gal" nillable="true" type="tns:ArrayOfDepositPlace_Model" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReservoirAreaEntity" nillable="true" type="tns:ReservoirAreaEntity" />
+  <xs:complexType name="ArrayOfDepositPlace_Model">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DepositPlace_Model" nillable="true" type="tns:DepositPlace_Model" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDepositPlace_Model" nillable="true" type="tns:ArrayOfDepositPlace_Model" />
+  <xs:complexType name="DepositPlace_Model">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Gal_Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gal_Grade" type="xs:int" />
+      <xs:element minOccurs="0" name="Gal_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Gal_IfUse" type="xs:int" />
+      <xs:element minOccurs="0" name="Gal_Level1" type="xs:int" />
+      <xs:element minOccurs="0" name="Gal_Level2" type="xs:int" />
+      <xs:element minOccurs="0" name="Gal_Level3" type="xs:int" />
+      <xs:element minOccurs="0" name="Gal_Level4" type="xs:int" />
+      <xs:element minOccurs="0" name="Gal_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gal_Rar_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Gal_Superior" type="xs:int" />
+      <xs:element minOccurs="0" name="ins" nillable="true" type="tns:ArrayOfDepositPlace_Model" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DepositPlace_Model" nillable="true" type="tns:DepositPlace_Model" />
+  <xs:complexType name="CompanyOperatorEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Account" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BindStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CmstID" type="xs:int" />
+      <xs:element minOccurs="0" name="CmstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyId" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IfBind" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OperatorID" type="xs:int" />
+      <xs:element minOccurs="0" name="OperatorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleID" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TempTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UniqFlag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UseStatus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompanyOperatorEntity" nillable="true" type="tns:CompanyOperatorEntity" />
+  <xs:complexType name="OrganizationEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CmstID" type="xs:int" />
+      <xs:element minOccurs="0" name="CmstIfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CmstName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrganizationEntity" nillable="true" type="tns:OrganizationEntity" />
+  <xs:complexType name="StorageEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IfUse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StorageID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StorageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="res" nillable="true" type="tns:ArrayOfReservoirAreaEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StorageEntity" nillable="true" type="tns:StorageEntity" />
+</xs:schema>

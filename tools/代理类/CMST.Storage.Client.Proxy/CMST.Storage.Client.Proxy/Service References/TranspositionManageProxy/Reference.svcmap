@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="94c5f789-c95b-4387-be5f-daec24ac8951" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://127.0.0.1:8082/TranspositionManage" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TranspositionManage1.disco" MetadataType="Disco" ID="77ccb6c2-ed2a-4707-9950-ace44f934ba2" SourceId="1" SourceUrl="http://192.168.4.80:8082/TranspositionManage?disco" />
+    <MetadataFile FileName="TranspositionManage1.wsdl" MetadataType="Wsdl" ID="0e154d58-184e-4b52-9e5c-3b8777fcb32f" SourceId="1" SourceUrl="http://192.168.4.80:8082/TranspositionManage?wsdl" />
+    <MetadataFile FileName="TranspositionManage3.xsd" MetadataType="Schema" ID="18265780-ff05-4e8b-a096-91ac20e810e1" SourceId="1" SourceUrl="http://192.168.4.80:8082/TranspositionManage?xsd=xsd0" />
+    <MetadataFile FileName="TranspositionManage31.xsd" MetadataType="Schema" ID="8fcc2309-2b1b-4954-87f9-a64215d6218b" SourceId="1" SourceUrl="http://192.168.4.80:8082/TranspositionManage?xsd=xsd1" />
+    <MetadataFile FileName="TranspositionManage32.xsd" MetadataType="Schema" ID="70227a93-289f-4a18-92b5-8a508c3f2883" SourceId="1" SourceUrl="http://192.168.4.80:8082/TranspositionManage?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

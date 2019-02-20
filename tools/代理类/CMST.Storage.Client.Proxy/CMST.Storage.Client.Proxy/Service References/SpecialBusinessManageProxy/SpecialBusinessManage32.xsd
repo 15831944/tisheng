@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.SpecialBusiness" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CMST.Storage.Server.Data.SpecialBusiness" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Frozen">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CheckTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Checker" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CmstID" type="xs:int" />
+      <xs:element minOccurs="0" name="Com_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fnds" nillable="true" type="tns:ArrayOfFrozenDetail" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="IfDel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IfOperate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MakeTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Maker" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ope_Id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Ope_Ope_Id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Frozen" nillable="true" type="tns:Frozen" />
+  <xs:complexType name="ArrayOfFrozenDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FrozenDetail" nillable="true" type="tns:FrozenDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFrozenDetail" nillable="true" type="tns:ArrayOfFrozenDetail" />
+  <xs:complexType name="FrozenDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AN" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Descript" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fro_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="GalName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gal_Id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="GoodsName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GradeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="ManName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PN" type="xs:int" />
+      <xs:element minOccurs="0" name="PackageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SkuName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sku_Id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SpecName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FrozenDetail" nillable="true" type="tns:FrozenDetail" />
+  <xs:complexType name="TransferGoods">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Checker" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CheckerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Checktime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CmstId" type="xs:int" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyNewID" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyNewName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyOldID" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyOldName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DepId" type="xs:int" />
+      <xs:element minOccurs="0" name="DepName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IfDel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MakeTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Maker" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MakerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RemarkNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="StatusName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tgds" nillable="true" type="tns:ArrayOfTranfersGoodsDetail" />
+      <xs:element minOccurs="0" name="TranfersGoodsID" type="xs:long" />
+      <xs:element minOccurs="0" name="TransferDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Type" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransferGoods" nillable="true" type="tns:TransferGoods" />
+  <xs:complexType name="ArrayOfTranfersGoodsDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TranfersGoodsDetail" nillable="true" type="tns:TranfersGoodsDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTranfersGoodsDetail" nillable="true" type="tns:ArrayOfTranfersGoodsDetail" />
+  <xs:complexType name="TranfersGoodsDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AN" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AuxID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BreID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="GalDescript" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GalID" type="xs:int" />
+      <xs:element minOccurs="0" name="GalName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GoodsName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GradeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ManName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PN" type="xs:int" />
+      <xs:element minOccurs="0" name="PackageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pro_Descrip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pro_id" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SignNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SignType" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SignTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SkuID" type="xs:int" />
+      <xs:element minOccurs="0" name="SkuName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Spare" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpecName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TranfersGoodsDetailID" type="xs:long" />
+      <xs:element minOccurs="0" name="TranfersGoodsID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TranfersGoodsDetail" nillable="true" type="tns:TranfersGoodsDetail" />
+  <xs:complexType name="TransferGoodsQueryModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CheckerID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CmstID" type="xs:int" />
+      <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GalID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="GoodsName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GradeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MakerID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ManName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NewComID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="OldComID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PackageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpecName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TimeType" type="xs:int" />
+      <xs:element minOccurs="0" name="TransferID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransferGoodsQueryModel" nillable="true" type="tns:TransferGoodsQueryModel" />
+</xs:schema>
