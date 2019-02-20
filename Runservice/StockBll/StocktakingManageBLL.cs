@@ -36,7 +36,7 @@ namespace StockBll
                 fi.Result = sb;
                 return fi;
             }
-            catch (Exception ex)
+             catch (Exception ex)
             {
                 fi.FeedbackMessage = ex.Message.ToString();
                 fi.ErrorStatus = STATUS_ADAPTER.SAVE_FAILED;
@@ -130,7 +130,23 @@ namespace StockBll
                 return fi;
             }
         }
-
+        public FeedbackInfomation OperatorAuth()
+        {
+            FeedbackInfomation fi = new FeedbackInfomation();
+            try
+            {
+               // StocktakingBillDetail sbd = MySMDAL.SelectStocktakingBillDetail(stocktakingDetailId);
+               
+                return fi;
+            }
+            catch (Exception ex)
+            {
+                fi.Result = null;
+                fi.FeedbackMessage = Tips.QUERY_FAILED + ":" + ex.Message.ToString();
+                fi.ErrorStatus = STATUS_ADAPTER.QUERY_ERROR;
+                return fi;
+            }
+        }
         private void JudgeStocktakingDetailStatus(long isbId, string status, string message, SqlTransaction st)
         {
             if (MySMDAL.SelectStocktakingDetailStatus(isbId, BaseInfo.FindBillStatusIDByName(status), st) < 0)

@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.ServiceModel;
-//using WcfAppliacation.StockTakingManage;
+using WcfAppliacation.StockTakingManage;
+using WcfAppliacation.ServiceReference1;
+using Newtonsoft.Json;
 
 namespace WcfAppliacation
 {
@@ -19,12 +21,20 @@ namespace WcfAppliacation
             InitializeComponent();
            
         }
+        private DataTable dt = new DataTable();
         public void Instantiation()
         {
             string url = "http://127.0.0.1:8082/StockTakingManage";
-            StockTakingManageProxyClient stock = new StockTakingManageProxyClient(GetWSHttpBinding(), new EndpointAddress(url));
-            StockModelData.StockModel sm = new StockModelData.StockModel();
-            stock.AddStocktakingBill(sm);
+            StockTakingManage.StockTakingManageProxyClient stock = new StockTakingManage.StockTakingManageProxyClient(GetWSHttpBinding(), new EndpointAddress(url));
+            //StockModelData.StockModel sm = new StockModelData.StockModel();
+            //stock.Endpoint.EndpointBehaviors.Add(new MyEndpointBehavior());
+           string fi= stock.QueryStocktakingBillDetailsInfo(8);
+           FeedbackInfomation fi1= JsonConvert.DeserializeObject<FeedbackInfomation>(fi);
+            DataSet ds = JsonConvert.DeserializeObject<DataSet>(fi1.Result.ToString());
+            dt = ds.Tables[0];
+            dataGridView1.DataSource = dt;
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)

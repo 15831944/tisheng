@@ -1,0 +1,25 @@
+
+UPDATE dbo.UIDisplay SET ColOrder=2 WHERE id='676' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=3 WHERE id='677' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=4 WHERE id='658' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=5 WHERE id='659' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=6 WHERE id='660' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=7 WHERE id='661' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=8 WHERE id='662' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=9 WHERE id='663' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=10 WHERE id='664' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=11 WHERE id='665' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=12 WHERE id='666' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=13 WHERE id='667' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=14 WHERE id='668' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=15 WHERE id='669' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=16 WHERE id='670' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=17 WHERE id='671' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=18 WHERE id='672' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=19 WHERE id='673' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=20 WHERE id='674' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=21 WHERE id='675' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=22 WHERE id='678' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=23 WHERE id='679' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=24 WHERE id='680' AND ui='frmTransferGoodsTrackingNum';
+UPDATE dbo.UIDisplay SET ColOrder=25 WHERE id='681' AND ui='frmTransferGoodsTrackingNum';

@@ -8,3 +8,15 @@ C:\Users\lenovo\source\repos\WcfAppliacation\WcfAppliacation\bin\Debug\WcfApplia
 C:\Users\lenovo\source\repos\WcfAppliacation\WcfAppliacation\bin\Debug\WcfAppliacation.exe
 C:\Users\lenovo\source\repos\WcfAppliacation\WcfAppliacation\obj\Debug\WcfAppliacation.exe
 C:\Users\lenovo\source\repos\WcfAppliacation\WcfAppliacation\obj\Debug\WcfAppliacation.Form1.resources
+D:\提升项目\WcfAppliacation\WcfAppliacation\bin\Debug\WcfAppliacation.exe.config
+D:\提升项目\WcfAppliacation\WcfAppliacation\bin\Debug\WcfAppliacation.exe
+D:\提升项目\WcfAppliacation\WcfAppliacation\bin\Debug\WcfAppliacation.pdb
+D:\提升项目\WcfAppliacation\WcfAppliacation\obj\Debug\WcfAppliacation.Form1.resources
+D:\提升项目\WcfAppliacation\WcfAppliacation\obj\Debug\WcfAppliacation.Properties.Resources.resources
+D:\提升项目\WcfAppliacation\WcfAppliacation\obj\Debug\WcfAppliacation.csproj.GenerateResource.cache
+D:\提升项目\WcfAppliacation\WcfAppliacation\obj\Debug\WcfAppliacation.csproj.CoreCompileInputs.cache
+D:\提升项目\WcfAppliacation\WcfAppliacation\obj\Debug\WcfAppliacation.exe
+D:\提升项目\WcfAppliacation\WcfAppliacation\obj\Debug\WcfAppliacation.pdb
+D:\提升项目\WcfAppliacation\WcfAppliacation\obj\Debug\WcfAppliacation.csprojAssemblyReference.cache
+D:\提升项目\WcfAppliacation\WcfAppliacation\bin\Debug\Newtonsoft.Json.dll
+D:\提升项目\WcfAppliacation\WcfAppliacation\obj\Debug\WcfAppliacation.csproj.CopyComplete

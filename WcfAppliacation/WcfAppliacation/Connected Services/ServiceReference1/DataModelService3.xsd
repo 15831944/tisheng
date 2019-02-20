@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/StockModelData" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/StockModelData" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Sku">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuxID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductID" type="xs:int" />
+      <xs:element minOccurs="0" name="SignNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SignTypeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SkuID" type="xs:int" />
+      <xs:element minOccurs="0" name="SkuName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Spare" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Sku" nillable="true" type="tns:Sku" />
+  <xs:complexType name="BillType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="BillTypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BillType" nillable="true" type="tns:BillType" />
+</xs:schema>

@@ -40,5 +40,9 @@ namespace StockService
         {
             return JsonConvert.SerializeObject(MySMBLL.QueryStocktakingBillInfos(sq));
         }
+        public string OperatorAuth()
+        {
+            return JsonConvert.SerializeObject(MySMBLL.OperatorAuth());
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace StockDal
 {
     public class SqlDataHelper
     {
-        private static string my_connstr = "Server=.;DataBase=CMSTStorageDB;User Id=sa;Password=123;Pooling=true;connection lifetime=0;Min Pool Size = 1;Max Pool Size=40000";
+        private static string my_connstr = "Server=localhost;DataBase=CMSTStorageDB;User Id=sa;Password=xxc199202;Pooling=true;connection lifetime=0;Min Pool Size = 1;Max Pool Size=40000";
         private static string tem_connstr = "Server={0};DataBase={1};User Id={2};Password={3};Pooling=true;connection lifetime=0;Min Pool Size = 1;Max Pool Size=40000";
         private static string mg_connstr = "";
 

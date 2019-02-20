@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9fb6f9ec-dcdb-415d-a394-353a4baa8686" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://127.0.0.1:8082/StockTakingManage" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="StockTakingManage.xsd" MetadataType="Schema" ID="a9497cd7-567b-4785-a0e1-d2bcce08ea78" SourceId="1" SourceUrl="http://127.0.0.1:8082/StockTakingManage?xsd=xsd0" />
+    <MetadataFile FileName="StockTakingManage.wsdl" MetadataType="Wsdl" ID="f1c36ab4-bb60-448e-82a3-29f128cb5fd3" SourceId="1" SourceUrl="http://127.0.0.1:8082/StockTakingManage?wsdl" />
+    <MetadataFile FileName="StockTakingManage1.xsd" MetadataType="Schema" ID="e4f00271-889d-446e-b2c3-929a3b0063ce" SourceId="1" SourceUrl="http://127.0.0.1:8082/StockTakingManage?xsd=xsd1" />
+    <MetadataFile FileName="StockTakingManage.disco" MetadataType="Disco" ID="883390ed-7e0b-434f-91de-21a76bc8c633" SourceId="1" SourceUrl="http://127.0.0.1:8082/StockTakingManage?disco" />
+    <MetadataFile FileName="StockTakingManage2.xsd" MetadataType="Schema" ID="eec0cbae-4cbd-429e-9055-816ef8ccd411" SourceId="1" SourceUrl="http://127.0.0.1:8082/StockTakingManage?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

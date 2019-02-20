@@ -45,11 +45,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IClientCallBack.cs" />
+    <Compile Include="IDataModel.cs" />
     <Compile Include="IDuplexService.cs" />
     <Compile Include="IStocktakingManage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\StockCommon\StockCommon.csproj">
+      <Project>{d8e334df-d3c5-4354-af7d-3fa5a0351e23}</Project>
+      <Name>StockCommon</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StockTest\StockModelData.csproj">
       <Project>{fa40df16-99c9-45ba-a539-e9f1c8ff5efb}</Project>
       <Name>StockModelData</Name>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/StockCommon" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/StockCommon" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="FeedbackInfomation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorStatus" type="tns:STATUS_ADAPTER" />
+      <xs:element minOccurs="0" name="FeedbackMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Result" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FeedbackInfomation" nillable="true" type="tns:FeedbackInfomation" />
+  <xs:simpleType name="STATUS_ADAPTER">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DB_CONNECT_NORMAL" />
+      <xs:enumeration value="DB_CONNECT_FAILD" />
+      <xs:enumeration value="DB_ERROR" />
+      <xs:enumeration value="IP_NORMAL" />
+      <xs:enumeration value="IP_EMPTY" />
+      <xs:enumeration value="IP_FORMAT" />
+      <xs:enumeration value="QUERY_NORMAL" />
+      <xs:enumeration value="QUERY_ERROR" />
+      <xs:enumeration value="INSERT_NORMAL" />
+      <xs:enumeration value="INSERT_ERROR" />
+      <xs:enumeration value="SAVE_SUCCESS" />
+      <xs:enumeration value="SAVE_FAILED" />
+      <xs:enumeration value="DEl_SUCCESS" />
+      <xs:enumeration value="DEL_FAILED" />
+      <xs:enumeration value="QUERY_NODATA" />
+      <xs:enumeration value="CHECK_SUCCESS" />
+      <xs:enumeration value="CHECK_FAILED" />
+      <xs:enumeration value="CANCEL_CHECK_SUCCESS" />
+      <xs:enumeration value="CANCEL_CHECK_FAILED" />
+      <xs:enumeration value="LOGIN_SUCCESS" />
+      <xs:enumeration value="LOGIN_FAILED" />
+      <xs:enumeration value="CHECK_PWD_SUCCESS" />
+      <xs:enumeration value="CHECK_PWD_FAILED" />
+      <xs:enumeration value="BIND_SUCCESS" />
+      <xs:enumeration value="BIND_FAILED" />
+      <xs:enumeration value="TEMPORARY_SUCCESS" />
+      <xs:enumeration value="TEMPORARY_FAILED" />
+      <xs:enumeration value="REVIEW_SUCCESS" />
+      <xs:enumeration value="REVIEW_FAILED" />
+      <xs:enumeration value="CONFIRM_SUCCESS" />
+      <xs:enumeration value="CONFIRM_FAILED" />
+      <xs:enumeration value="QUERY_REPEAT" />
+      <xs:enumeration value="RedisCluster_CONNECT_NORMAL" />
+      <xs:enumeration value="RedisCluster_CONNECT_FAILD" />
+      <xs:enumeration value="UPDATE_SUCCESS" />
+      <xs:enumeration value="UPDATE_ERROR" />
+      <xs:enumeration value="LOGOUT_SUCCESS" />
+      <xs:enumeration value="LOGOUT_FAILED" />
+      <xs:enumeration value="REVERSE_SUCCESS" />
+      <xs:enumeration value="REVERSE_FAILED" />
+      <xs:enumeration value="ACCOUNT_PASSWORD_ERROR" />
+      <xs:enumeration value="DESERIALIZEPARA_FAILED" />
+      <xs:enumeration value="IMPORT_SUCCESS" />
+      <xs:enumeration value="IMPORT_FAILED" />
+      <xs:enumeration value="SUBMIT_SUCCESS" />
+      <xs:enumeration value="SUBMIT_FAILED" />
+      <xs:enumeration value="CANCELSUBMIT_SUCCESS" />
+      <xs:enumeration value="CANCELSUBMIT_FAILED" />
+      <xs:enumeration value="RETURN_SUCCESS" />
+      <xs:enumeration value="RETURN_FAILED" />
+      <xs:enumeration value="INVALID_SUCCESS" />
+      <xs:enumeration value="INVALID_FAILED" />
+      <xs:enumeration value="END_SUCCESS" />
+      <xs:enumeration value="END_FAILED" />
+      <xs:enumeration value="RESTART_SUCCESS" />
+      <xs:enumeration value="RESTART_FAILED" />
+      <xs:enumeration value="WITHDRAW_SUCCESS" />
+      <xs:enumeration value="WITHDRAW_FAILED" />
+      <xs:enumeration value="CHARGE_NORMAL" />
+      <xs:enumeration value="CHARGE_EMPTY" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="STATUS_ADAPTER" nillable="true" type="tns:STATUS_ADAPTER" />
+</xs:schema>

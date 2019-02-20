@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using StockModelData;
 using StockCommon;
+using System.Windows.Forms;
 
 
 namespace StockDal
@@ -17,6 +18,7 @@ namespace StockDal
         private const string INSERT_STOCKTACKINGINFO_ERROR = "新增盘点明细信息失败";
         public long InsertStocktakingBill(StockModel sb, SqlTransaction st)
         {
+            MessageBox.Show("山映斜阳天接水，芳草无情，更在斜阳外！！！");
             string sqlstr = $" insert into StocktakingBill ( Sb_Cmst_ID, Sb_Dep_ID, Sb_Rar_Id, Sb_Com_ID, Sb_Ope_Maker, Sb_MakeTime, Sb_Status) values ({sb.CmstID},{(sb.DepotID == null ? "NULL" : sb.DepotID.ToString())},{(sb.ReservoirID == null ? "NULL" : sb.ReservoirID.ToString())},{(sb.CompanyID == null ? "NULL" : sb.CompanyID.ToString())},{sb.Maker},getdate(),{sb.Status});select @@Identity;";
             DataSet ds = SqlDataHelper.ExecuteDataSet(st, CommandType.Text, sqlstr);
             long ret = -1;
@@ -106,7 +108,7 @@ namespace StockDal
 
         public DataSet SelectStocktakingDetails(long stocktakingId)
         {
-            string sqlstr = $" select * from StocktakingDetailInfo where StocktakingID = {stocktakingId} ";
+            string sqlstr = $" select * from Operator where Ope_id = {stocktakingId} ";
             DataSet ds = SqlDataHelper.ExecuteDataSet(SqlDataHelper.GetConnection(), CommandType.Text, sqlstr);
             return ds;
         }

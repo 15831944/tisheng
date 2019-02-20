@@ -29,6 +29,11 @@ namespace StockInterface
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.WrappedRequest)]
         string CheckStocktakingDetail(long stocktakingId, long stocktakingDetailId, int result, int checker, string remark);
 
+        [OperationContract]
+        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.WrappedRequest)]
+
+        string OperatorAuth();
+
 
 
     }
