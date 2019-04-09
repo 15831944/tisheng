@@ -1,0 +1,44 @@
+﻿<Window x:Class="RepositoryOfXA.Views.AddOrEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:viewModel="clr-namespace:RepositoryOfXA.ViewModels"
+        xmlns:local="clr-namespace:RepositoryOfXA.Views"
+        mc:Ignorable="d"
+        Title="AddOrEditWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" Topmost="True" ResizeMode="NoResize">
+    <Window.DataContext>
+    <viewModel:AddOrEditViewModel></viewModel:AddOrEditViewModel>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="用户姓名:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"></Label>
+        <Label Grid.Row="1" Grid.Column="0" Content="用户账号:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"></Label>
+        <Label Grid.Row="2" Grid.Column="0" Content="用户密码:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"></Label>
+        <Label Grid.Row="3" Grid.Column="0" Content="用户角色:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"></Label>
+        <TextBox Grid.Row="0" Grid.Column="1" Width="160" Height="25" Text="{Binding CurrentStudentEntity.StudentName,Mode=TwoWay}"></TextBox>
+        <TextBox Grid.Row="1" Grid.Column="1" Width="160" Height="25" Text="{Binding CurrentStudentEntity.StudentAge,Mode=TwoWay}"></TextBox>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Margin="20,0,0,0">
+            <RadioButton  GroupName="sex"  Content="男" VerticalAlignment="Center" IsChecked="{Binding IsChecked,Mode=TwoWay}"></RadioButton>
+            <RadioButton  GroupName="sex"   Content="女" VerticalAlignment="Center"  Margin="20,0,0,0"></RadioButton>
+        </StackPanel>
+       
+        <TextBox Grid.Row="3" Grid.Column="1" Width="160" Height="25" Text="{Binding CurrentStudentEntity.StudentAddress,Mode=TwoWay}"></TextBox>
+    
+        <Rectangle Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Fill="Black" Height="1" VerticalAlignment="Bottom"></Rectangle>
+        
+        <Button Content="保存" Width="80" Height="30" Grid.Row="4" Grid.Column="1" Command="{Binding SaveCommand}"></Button>
+
+    </Grid>
+</Window>

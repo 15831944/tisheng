@@ -1,8 +1,8 @@
 D:\提升项目\MVVMWPFtest\MVVMtest\bin\Debug\MVVMtest.dll
 D:\提升项目\MVVMWPFtest\MVVMtest\bin\Debug\MVVMtest.pdb
-D:\提升项目\MVVMWPFtest\MVVMtest\obj\Debug\MVVMtest.csprojAssemblyReference.cache
 D:\提升项目\MVVMWPFtest\MVVMtest\obj\Debug\MVVMtest.csproj.CoreCompileInputs.cache
 D:\提升项目\MVVMWPFtest\MVVMtest\obj\Debug\MVVMtest.dll
 D:\提升项目\MVVMWPFtest\MVVMtest\obj\Debug\MVVMtest.pdb
 D:\提升项目\MVVMWPFtest\MVVMtest\bin\Debug\System.Windows.Interactivity.dll
 D:\提升项目\MVVMWPFtest\MVVMtest\obj\Debug\MVVMtest.csproj.CopyComplete
+D:\提升项目\MVVMWPFtest\MVVMtest\obj\Debug\MVVMtest.csprojAssemblyReference.cache

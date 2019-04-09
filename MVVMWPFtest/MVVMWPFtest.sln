@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMtest", "MVVMtest\MVVMte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandTest", "CommandTest\CommandTest.csproj", "{59694B58-71A4-4D7D-824F-AC98A20209BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryOfXA", "RepositoryOfXA\RepositoryOfXA.csproj", "{8DA22D17-AE1D-4071-A5EE-6FCC84DE1E57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{59694B58-71A4-4D7D-824F-AC98A20209BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59694B58-71A4-4D7D-824F-AC98A20209BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59694B58-71A4-4D7D-824F-AC98A20209BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DA22D17-AE1D-4071-A5EE-6FCC84DE1E57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DA22D17-AE1D-4071-A5EE-6FCC84DE1E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DA22D17-AE1D-4071-A5EE-6FCC84DE1E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DA22D17-AE1D-4071-A5EE-6FCC84DE1E57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
