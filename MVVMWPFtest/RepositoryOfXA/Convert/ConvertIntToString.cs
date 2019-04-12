@@ -11,16 +11,16 @@ namespace RepositoryOfXA.Convert
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            string sex = "";
+            string IfUse = "";
             if (int.Parse(value.ToString()) == 0)
             {
-                sex = "男";
+                IfUse = "启用";
             }
             else
             {
-                sex = "女";
+                IfUse = "未启用";
             }
-            return sex;
+            return IfUse;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)

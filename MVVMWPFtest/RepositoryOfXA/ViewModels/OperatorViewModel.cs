@@ -39,10 +39,10 @@ namespace RepositoryOfXA.ViewModels
             }
 
         }
-        public ICommand AddCommand { get; set; }
-        public ICommand RefreshCommand { get; set; }
-        public ICommand EditCommand { get; set; }
-        public ICommand DeleteCommand { get; set; }
+        public DelegateCommand AddCommand { get; set; }
+        public DelegateCommand RefreshCommand { get; set; }
+        public DelegateCommand EditCommand { get; set; }
+        public DelegateCommand DeleteCommand { get; set; }
 
         private OperatorDal OperatorDal = null;
         public OperatorViewModel()

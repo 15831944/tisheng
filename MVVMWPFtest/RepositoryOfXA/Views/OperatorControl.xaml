@@ -18,7 +18,10 @@
     <UserControl.DataContext>
         <viewModel:OperatorViewModel></viewModel:OperatorViewModel>
     </UserControl.DataContext>
-    <Grid>
+    <Grid Opacity="0.8">
+        <Grid.OpacityMask>
+            <SolidColorBrush Color="Black" Opacity="100"/>
+        </Grid.OpacityMask>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
@@ -26,8 +29,8 @@
         <Button Width="80" Height="30" Content="添加" HorizontalAlignment="Right" Margin="0,0,20,0" Grid.Row="0" Command="{Binding AddCommand}"></Button>
         <Button Width="80" Height="30" Content="刷新" HorizontalAlignment="Right" Margin="0,0,120,0" Grid.Row="0" Command="{Binding RefreshCommand}"/>
         <Rectangle Fill="Black" Height="1" Grid.Row="0" VerticalAlignment="Bottom"></Rectangle>
-        <DataGrid Grid.Row="1" ItemsSource="{Binding Students}"  SelectedItem="{Binding SelectStudentEntity, Mode=TwoWay}"  CanUserSortColumns="False"  CanUserResizeColumns="False" CanUserResizeRows="False" SelectionMode="Extended" 
-                            CanUserReorderColumns="False"  RowHeaderWidth="0" CanUserAddRows="False"  AutoGenerateColumns="False"  EnableRowVirtualization="False" GridLinesVisibility="None"  Margin="5" >
+        <DataGrid Grid.Row="1" ItemsSource="{Binding Operator}"  SelectedItem="{Binding SelectOperatorEntity, Mode=TwoWay}"  CanUserSortColumns="False"  CanUserResizeColumns="False" CanUserResizeRows="False" SelectionMode="Extended" 
+                            CanUserReorderColumns="False"  RowHeaderWidth="0" CanUserAddRows="False"  AutoGenerateColumns="False"  EnableRowVirtualization="False" GridLinesVisibility="None"  Margin="200,5,5,33" BorderThickness="1" >
             <DataGrid.Columns>
                 <DataGridTemplateColumn Header="编号" Width="80" >
                     <DataGridTemplateColumn.CellTemplate>
@@ -38,7 +41,7 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="姓名" Width="120" >
+                <DataGridTemplateColumn Header="姓名" Width="80" >
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Grid>
@@ -51,7 +54,7 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Grid>
-                                <TextBlock Text="{Binding Ope_Account,Converter={StaticResource convertIntToString}}" HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBlock>
+                                <TextBlock Text="{Binding Ope_Account}" HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBlock>
                             </Grid>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
@@ -65,11 +68,11 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="是否启用" Width="180" >
+                <DataGridTemplateColumn Header="是否启用" Width="80" >
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Grid>
-                                <TextBlock Text="{Binding Ope_Ifuse}" HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBlock>
+                                <TextBlock Text="{Binding Ope_Ifuse,Converter={StaticResource convertIntToString}}" HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBlock>
                             </Grid>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
@@ -89,7 +92,27 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
+        <Grid HorizontalAlignment="Left" Height="390" Margin="-5,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200">
+            <Grid.RowDefinitions>
 
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="用户姓名:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"></Label>
+            <Label Grid.Row="1" Grid.Column="0" Content="用户账号:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"></Label>
+            <Label Grid.Row="2" Grid.Column="0" Content="用户密码:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" RenderTransformOrigin="0.59,-1.2"></Label>
+            <TextBox Grid.Row="0" Grid.Column="1" Width="80" Height="25" Text="{Binding SelectOperatorEntity.Ope_Name,Mode=TwoWay}"></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="1" Width="80" Height="25" Text="{Binding SelectOperatorEntity.Ope_Account,Mode=TwoWay}"></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="1" Width="80" Height="25" Text="{Binding SelectOperatorEntity.Ope_PassWord,Mode=TwoWay}" Margin="20,10,20,15"></TextBox>
+            <Rectangle Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Fill="Black" Height="1" VerticalAlignment="Bottom"></Rectangle>
 
+        </Grid>
     </Grid>
 </UserControl>
